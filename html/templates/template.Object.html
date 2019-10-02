@@ -1,0 +1,18 @@
+<div class="object">
+    <div class="header">
+        <span class="title">{{$title}}</span>
+        <div class="block">
+            <span class="subtitle">Description</span>
+            <span class="description">{{$description}}</span>    
+        </div>
+        <div class="block">
+            <span class="subtitle">OML</span>
+            <span class="oml"><code>{{calc @oml=JSON.stringify($oml)}}{{@oml}}</code></span>
+        </div>         
+    </div>
+    <div class="demo">
+        <span class="subtitle">Demo</span>
+        <span id="instance"></span>
+    </div> 
+    <div class="methods"><span class="bt">METHODS</span></div>
+</div>
