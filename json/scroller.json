@@ -1,0 +1,44 @@
+{
+    "title":"Scroller",
+    "description":"OGX.JS dismisses the native scroller and replaces it by its own, fully skinable scroll bar. Any object extending the Uxi class can scroll.",
+    "oml":{        
+        "selector:[Class or Object]":{
+            "scroll":true     
+        }                
+    },
+    "demoml":{
+        "#instance:Templates.Scroller":{
+            "node:OML":{
+                "#scroller0:Templates.Lorem":{
+                    "scroll":true     
+                },
+                "#scroller1:Templates.Lorem":{
+                    "scroll":true
+                },
+                "#scroller2:Templates.Lorem":{
+                    "scroll":true
+                }
+            }            
+        }
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"}
+        ],
+        "methods":[
+            {"name":"resize", "desc":"resize/redraw the component"},
+            {"name":"top", "desc":"scroll to top"},
+            {"name":"inner", "desc":"return the inner element"},
+            {"name":"state", "desc":"return the state of the component"},
+            {"name":"mute", "desc":"prevent triggering events"},
+            {"name":"vocal", "desc":"resume triggering events"}
+        ],
+        "events":[
+            {"name":"OGX.Scroller.READY", "desc":"when the component is ready"},
+            {"name":"OGX.Scroller.TOP", "desc":"when the top is reached"},
+            {"name":"OGX.Scroller.BOTTOM", "desc":"when the bottom is reached"},
+            {"name":"OGX.Scroller.SCROLL", "desc":"when the end user scrolls"}
+        ]
+    } 
+}
