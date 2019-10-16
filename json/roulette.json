@@ -1,0 +1,56 @@
+{
+    "title":"Roulette",
+    "description":"Roulette is a substitute for input select that renders data an infinite fashion.",
+    "oml":{        
+        "selector:Roulette":"{CONFIG}"        
+    },
+    "demoml":{
+        "#instance:Templates.Roulette":{
+            "node:OML":{
+                "#instance > .roulettes .rouletteA:Roulette":{     
+                    "list":[
+                        {"label":"OGX.JS is not that great", "value":0},
+                        {"label":"OGX.JS is OK I guess", "value":1},
+                        {"label":"I like OGX.JS", "value":2},
+                        {"label":"I Love OGX.JS", "value":3},
+                        {"label":"I'm crazy about OGX.JS", "value":4}
+                    ],
+                    "value":3          
+                },
+                "#instance > .roulettes .rouletteB:Roulette":{   
+                    "id":"rouletteB",  
+                    "list":[
+                        {"label":"OGX.JS is not that great", "value":0},
+                        {"label":"OGX.JS is OK I guess", "value":1},
+                        {"label":"I like OGX.JS", "value":2},
+                        {"label":"I Love OGX.JS", "value":3},
+                        {"label":"I'm crazy about OGX.JS", "value":4}
+                    ],
+                    "value":3          
+                },
+                "ctrl:Controllers.Roulette":{}
+            }            
+        }        
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"value", "type":"*", "desc":"the current value"},
+            {"name":"name", "type":"string", "desc":"name given to hidden input for forms, optional"},
+            {"name":"display", "type":"OGX.Display", "desc":"an optional custom display"},
+            {"name":"key", "type":"string", "desc":"the name of the property of each object to base the value upon"},
+            {"name":"mode", "type":"constant", "desc":"the operating mode, defaults to OGX.Roulette.MODE_REWIND"},
+            {"name":"icon", "type":"string", "desc":"an optional icon class"}
+        ],
+        "methods":[
+            {"name":"val", "desc":"set or retrieve the current value"},
+            {"name":"loopval", "desc":"animate until a value is reached"},
+            {"name":"next", "desc":"animate to previous item"},
+            {"name":"prev", "desc":"animate to next item"}
+        ],
+        "events":[
+            {"name":"OGX.Roulette.CHANGE", "desc":"when the roulette changes value"}
+        ]
+    } 
+}

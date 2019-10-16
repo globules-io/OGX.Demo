@@ -1,0 +1,33 @@
+{
+    "title":"Switch",
+    "description":"Switch is a simple on-off toggle object.",
+    "oml":{
+        "selector:Switch":"{CONFIG}"
+    },    
+    "demoml":{
+        "#instance:Templates.Switches":{           
+            "node:OML":{
+                "#switchA:Switch":{
+                    "labels":false
+                },
+                "#switchB:Switch":{
+                    "labels":["OFF", "ON"]
+                }
+            }
+        }        
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"labels", "type":"array", "desc":"array of labels, optional"},
+            {"name":"values", "type":"array", "desc":"array of values"},
+            {"name":"value", "type":"boolean", "desc":"default value"}
+        ],
+        "methods":[
+            {"name":"val", "desc":"set or retrieve the current value"},
+            {"name":"toggle", "desc":"toggle the switch"}
+        ],
+        "events":[{"name":"OGX.Switch.TOGGLE", "desc":"when the switch toggles"}]
+    } 
+}

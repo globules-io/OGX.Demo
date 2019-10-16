@@ -1,0 +1,50 @@
+{
+    "title":"GridSwiper",
+    "description":"GridSwiper is an infinite, two axis swiper that returns the absolute and relative position of the newly visible cell.",
+    "oml":{
+        "selector:GridSwiper":{          
+            
+        }
+    },
+    "demoml":{
+        "#instance:GridSwiper":{
+            "id":"grid",
+            "loop":true,
+            "axis":{"x":true, "y":true}
+        },
+        "ctrl:Controllers.Grid":{}
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"map", "type":"array", "desc":"2d map"},
+            {"name":"axis", "type":"object", "desc":"axis restriction object"},
+            {"name":"loop", "type":"boolean", "desc":"loop or stop at map edge"},
+            {"name":"start", "type":"object", "desc":"starting point"}            
+        ],
+        "methods":[
+            {"name":"setMap", "desc":"set the map"},   
+            {"name":"setMapCell", "desc":"set the value of a cell of the map"},
+            {"name":"getMapCell", "desc":"get the value of a cell of the map"},
+            {"name":"getCells", "desc":"get onscreen cells and their position"},
+            {"name":"getCellContent", "desc":"get content of a cell given a point"},
+            {"name":"getCurrentCell", "desc":"get the current cell"},
+            {"name":"renderCellContent", "desc":"force rendering of a cell given a point"},
+            {"name":"setTopCell", "desc":"set the relative top cell based on current cell"},     
+            {"name":"setBottomCell", "desc":"set the relative bottom cell based on current cell"},     
+            {"name":"setLeftCell", "desc":"set the relative left cell based on current cell"},     
+            {"name":"setRightCell", "desc":"set the relative right cell based on current cell"},  
+            {"name":"swipeRight", "desc":"acts like a swipe"},      
+            {"name":"swipeLeft", "desc":"acts like a swipe"},    
+            {"name":"swipeUp", "desc":"acts like a swipe"},    
+            {"name":"swipeDown", "desc":"acts like a swipe"}  
+        ],
+        "events":[
+            {"name":"OGX.GridSwiper.SWIPE_UP", "desc":"when the end user has swiped up"},
+            {"name":"OGX.GridSwiper.SWIPE_RIGHT", "desc":"when the end user has swiped right"},
+            {"name":"OGX.GridSwiper.SWIPE_DOWN", "desc":"when the end user has swiped down"},
+            {"name":"OGX.GridSwiper.SWIPE_LEFT", "desc":"when the end user has swiped left"}
+        ]
+    } 
+}

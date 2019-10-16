@@ -1,0 +1,55 @@
+{
+    "title":"Iceberg",
+    "description":"Iceberg can be composed of a main view and up to 4 hidden panels, one per side. Unlike Carousel, Iceberg's hidden panels' width are less than the main view's one.",
+    "oml":{
+        "selector:Iceberg":"{CONFIG}"
+    },
+    "demoml":{
+        "#instance:Iceberg":{
+            "left":"50%",
+            "right":"100px",
+            "top":"200px",
+            "bottom":"300px",
+            "node:OML":[
+                {"top:Html":{
+                    "html":"<span class=\"msg\">Hidden Content</span>"
+                }},
+                {"left:Html":{
+                     "html":"<span class=\"msg\">Hidden Content</span>"
+                }},
+                {"main:Html":{
+                     "html":"<span class=\"msg\">Main Content</span>"
+                }},
+                {"right:Html":{
+                     "html":"<span class=\"msg\">Hidden Content</span>"
+                }},
+                {"bottom:Html":{
+                     "html":"<span class=\"msg\">Hidden Content</span>"
+                }}
+            ]
+        }
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"left", "type":"int", "desc":"the size of the left hidden panel"},
+            {"name":"top", "type":"int", "desc":"the size of the top hidden panel"},
+            {"name":"main", "type":"array", "desc":"drag distance minimum before auto swipe"},
+            {"name":"right", "type":"int", "desc":"the size of the right hidden panel"},
+            {"name":"bottom", "type":"int", "desc":"the size of the bottom hidden panel"},
+            {"name":"min", "type":"boolean", "desc":"the minimal swipe distance before revealing"},
+            {"name":"flatten", "type":"int", "desc":"size at which this components flattens to reveal all panels"}
+        ],
+        "methods":[
+            {"name":"val", "desc":"set or retrieve panel to show"}           
+        ],
+        "events":[
+            {"name":"OGX.Iceberg.SWIPE_UP", "desc":"when the end user has swiped up"},
+            {"name":"OGX.Iceberg.SWIPE_RIGHT", "desc":"when the end user has swiped right"},
+            {"name":"OGX.Iceberg.SWIPE_DOWN", "desc":"when the end user has swiped down"},
+            {"name":"OGX.Iceberg.SWIPE_LEFT", "desc":"when the end user has swiped left"},
+            {"name":"OGX.Iceberg.RESTORE", "desc":"when a drag didn't transform in a swipe"}
+        ]
+    } 
+}

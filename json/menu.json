@@ -35,6 +35,11 @@
                 "label":"NestedList", 
                 "initials":"NL", 
                 "scope":["public"]       
+            },
+            {
+                "label":"GroupedList", 
+                "initials":"GL", 
+                "scope":["public"]       
             }
         ] 
     },    
@@ -134,25 +139,20 @@
         ]   
     },
     {
+        "label":"Tags",
+        "icon":"icon_tags",
+        "scope":["public"]      
+    }, 
+    {
         "label":"Tabs",
         "icon":"icon_tabs",
         "scope":["public"]      
-    },
-    {
-        "label":"Templates",
-        "icon":"icon_templates",
-        "scope":["public"]      
-    },    
+    },   
     {
         "label":"Trees",
         "icon":"icon_trees",
         "scope":["public"],
-        "items":[
-            {
-                "label":"GroupedList", 
-                "initials":"GL", 
-                "scope":["public"]       
-            },
+        "items":[            
             {
                 "label":"StackedTree", 
                 "initials":"ST", 
@@ -162,7 +162,12 @@
                 "label":"Tree", 
                 "initials":"TR", 
                 "scope":["public"]       
-            }           
+            },
+            {
+                "label":"TreedList", 
+                "initials":"TL", 
+                "scope":["public"]       
+            }          
         ] 
     }, 
     {

@@ -1,0 +1,40 @@
+{
+    "title":"Tags",
+    "description":"Tags is a tag manager",
+    "oml":{
+        "selector:Tags":"{CONFIG}"
+    },
+    "demoml":{
+        "#instance:Tags":{          
+            "editable":true,
+            "insert":true,
+            "current_tags":["OGX.JS", "OML", "JavaScript"]
+        }
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"editable", "type":"boolean", "desc":"if tags can be added/removed"},
+            {"name":"insert", "type":"boolean", "desc":"if tags can be added in editable mode"},
+            {"name":"tags", "type":"array", "desc":"system tags"},
+            {"name":"current_tags", "type":"boolean", "desc":"current tags"},
+            {"name":"tags_ascii", "type":"array", "desc":"an optional ASCII array to use with OGX.Tags.MODE_ASCII"},
+            {"name":"mode", "type":"constant", "desc":"the operating mode, defaults to OGX.Tags.MODE_STRING"},
+            {"name":"placeholder", "type":"string", "desc":"name of the hidden input for forms"},
+            {"name":"restrict", "type":"object", "desc":"an optional restrict object for the input field"}
+        ],
+        "methods":[
+            {"name":"tags", "desc":"set or retrieve the system tags"},
+            {"name":"currentTags", "desc":"set or retrieve current tags"},
+            {"name":"renderTags", "desc":"render tags given objet"},
+            {"name":"addTag", "desc":"add tag to currentTags"},
+            {"name":"removeTag", "desc":"remove tag from currentTags"},
+            {"name":"destroy", "desc":"destroy the component"}
+        ],
+        "events":[
+            {"name":"OGX.Tags.TAG_ADDED", "desc":"when a tag is added to currentTags"},
+            {"name":"OGX.Tags.TAG_REMOVED", "desc":"when a tag is remove from currentTags"}            
+        ]
+    } 
+}

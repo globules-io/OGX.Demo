@@ -1,0 +1,68 @@
+{
+    "title":"Carousel",
+    "description":"Carousel contains two or more placeholders which can be swiped from one to another.",
+    "oml":{
+        "selector:Carousel":{     
+            "node:OML":[
+                {"default:[Class of Object]":{}}
+            ]
+        }
+    },
+    "demoml":{
+        "#instance:Carousel":{  
+            "dots":true,   
+            "node:OML":[
+                {"default:Html":{
+                    "html":"<span class=\"msg\">Anything can be rendered in Carousel's placeholders, just like any other object extending the placeholder class.<br>Each non visible node is blured while the visible one is focussed.</span>"
+                }},
+                {"default:Views.PopupStandard":{
+                    "mode":"Standard",
+                    "template":"Standard"
+                }},
+                {"default:Views.Overlay":{
+                    "loading":true, "data":{"loading":true}
+                }},                
+                {"default:Iceberg":{
+                    "bottom":200,
+                    "node:OML":[
+                        {"main:Html":{
+                            "html":"<span class=\"msg\">Here is an Icebreg with content hidden at the bottom.</span>"
+                        }},
+                        {"bottom:Html":{
+                            "html":"<span class=\"msg\">Hidden content!</span>"
+                        }}
+                    ]
+                }},
+                {"default:Templates.Dummy":{}}
+            ]
+        }
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"current", "type":"int", "desc":"the panel to display"},
+            {"name":"min_x", "type":"array", "desc":"drag distance minimum before auto swipe"},
+            {"name":"anim", "type":"boolean", "desc":"if switching between panels is animated"},
+            {"name":"drag", "type":"boolean", "desc":"if the end user can swipe/drag"},
+            {"name":"dots", "type":"boolean", "desc":"if the component displays dots to show the number of panels"},
+            {"name":"css", "type":"string", "desc":"an optional css class"}
+        ],
+        "methods":[
+            {"name":"val", "desc":"set or retrieve the current index"},
+            {"name":"panels", "desc":"get number of panels"},
+            {"name":"addNode", "desc":"add a panel and render an OML node in it"},
+            {"name":"removeNode", "desc":"remove an OML node and its panel"},
+            {"name":"showPanel", "desc":"show a panel given an index"},
+            {"name":"swapPanel", "desc":"swap positions between 2 panels"},
+            {"name":"removePanel", "desc":"remove panel given index, and OML node if any"},
+            {"name":"destroy", "desc":"destroy the component"}
+        ],
+        "events":[
+            {"name":"OGX.Carousel.READY", "desc":"when the component is ready"},
+            {"name":"OGX.Carousel.DRAG", "desc":"when the end user starts dragging"},
+            {"name":"OGX.Carousel.CHANGE", "desc":"when a new panel is shown"},
+            {"name":"OGX.Carousel.RESTORE", "desc":"when a drag didn't transform in a swipe"}
+        ]
+    } 
+}
