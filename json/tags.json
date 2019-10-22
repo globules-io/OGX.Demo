@@ -8,6 +8,7 @@
         "#instance:Tags":{          
             "editable":true,
             "insert":true,
+            "tags":["OGX.JS", "OML", "JavaScript", "Windows", "MacOS", "iOS", "Android", "ChromeOS", "desktop", "mobile", "framework", "CSS", "HTML"],
             "current_tags":["OGX.JS", "OML", "JavaScript"]
         }
     },

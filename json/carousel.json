@@ -15,9 +15,8 @@
                 {"default:Html":{
                     "html":"<span class=\"msg\">Anything can be rendered in Carousel's placeholders, just like any other object extending the placeholder class.<br>Each non visible node is blured while the visible one is focussed.</span>"
                 }},
-                {"default:Views.PopupStandard":{
-                    "mode":"Standard",
-                    "template":"Standard"
+                {"default:Views.Views":{
+                    "data":{"name":"View Demo"}                    
                 }},
                 {"default:Views.Overlay":{
                     "loading":true, "data":{"loading":true}
@@ -33,7 +32,9 @@
                         }}
                     ]
                 }},
-                {"default:Templates.Dummy":{}}
+                {"default:Templates.Lorem":{
+                    "scroll":true
+                }}
             ]
         }
     },

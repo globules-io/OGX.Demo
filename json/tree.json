@@ -1,0 +1,55 @@
+{
+    "title":"Tree",
+    "description":"Tree can render a tree of collapsable objects from either a JSON tree or a simple List via List.group",
+    "oml":{
+        "selector:Tree":"{CONFIG}"
+    },
+    "demoml":{
+        "#instance:Tree":{
+            "scroll":true,
+            "data:Data":"menu.json"
+        }
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"constant", "desc":"selector where to create this object"},
+            {"name":"show_root", "type":"boolean", "desc":"show or hide root node"},
+            {"name":"root_label", "type":"string", "desc":"label of the root node"},
+            {"name":"editable", "type":"boolean", "desc":"if the tree is editable"},
+            {"name":"sort", "type":"object", "desc":"a sort object"},
+            {"name":"toggle", "type":"boolean", "desc":"if tree items toggle on select"},
+            {"name":"drag_after", "type":"int", "desc":"time in ms after which an item becomes drag-able"},
+            {"name":"icon_size", "type":"int", "desc":"size of icons"},
+            {"name":"types", "type":"object", "desc":"the object defining the mode and icon per item"},
+            {"name":"data", "type":"object", "desc":"the data tree"}
+        ],
+        "methods":[
+            {"name":"setIconSize", "desc":"change icon size"},
+            {"name":"selectItemByPropVal", "desc":"select item given propery value pair"},
+            {"name":"selectItemByPath", "desc":"select item given its path"},
+            {"name":"updateSelectedItemDataProperty", "desc":"update the value of a property of the selected item"},
+            {"name":"updateSelectedItemData", "desc":"update the entire data object of the selected item"},
+            {"name":"updateSelectedItemLabel", "desc":"update the label of the selected item"},
+            {"name":"deleteItemByPath", "desc":"delete an item given its path"},
+            {"name":"deleteSelectedItem", "desc":"delete selected item"},
+            {"name":"getSelectedItem", "desc":"get selected item"},
+            {"name":"getTree", "desc":"retrieve the data tree"},
+            {"name":"setData", "desc":"set types and data tree"},
+            {"name":"setTypes", "desc":"set types object"},
+            {"name":"setTree", "desc":"set data tree"},
+            {"name":"newTree", "desc":"new data tree"},
+            {"name":"filterTree", "desc":"filter the tree"},
+            {"name":"destroy", "desc":"destroy the component"}
+
+        ],
+        "events":[
+            {"name":"OGX.Tree.SELECT", "desc":"when an item is selected"},
+            {"name":"OGX.Tree.UNSELECT", "desc":"when an item is unselected"},
+            {"name":"OGX.Tree.OPEN", "desc":"when an item has opened"},
+            {"name":"OGX.Tree.CLOSE", "desc":"when an item has closed"},
+            {"name":"OGX.Tree.DRAG", "desc":"when an item is being dragged"},
+            {"name":"OGX.Tree.DROP", "desc":"when an item is being drop"}
+        ]
+    } 
+}

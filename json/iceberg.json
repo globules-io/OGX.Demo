@@ -11,26 +11,26 @@
             "top":"200px",
             "bottom":"300px",
             "node:OML":[
-                {"top:Html":{
-                    "html":"<span class=\"msg\">Hidden Content</span>"
+                {"top:Views.Views":{
+                    "data":{"name":"Hidden Content (View Demo)"}                    
                 }},
-                {"left:Html":{
-                     "html":"<span class=\"msg\">Hidden Content</span>"
+                {"left:Views.Views":{
+                    "data":{"name":"Hidden Content (View Demo)"}   
                 }},
                 {"main:Html":{
-                     "html":"<span class=\"msg\">Main Content</span>"
+                    "html":"<span class=\"msg\">Main Content</span>"
                 }},
-                {"right:Html":{
-                     "html":"<span class=\"msg\">Hidden Content</span>"
+                {"right:Views.Views":{
+                    "data":{"name":"Hidden Content (View Demo)"}   
                 }},
-                {"bottom:Html":{
-                     "html":"<span class=\"msg\">Hidden Content</span>"
+                {"bottom:Views.Views":{
+                    "data":{"name":"Hidden Content (View Demo)"}   
                 }}
             ]
         }
     },
     "doc":{
-        "extends":["Uxi", "Touch"],
+        "extends":["Uxi", "Touch", "Placeholder"],
         "properties":[
             {"name":"container", "type":"string", "desc":"selector where to create this object"},
             {"name":"left", "type":"int", "desc":"the size of the left hidden panel"},

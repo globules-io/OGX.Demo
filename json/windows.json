@@ -1,0 +1,81 @@
+{
+    "title":"Windows",
+    "description":"The Window objects can be instanced into any Uxi node, and animated to appear from any side",
+    "oml":{        
+        "id:Window":"{CONFIG}"        
+    },
+    "demoml":{
+        "#instance:Views.Windows":{   
+            "template":"Quad",
+            "node:OML":{
+                "#item0:Ghost":{
+                    "node:OML":[
+                        {"winA:Window":{           
+                            "width":"100%",
+                            "height":"100%",
+                            "style":"OGX.Window.STYLE_BACK",
+                            "title":"Window A",
+                            "anim":"OGX.Window.ANIM_LEFT"
+                        }}
+                    ]
+                },
+                "#item1:Ghost":{
+                    "node:OML":[
+                        {"winB:Window":{           
+                            "width":"100%",
+                            "height":"100%",
+                            "style":"OGX.Window.STYLE_BACK",
+                            "title":"Window B",
+                            "anim":"OGX.Window.ANIM_RIGHT"
+                        }}
+                    ]
+                },
+                "#item2:Ghost":{
+                    "node:OML":[
+                        {"winC:Window":{           
+                            "width":"100%",
+                            "height":"100%",
+                            "style":"OGX.Window.STYLE_BACK",
+                            "title":"Window C",
+                            "anim":"OGX.Window.ANIM_TOP"
+                        }}
+                    ]
+                },
+                "#item3:Ghost":{
+                    "node:OML":[
+                        {"winD:Window":{           
+                            "width":"100%",
+                            "height":"100%",
+                            "style":"OGX.Window.STYLE_BACK",
+                            "title":"Window D",
+                            "anim":"OGX.Window.ANIM_BOTTOM"
+                        }}
+                    ]
+                }              
+            }
+        }        
+    },
+    "doc":{
+        "extends":["Uxi", "Placeholder", "Touch", "Resize"],
+        "properties":[
+            {"name":"anim", "type":"constant", "desc":"animation which also decides for the position"},
+            {"name":"resize", "type":"boolean", "desc":"if the window is resize-able"},
+            {"name":"drag", "type":"boolean", "desc":"if the window is dra-able"},
+            {"name":"show", "type":"boolean", "desc":"if the window should be shown upon creation"},
+            {"name":"width", "type":"string", "desc":"the width in % or px"},
+            {"name":"height", "type":"string", "desc":"the height in % or px"},
+            {"name":"head", "type":"constant", "desc":"if the window has a head, and what style"},
+            {"name":"icons", "type":"string", "desc":"if the window has touchable icons in the head"}
+        ],
+        "methods":[
+            {"name":"show", "desc":"show the window"},
+            {"name":"hide", "desc":"hide the window"}
+        ],
+        "events":[
+            {"name":"OGX.Window.CLOSING", "desc":"when the window starts closing"},
+            {"name":"OGX.Window.CLOSED", "desc":"when the window has closed"},
+            {"name":"OGX.Window.OPENING", "desc":"when the window starts opening"},
+            {"name":"OGX.Window.OPEN", "desc":"when the window has opened"}
+        ]
+    } 
+}
