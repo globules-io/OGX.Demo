@@ -152,7 +152,12 @@
         "label":"Trees",
         "icon":"icon_trees",
         "scope":["public"],
-        "items":[            
+        "items":[    
+            {
+                "label":"RouletteTree", 
+                "initials":"RT", 
+                "scope":["public"]       
+            },       
             {
                 "label":"StackedTree", 
                 "initials":"ST", 

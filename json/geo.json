@@ -1,0 +1,30 @@
+{
+    "canada":{
+        "ontario":{
+            "toronto":true,
+            "waterloo":true
+        },
+        "quebec":{
+            "quebec":true,
+            "montreal":true
+        },
+        "alberta":{
+            "edmonton":true,
+            "calgary":true
+        }
+    },
+    "usa":{
+        "california":{
+            "san francisco":true,
+            "san diego":true
+        },
+        "vermont":{
+            "burlington":true,
+            "montpelier":true
+        },
+        "texas":{
+            "dallas":true,
+            "san antonio":true            
+        }
+    }
+}
