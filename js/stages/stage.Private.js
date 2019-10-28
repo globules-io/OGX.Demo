@@ -6,9 +6,9 @@ OGX.Stages.Private = function(){
     //Override
 	this.ux = function(__bool){
         if(__bool){
-			$(document).on(this.touch.down, '.icon, .tab, .bt, .snd, .ogx_window_icon, .ogx_window_main_icon', playClick);  
+			$(document).on(this.touch.down, '.icon, .tab, .bt, .snd', playClick);  
         }else{     
-			$(document).off(this.touch.down, '.icon, .tab, .bt, .snd, .ogx_window_icon, .ogx_window_main_icon', playClick);  
+			$(document).off(this.touch.down, '.icon, .tab, .bt, .snd', playClick);  
         }
 	};   
 
