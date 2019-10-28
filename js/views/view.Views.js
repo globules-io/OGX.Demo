@@ -8,6 +8,7 @@ OGX.Views.Views = function(__config){
 	var that = this;  
     var intv = false; 
     var balls = [];
+    var sw, sh;
 
     //@Override
 	this.construct = function(){            
@@ -75,8 +76,7 @@ OGX.Views.Views = function(__config){
                                     balls[i].friction += 0.001;
                                     balls[i].el.css({'width':balls[i].radius*2+'px', 'height':balls[i].radius*2+'px', 'border-radius':balls[i].radius+'px'});
                                     balls[j].el.remove();
-                                    balls[j] = false;        
-                                    //OGX.Audio.playSound('drop.mp3', 0.3);                                                                      
+                                    balls[j] = false;                                            
                                 }                                         
                             }
                         }
@@ -86,8 +86,8 @@ OGX.Views.Views = function(__config){
                 if(balls[i].x + balls[i].radius*2 >= sw || balls[i].x <= 0){
                     balls[i].dirX *= -1;   
                     balls[i].x += balls[i].dirX*balls[i].speed;    
-                }
-                if(balls[i].y + balls[i].radius*2 >= sh || balls[i].y <= 0){
+                }                
+                if(balls[i].y + balls[i].radius*2 >= sh || balls[i].y <= 0){                   
                     balls[i].dirY *= -1;
                     balls[i].y += balls[i].dirY*balls[i].speed;   
                 }
