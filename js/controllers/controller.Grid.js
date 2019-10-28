@@ -15,6 +15,7 @@ OGX.Controllers.Grid = function(__data){
     };
 
     function displayPoint(__abs, __rel){
-        return '<span class="msg">Relative Point: '+JSON.stringify(__rel)+'<br>Absolute Point: '+JSON.stringify(__abs)+'</span>';
+        var color = [50+Math.round(Math.random()*100), 50+Math.round(Math.random()*100), 50+Math.round(Math.random()*100)];
+        return '<div style="display:block; width:100%; height:100%; background-color:rgb('+color.join(',') +'")><span class="msg">Relative Point: '+JSON.stringify(__rel)+'<br>Absolute Point: '+JSON.stringify(__abs)+'</span></div>';
     }
 };
