@@ -17,7 +17,6 @@ OGX.Controllers.Menu = function(){
                 stage.addOverlay({anim:OGX.Overlay.FADE, close_on_click:false});  
                 win.show();
             });
-            //problem here, theater should only be showed after window has fully closed
             win.el.on(OGX.StackedTree.SELECT, function(__e, __data){  
                 __e.stopImmediatePropagation();   
                 //stop listening to window closing (from swipe or window icon)
