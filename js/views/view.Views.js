@@ -7,25 +7,35 @@ OGX.Views.Views = function(__config){
 	'use strict';
 	var that = this;  
     var intv = false; 
+    var done  = false;
     var balls = [];
-    var sw, sh;
+    var msg, sw, sh;
+    //name of the view coming from config
+    if(__config.hasOwnProperty('data') && __config.data.hasOwnProperty('name')){
+        msg = __config.data.name;
+    }
 
-    //@Override
-	this.construct = function(){            
+    //@Override - __data passed if coming from GridSwiper : points
+	this.construct = function(__points){   
+        if(typeof(__points) !== 'undefined'){
+            msg = 'Relative Point:'+JSON.stringify(__points.rel)+'<br>Absolute Point:'+JSON.stringify(__points.abs);    
+        }
+        //run resize at start to set sw, sh
         this.resize();  
+        //gen some balls!
         genBalls();           
 	};
     
     //@Override
 	this.enable = function(){
-        if(!intv){
+        if(!intv && !done){
             intv = requestAnimationFrame(onTick);            
         }
 	};
 	
     //@Override
 	this.disable = function(){
-        if(intv){
+        if(intv && !done){
            cancelAnimationFrame(intv);
            intv = false;
         }	
@@ -55,7 +65,8 @@ OGX.Views.Views = function(__config){
 	}; 	
   
     function onTick(){
-        var dist;        
+        var dist; 
+        var spd = 0;       
         for(var i = 0; i < balls.length; i++){    
             if(balls[i]){ 
                 balls[i].speed *= 1-balls[i].friction;
@@ -81,26 +92,34 @@ OGX.Views.Views = function(__config){
                             }
                         }
                     }
-                }
+                }               
                 //check screen bounds
-                if(balls[i].x + balls[i].radius*2 >= sw || balls[i].x <= 0){
-                    balls[i].dirX *= -1;   
-                    balls[i].x += balls[i].dirX*balls[i].speed;    
-                }                
-                if(balls[i].y + balls[i].radius*2 >= sh || balls[i].y <= 0){                   
-                    balls[i].dirY *= -1;
-                    balls[i].y += balls[i].dirY*balls[i].speed;   
+                if(balls[i].speed){
+                    balls[i].speed > spd ? spd = balls[i].speed : null;
+                    if(balls[i].x + balls[i].radius*2 >= sw || balls[i].x <= 0){
+                        balls[i].dirX *= -1;   
+                        balls[i].x += balls[i].dirX*balls[i].speed;    
+                    }                
+                    if(balls[i].y + balls[i].radius*2 >= sh || balls[i].y <= 0){                   
+                        balls[i].dirY *= -1;
+                        balls[i].y += balls[i].dirY*balls[i].speed;   
+                    }
+                    balls[i].el.css('transform', 'translate3d('+balls[i].x+'px, '+balls[i].y+'px, 0)');   
                 }
-                balls[i].el.css('transform', 'translate3d('+balls[i].x+'px, '+balls[i].y+'px, 0)');   
-            }              
+            }                         
         }
-        intv = requestAnimationFrame(onTick);
+        //stop running if there's nothing moving anymore
+        if(spd > 0.1){
+            intv = requestAnimationFrame(onTick);
+        }else{
+            done = true;
+        }
     }
 
     function genBalls(){
         var total = 3+Math.round(Math.random()*30);
-        var x, y, dirX, dirY, radius, rgb;
-        var html = '<span class="msg" style="position:absolute;">'+__config.data.name+'</span>';
+        var x, y, dirX, dirY, radius, rgb; 
+        var html = '<span class="msg" style="position:absolute;">'+msg+'</span>';
         for(var i = 0; i < total; i++){
             dirX = 0.1+Math.random()*0.9;
             dirY = 0.1+Math.random()*0.9;       
