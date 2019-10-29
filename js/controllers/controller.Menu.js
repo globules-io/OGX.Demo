@@ -17,24 +17,13 @@ OGX.Controllers.Menu = function(){
                 stage.addOverlay({anim:OGX.Overlay.FADE, close_on_click:false});  
                 win.show();
             });
+            //problem here, theater should only be showed after window has fully closed
             win.el.on(OGX.StackedTree.SELECT, function(__e, __data){  
                 __e.stopImmediatePropagation();   
+                //stop listening to window closing (from swipe or window icon)
                 win.el.off(OGX.Window.CLOSING, onClosing);
-                win.hide();
-                setTimeout(function(){
-                    if(__data.hasOwnProperty('theater')){
-                        stage.removeOverlay(false);
-                        app.theater.show();
-                    }else{                  
-                        var url = 'private/object/'+__data.label.toLowerCase();
-                        if(stage.url !== url){
-                            app.goto(url);                           
-                        }else{
-                            stage.removeOverlay();
-                        }   
-                        win.el.on(OGX.Window.CLOSING, onClosing);         
-                    }  
-                }, 30);        
+                //hide the window then show the theater, pass data and window
+                win.hide(null, onClosed, {data:__data, win:win});
             });
             win.el.on(OGX.Window.CLOSING, onClosing);
         }else{
@@ -47,5 +36,20 @@ OGX.Controllers.Menu = function(){
     function onClosing(){
        stage.removeOverlay();
     }
-     
+
+    //if it's a theater link, show theater, otherwise to go url if different
+    function onClosed(__obj){
+        if(__obj.data.hasOwnProperty('theater')){
+            stage.removeOverlay(false);
+            app.theater.show();
+        }else{                  
+            var url = 'private/object/'+__obj.data.label.toLowerCase();
+            if(stage.url !== url){
+                app.goto(url);                           
+            }else{
+                stage.removeOverlay();
+            }   
+            __obj.win.el.on(OGX.Window.CLOSING, onClosing);         
+        }  
+    }     
 };
