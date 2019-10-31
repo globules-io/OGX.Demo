@@ -1,0 +1,16 @@
+@font-face {
+    font-family:RBlight;
+    src:url('../../fonts/roboto/Roboto-Light.ttf');
+}
+@font-face {
+    font-family:RBreg;
+    src:url('../../fonts/roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family:RBsemi;
+    src:url('../../fonts/roboto/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family:RBbold;
+    src:url('../../fonts/roboto/Roboto-Bold.ttf');
+}

@@ -1,0 +1,34 @@
+.ogx_iceberg_view{
+    border-right:1px solid #444;
+}
+.ogx_iceberg_view:last-of-type{
+    border-right:none;
+}
+.popup_message{
+    display:block;
+    padding:20px 20px 0px 20px;
+    font-family:RBreg;
+    font-size:16px;
+    text-align:center;
+}
+.popup_message_center{
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;   
+    text-align:center;
+    font-family:RBreg;
+    font-size:16px;
+    top:calc(50% - 8px);
+    padding:0px 10px 0px 10px;
+}
+.popup_message_dialogs{
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;   
+    text-align:center;
+    font-family:RBreg;
+    font-size:16px;   
+    padding:20px;
+}
