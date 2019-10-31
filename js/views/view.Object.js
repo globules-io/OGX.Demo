@@ -2,10 +2,10 @@ require('Views.Object', 'View');
 OGX.Views.Object = function(__config){
     construct(this, 'Views.Object');
 	'use strict';
-    var that = this;
-    var config = __config;
-    var popup = false;
-    var oml;
+    let that = this;
+    let config = __config;
+    let popup = false;
+    let oml;
 
     this.construct = function(__data, __route_data){
         //demo
