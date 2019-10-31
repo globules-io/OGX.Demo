@@ -22,6 +22,7 @@ OGX.Views.PopupAdvanced = function(__config){
         OGX.Audio.playSound('click.mp3', 0.1);
     };  
     
+    //@Override   
     this.destroy = function(){
         $('#instance').css('background-color', 'unset');
     }; 
