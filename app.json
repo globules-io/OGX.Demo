@@ -100,7 +100,7 @@
                     "id":"chat",
                     "key":"_id"
                 },
-                "chatController:Controllers.Chat":{"views":[]}    
+                "chatController:Controllers.Chat":{}    
             },           
             "sketch/draw":{  
                 "#basic:Views.Sketch":{
