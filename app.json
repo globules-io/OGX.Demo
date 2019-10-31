@@ -1,0 +1,210 @@
+{
+    "routing":{ 
+        "routes":{
+            "public/home":{                
+                "#main_public:Templates.Home":{  
+                    "node:OML":{
+                        "#home > .carousel:Carousel":{
+                            "id":"carousel",
+                            "dots":{"position":"top"},    
+                            "node:OML":[
+                                {"default:Views.Login":{
+                                    "id":"#login", "template":"Login", "scroll":false, "observe":false
+                                }},
+                                {"default:Views.Register":{
+                                    "id":"#register", "template":"Register", "scroll":false, "observe":false
+                                }}
+                            ]                       
+                        } 
+                    }                                
+                },
+                "ctrl:Controllers.Home":{},    
+                "scope":["public"]
+            },         
+            "private/main":{  
+                "#main_private:Templates.Welcome":{},
+                "winmenu:Window":{
+                    "head":"OGX.Window.HEAD_BACK", 
+                    "anim":"OGX.Window.ANIM_LEFT", 
+                    "width":"60%", 
+                    "min_width":200,
+                    "height":"100%", 
+                    "show":false, 
+                    "drag":true, 
+                    "resize":true, 
+                    "close_on_click_out":true,  
+                    "node:OML":[
+                        {"default:StackedTree":{
+                            "id":"#menu_tree", 
+                            "display":{
+                                "template":"MenuItem"                                          
+                            },
+                            "list:Data":"menu.json"
+                        }}                            
+                    ]                     
+                },
+                "ctrl:Controllers.Menu":{},
+                "scope":["public"]                 
+            },  
+            "private/object/([a-zA-Z]+)":{
+                "#main_private:Point":{
+                    "id":"#point",
+                    "live":["object", "#doc"],
+                    "0:479":{  
+                        "winobj:Window":{
+                            "title:Route.Data":"{{$object}}",  
+                            "width":"100%",
+                            "height":"100%",
+                            "anim":"OGX.Window.ANIM_RIGHT",
+                            "node:OML":[
+                                {"default:Templates.Doc":{
+                                    "id":"#doc",                                      
+                                    "scroll":true,     
+                                    "data:Route.Data":"{{$object}}.json"
+                                }}
+                            ]
+                        },                         
+                        "default:Views.Object":{
+                            "id":"object",
+                            "template":"Object", 
+                            "data:Route.Data":"{{$object}}.json"
+                        }                                              
+                    },
+                    "480:5000":{
+                        "default:Templates.Split":{
+                            "node:OML":[
+                                { 
+                                    "#point > .split > .right:Templates.Doc":{
+                                        "id":"#doc",
+                                        "scroll":true,
+                                        "data:Route.Data":"{{$object}}.json"
+                                    }
+                                },
+                                {
+                                    "#point > .split > .left:Views.Object":{
+                                        "id":"object",
+                                        "template":"Object",
+                                        "data:Route.Data":"{{$object}}.json"
+                                    }   
+                                }                             
+                            ]
+                        }
+                    }
+                },                               
+                "data:Route":["object"],
+                "origin:Route":"private/main",
+                "scope":["private"]   
+            },            
+            "messenger/chat":{  
+                ".chat:Chat":{
+                    "id":"chat",
+                    "key":"_id"
+                },
+                "chatController:Controllers.Chat":{"views":[]}    
+            },           
+            "sketch/draw":{  
+                "#basic:Views.Sketch":{
+                    "id":"draw",                     
+                    "template":"Sketch",
+                    "observe":true,
+                    "node:OML":{
+                        "#sketch .controls:DynamicList":{
+                            "id":"controls", "key":"id", "scroll":false, "reorder":false, "mode":"hit", "list:Data":"controls.json", "display":{"html":"<span class=\"icon\"></span>", "css":{"bind":"id", "add":"control"}}                           
+                        },
+                        "#sketch .colors:DynamicList":{
+                            "id":"colors", "key":"color", "scroll":true, "reorder":false, "list:Data":"colors.json", "display":{"html":"<span class=\"icon\" style=\"background-color:{{$color}};\"></span>", "css":"color"}                           
+                        },
+                        "#sketch .brushes:DynamicList":{
+                            "id":"brushes", "key":"size", "scroll":true, "reorder":false, "list:Data":"brushes.json", "display":{"template":"Brush", "css":"brush"}
+                        }                 
+                    }
+                }                
+            }
+        },
+        "options":{
+            "history":true,
+            "bookmarkable":false      
+        }
+    },
+    "vapps":{
+        "public:Stages.Public":{"template":"Public", "observe":false, "closeable":false, "use":true, "home":"home", "scope":["public"], "theater":false},
+        "private:Stages.Private":{"template":"Private", "observe":false, "closeable":false, "home":"main", "scope":["public"], "theater":{"icon":"ogx_logo.svg", "label":"Demo"}},
+        "messenger:Stages.Messenger":{"template":"Chat", "observe":false, "closeable":true, "home":"chat", "scope":["public"], "theater":{"icon":"messenger.svg", "label":"Messenger"}},
+        "sketch:Stages.Sketch":{"template":"Basic", "observe":false, "closeable":true, "home":"draw", "scope":["public"], "theater":{"icon":"sketch.svg", "label":"Sketch"}}
+    },
+    "templates":{
+        "path":"html/templates/",
+        "files":{ 
+            "Ad":"template.Ad.html",
+            "Basic":"template.Basic.html",
+            "Brush":"template.Brush.html",
+            "Chat":"template.Chat.html", 
+            "Dummy":"template.Dummy.html",  
+            "Doc":"template.Doc.html",     
+            "Filters":"template.Filters.html",               
+            "Home":"template.Home.html",            
+            "Login":"template.Login.html",  
+            "Lorem":"template.Lorem.html",            
+            "Menu":"template.Menu.html", 
+            "MenuItem":"template.MenuItem.html", 
+            "Method":"template.Method.html",            
+            "News":"template.News.html",
+            "Object":"template.Object.html", 
+            "Overlay":"template.Overlay.html",  
+            "Quad":"template.Quad.html",
+            "Register":"template.Register.html",  
+            "Roulette":"template.Roulette.html",  
+            "Scroller":"template.Scroller.html",  
+            "Standard":"template.Standard.html",      
+            "Post":"template.Post.html",       
+            "Public":"template.Public.html",
+            "Private":"template.Private.html",
+            "Profile":"template.Profile.html",
+            "Sketch":"template.Sketch.html",
+            "Split":"template.Split.html", 
+            "Switches":"template.Switches.html", 
+            "User":"template.User.html",
+            "Welcome":"template.Welcome.html"           
+        }
+    }, 
+    "preload":{
+        "images":{
+            "path":"img/",
+            "files":["calendar.svg", "clear.svg", "code.svg", "dialogs.svg", "help.svg", "lists.svg", "loaders.svg", "loop.svg", "menu.svg", "messenger.svg", "ogx_logo.svg", "oml.svg", "overlay.svg", "overlays.svg", "popup.svg", "popups.svg", "routing.svg",
+"save.svg", "scrollers.svg", "settings.svg", "sketch.svg", "storage.svg", "subapps.svg", "swipers.svg", "switches.svg", "tabs.svg", "tags.svg", "theater.jpg", "trees.svg", "views.svg", "welcome.png", "windows.svg"]
+        },
+        "sounds":{
+            "path":"snd/",
+            "files":["click.mp3"]
+        },
+        "json":{
+            "path":"json/",
+            "files":["_calendar.json", "_popup.json", "advanced.json", "brushes.json", "carousel.json", "colors.json", "container.json", "controls.json", "dialogs.json", "dynamiclist.json", "feed.json", "geo.json", "gridswiper.json", "groupedlist.json", "iceberg.json", "list.json", "loading.json", "menu.json", "multi.json", "nestlist.json", "overlay.json", "roulette.json", "roulettetree.json", "scroller.json", "simple.json", "stackedtree.json", "standard.json", "switch.json", "tabs.json", "tags.json", "tree.json", "treedlist.json", "users.json", "views.json", "windows.json"]
+        },
+        "fonts":[]
+    },
+    "popups":{
+        "width":300,
+        "height":400,
+        "anim":"OGX.Popup.ANIM_FADE",
+        "overlay":true,
+        "listen_overlay":false
+    },
+    "overlays":{
+        "anim":"OGX.Overlay.ANIM_FADE"
+    },
+    "windows":{
+        "head":"OGX.Window.HEAD_BACK",
+        "width":"100%",
+        "icons":["img/ogx_logo.svg"],
+        "fade":false,
+        "scroll":false,
+        "blured":true,
+        "show":false
+    },
+    "theater":{
+        "icon_size":50,
+        "timeout":30
+    },
+    "scope":["public"]    
+}
