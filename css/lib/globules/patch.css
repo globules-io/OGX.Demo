@@ -1,0 +1,18 @@
+/*
+Webview Patch : Only patching here proper css not supported on WebView (main issues with FlexBox vs Browser)
+*/
+.ogx_stacked_tree_level_list{
+    position:relative;
+}
+.ogx_stacked_tree_level_list > .ogx_scroller_outer{
+    position:absolute;
+}
+.ogx_window_body > .ogx_scroller_outer{
+    position:absolute;
+}
+.ogx_calendar > .ogx_calendar_body{
+    position:relative;
+}
+.ogx_calendar > .ogx_calendar_body > .ogx_grid_swiper{
+    position:absolute;
+}
