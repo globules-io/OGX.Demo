@@ -2,7 +2,7 @@ require('Controllers.Menu', 'Controller');
 OGX.Controllers.Menu = function(){
     construct(this, 'Controllers.Menu');
     'use strict';
-    var stage, win;
+    let stage, win;
 
     //@Override
     this.construct = function(){
@@ -42,7 +42,7 @@ OGX.Controllers.Menu = function(){
             stage.removeOverlay(false);
             app.theater.show();
         }else{                  
-            var url = 'private/object/'+__obj.data.label.toLowerCase();
+            let url = 'private/object/'+__obj.data.label.toLowerCase();
             if(stage.url !== url){
                 app.goto(url);                           
             }else{

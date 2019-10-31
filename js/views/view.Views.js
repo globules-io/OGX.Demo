@@ -5,11 +5,11 @@ require('Views.Views', 'View');
 OGX.Views.Views = function(__config){
     construct(this, 'Views.Views');
 	'use strict';
-	var that = this;  
-    var intv = false; 
-    var done  = false;
-    var balls = [];
-    var msg, sw, sh;
+	let that = this;  
+    let intv = false; 
+    let done  = false;
+    let balls = [];
+    let msg, sw, sh;
     //name of the view coming from config
     if(__config.hasOwnProperty('data') && __config.data.hasOwnProperty('name')){
         msg = __config.data.name;
@@ -46,7 +46,7 @@ OGX.Views.Views = function(__config){
         sw = this.el.width();
         sh = this.el.height();
         //put balls outside the view back inside
-        for(var i = 0; i < balls.length; i++){      
+        for(let i = 0; i < balls.length; i++){      
             if(balls[i].x + balls[i].radius*2 >= sw){
                 balls[i].x = sw-balls[i].radius*2-balls[i].speed;
             }else{
@@ -65,9 +65,9 @@ OGX.Views.Views = function(__config){
 	}; 	
   
     function onTick(){
-        var dist; 
-        var spd = 0;       
-        for(var i = 0; i < balls.length; i++){    
+        let dist; 
+        let spd = 0;       
+        for(let i = 0; i < balls.length; i++){    
             if(balls[i]){ 
                 balls[i].speed *= 1-balls[i].friction;
                 balls[i].speed < 0 ? balls[i].speed = 0 : null;
@@ -75,7 +75,7 @@ OGX.Views.Views = function(__config){
                 balls[i].y += balls[i].dirY*balls[i].speed;
                 //check other balls
                 //the bigger one wins
-                for(var j = 0; j < balls.length; j++){
+                for(let j = 0; j < balls.length; j++){
                     if(balls[j]){
                         if(i !== j){
                             //just compare distance center to center
@@ -117,10 +117,10 @@ OGX.Views.Views = function(__config){
     }
 
     function genBalls(){
-        var total = 3+Math.round(Math.random()*30);
-        var x, y, dirX, dirY, radius, rgb; 
-        var html = '<span class="msg" style="position:absolute;">'+msg+'</span>';
-        for(var i = 0; i < total; i++){
+        let total = 3+Math.round(Math.random()*30);
+        let x, y, dirX, dirY, radius, rgb; 
+        let html = '<span class="msg" style="position:absolute;">'+msg+'</span>';
+        for(let i = 0; i < total; i++){
             dirX = 0.1+Math.random()*0.9;
             dirY = 0.1+Math.random()*0.9;       
             Math.random() > 0.5 ? dirX *= -1 : null;
