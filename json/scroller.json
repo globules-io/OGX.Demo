@@ -29,6 +29,7 @@
         "methods":[
             {"name":"resize", "desc":"resize/redraw the component"},
             {"name":"top", "desc":"scroll to top"},
+            {"name":"bottom", "desc":"scroll to bottom"},
             {"name":"inner", "desc":"return the inner element"},
             {"name":"state", "desc":"return the state of the component"},
             {"name":"mute", "desc":"prevent triggering events"},

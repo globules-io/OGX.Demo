@@ -1,0 +1,55 @@
+{
+    "title":"List",
+    "description":"List is an editale, filterable and searchable super Array, inspired by MongoDB, here demo'd via DynamicList.",
+    "oml":false,
+    "demoml":{        
+        "#instance:Html":{ 
+            "html":"<div class=\"list\"></div>",
+            "node:OML":{
+                "#instance > .list:DynamicList":{ 
+                    "id":"users",
+                    "scroll":true, 
+                    "swipe":true,
+                    "mode":"hit",
+                    "display":{"template":"User", "css":"user"}, 
+                    "key":"_id",
+                    "list:Data":"users.json"
+                }
+            }
+        },
+        "ctrl:Controllers.List":{
+            "data:Data":{"list":"DynamicList", "id":"users"}
+        }
+    },
+    "doc":{
+        "extends":[],
+        "properties":[],
+        "methods":[
+            {"name":"insert", "desc":"insert item at index"},
+            {"name":"delete", "desc":"delete item at index"},
+            {"name":"last", "desc":"return last item"},
+            {"name":"findDelete", "desc":"find and delete item given prop/val pair to match"},
+            {"name":"findReplace", "desc":"find and replace item given prop/val pair to match"},
+            {"name":"findUpdate", "desc":"find and update item given prop/val pair to match"},
+            {"name":"findIndex", "desc":"find index of item given prop/val pair to match"},
+            {"name":"find", "desc":"find item given prop/val pair to match"},
+            {"name":"swap", "desc":"swap two index given their index"},
+            {"name":"cache", "desc":"cache list given a property as index"},
+            {"name":"uncache", "desc":"uncache list given a property as index"},
+            {"name":"read", "desc":"read from cache given index prop/value pair to match"},
+            {"name":"clear", "desc":"clear array, cache and filters"},
+            {"name":"group", "desc":"group array given a property"},
+            {"name":"groupm", "desc":"group array given list of properties"},
+            {"name":"addFilter", "desc":"add a fitler"},
+            {"name":"removeFilter", "desc":"remove a filter"},
+            {"name":"getFilters", "desc":"get filters"},
+            {"name":"resetFilters", "desc":"remove all filters"},
+            {"name":"setFilters", "desc":"set filters"},
+            {"name":"setFilteringMode", "desc":"set filtering mode"},
+            {"name":"filter", "desc":"filter the array"},
+            {"name":"get", "desc":"query the array"}
+        ],
+        "events":[]
+    },
+    "option":true    
+}

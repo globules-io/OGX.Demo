@@ -1,0 +1,16 @@
+{
+    "title":"Popup (advanced)",
+    "description":"Popup can also be drag-able and resize-able.",
+    "mode":"advanced",
+    "oml":{
+        "id:Popup":{
+            "resize":true, "drag":true
+        }
+    },
+    "demoml":{   
+        "#instance:Views.PopupAdvanced":{    
+            "mode":"advanced"      
+        }
+    },
+    "doc:JSON":"_popup.json"
+}

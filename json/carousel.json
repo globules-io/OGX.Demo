@@ -4,7 +4,7 @@
     "oml":{
         "selector:Carousel":{     
             "node:OML":[
-                {"default:[Class of Object]":{}}
+                {"default:[Class of Object]":"{CONFIG}"}
             ]
         }
     },
@@ -13,22 +13,39 @@
             "dots":true,   
             "node:OML":[
                 {"default:Html":{
-                    "html":"<span class=\"msg\">Anything can be rendered in Carousel's placeholders, just like any other object extending the placeholder class.<br>Each non visible node is blured while the visible one is focussed.</span>"
+                    "html":"<span class=\"msg msg_large\">Anything can be rendered in Carousel's placeholders, just like any other object extending the placeholder class.<br>Each non visible node is blured while the visible one is focussed.</span>"
                 }},
                 {"default:Views.Views":{
                     "data":{"name":"View Demo"}                    
-                }},
-                {"default:Views.Overlay":{
-                    "loading":true, "data":{"loading":true}
-                }},                
+                }},                       
+                {"default:Templates.Overlay":{
+                        "node:OML":{
+                            "#overlay0:Views.Overlay":{
+                                "loading":true, "data":{"loading":true}
+                            },
+                            "#overlay1:Views.Overlay":{
+                                "loading":true, "data":{"loading":true}
+                            },
+                            "#overlay2:Views.Overlay":{
+                                "loading":true, "data":{"loading":true}
+                            },
+                            "#overlay3:Views.Overlay":{
+                                "loading":true, "data":{"loading":true}
+                            },
+                            "#overlay4:Views.Overlay":{
+                                "loading":true, "data":{"loading":true}
+                            }
+                        }
+                    }
+                },        
                 {"default:Iceberg":{
                     "bottom":200,
                     "node:OML":[
                         {"main:Html":{
-                            "html":"<span class=\"msg\">Here is an Icebreg with content hidden at the bottom.</span>"
+                            "html":"<span class=\"msg msg_large\">Here is an Icebreg with content hidden at the bottom.</span>"
                         }},
                         {"bottom:Html":{
-                            "html":"<span class=\"msg\">Hidden content!</span>"
+                            "html":"<span class=\"msg msg_large\">Hidden content!</span>"
                         }}
                     ]
                 }},

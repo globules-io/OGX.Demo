@@ -28,6 +28,6 @@
             {"name":"val", "desc":"set or retrieve the current value"},
             {"name":"toggle", "desc":"toggle the switch"}
         ],
-        "events":[{"name":"OGX.Switch.TOGGLE", "desc":"when the switch toggles"}]
+        "events":[{"name":"OGX.Switch.CHANGE", "desc":"when the switch toggles"}]
     } 
 }

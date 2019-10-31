@@ -9,6 +9,7 @@
             "template":"Quad",
             "node:OML":{
                 "#item0:Ghost":{
+                    "css":"ghostwin",
                     "node:OML":[
                         {"winA:Window":{           
                             "width":"100%",
@@ -20,6 +21,7 @@
                     ]
                 },
                 "#item1:Ghost":{
+                    "css":"ghostwin",
                     "node:OML":[
                         {"winB:Window":{           
                             "width":"100%",
@@ -31,6 +33,7 @@
                     ]
                 },
                 "#item2:Ghost":{
+                    "css":"ghostwin",
                     "node:OML":[
                         {"winC:Window":{           
                             "width":"100%",
@@ -42,6 +45,7 @@
                     ]
                 },
                 "#item3:Ghost":{
+                    "css":"ghostwin",
                     "node:OML":[
                         {"winD:Window":{           
                             "width":"100%",

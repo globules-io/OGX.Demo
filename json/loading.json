@@ -1,0 +1,40 @@
+{
+    "title":"Loading",
+    "description":"Any Template or View, and any other object extending the Uxi class can display a loading overlay.",
+    "oml":{
+        "selector:[Class or Object]":{
+            "loading":true
+        }
+    },
+    "demoml":{
+        "#instance:Templates.Overlay":{
+            "node:OML":{
+                "#overlay0:Views.Overlay":{
+                    "loading":true, "data":{"loading":true}
+                },
+                "#overlay1:Views.Overlay":{
+                    "loading":true, "data":{"loading":true}
+                },
+                "#overlay2:Views.Overlay":{
+                    "loading":true, "data":{"loading":true}
+                },
+                "#overlay3:Views.Overlay":{
+                    "loading":true, "data":{"loading":true}
+                },
+                "#overlay4:Views.Overlay":{
+                    "loading":true, "data":{"loading":true}
+                }
+            }
+        }
+    },
+    "doc":{
+        "extends":["Uxi", "Overlay"],
+        "properties":[],
+        "methods":[
+            {"name":"hasLoading", "desc":"check if the Uxi already has a loading overlay"},
+            {"name":"addLoading", "desc":"add Loading overlay to Uxi"},
+            {"name":"removeLoading", "desc":"remove Loading overlay from Uxi"}           
+        ],
+        "events":[]
+    }
+}

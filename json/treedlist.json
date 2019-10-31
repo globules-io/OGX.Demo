@@ -1,0 +1,37 @@
+{
+    "title":"TreedList",
+    "description":"A proxy object to convert an array of objects to a tree by grouping it.",
+    "oml":{        
+        "selector:TreedList":"{CONFIG}"        
+    },
+    "demoml":{
+        "#instance:TreedList":{  
+            "id":"#treed",
+            "list:Data":"users.json",
+            "renderer":"StackedTree",
+            "group_by":["gender", "state"],
+            "display":{"template":"User", "css":"user"},
+            "mode":"hit"
+        }, 
+        "ctrl:Controllers.List":{
+            "data:Data":{"list":"StackedTree", "id":"#treed_stacked"}
+        }                       
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"constant", "desc":"selector where to create this object"},
+            {"name":"list", "type":"array", "desc":"a list of objects"},
+            {"name":"display", "type":"OGX.Display", "desc":"a display used to render the items"}
+        ],
+        "methods":[
+            {"name":"setTree", "desc":"set a data tree"},
+            {"name":"destroy", "desc":"destroy the component"}
+        ],
+        "events":[
+            {"name":"OGX.StackedTree.BACK", "desc":"when the user navigates back"},
+            {"name":"OGX.StackedTree.ENTER", "desc":"when the user enter a node of the tree"},
+            {"name":"OGX.StackedTree.SELECT", "desc":"when the user selects an item"}
+        ]
+    } 
+}

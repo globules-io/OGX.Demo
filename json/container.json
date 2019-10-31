@@ -1,0 +1,60 @@
+{
+    "title":"Popup (container)",
+    "description":"Popup can also be used with a Container to display any OML tree.",
+    "oml":{
+        "id:Popup":{
+            "node:OML":[
+                {"default:Container":{
+                    "tabs":true,
+                    "node:OML":[
+                        {"default:[Class of Object]":"{CONFIG}"}
+                    ]
+                }}
+            ]
+        }
+    },
+    "demoml":{
+        "#instance:Views.PopupAdvanced":{        
+            "mode":"container",
+            "node:OML":[
+                {"container:Popup":{
+                    "title":"Popup with Container",
+                    "width":"90%",
+                    "height":"90%",
+                    "drag":true, 
+                    "resize":true,
+                    "show":true,
+                    "node:OML":[
+                        {"default:Container":{
+                            "tabs":{"list":[{"label":"View A"}, {"label":"View B"}, {"label":"View C"}, {"label":"View D"}, {"label":"View E"}]},
+                            "node:OML":[
+                                {"default:Views.Views":{"data":{"name":"View Demo A"}}},
+                                {"default:Views.Views":{"data":{"name":"View Demo B"}}},
+                                {"default:Views.Views":{"data":{"name":"View Demo C"}}},
+                                {"default:Views.Views":{"data":{"name":"View Demo D"}}},
+                                {"default:Views.Views":{"data":{"name":"View Demo E"}}}
+                            ]
+                        }}
+                    ]
+                }}
+            ]
+        }        
+    },
+    "doc":{
+        "extends":["Uxi"],
+        "properties":[
+            {"name":"tabs", "type":"object|boolean", "desc":"Tabs config object, defaults to false"},           
+            {"name":"enabled", "type":"boolean", "desc":"force enabled/disabled state"},
+            {"name":"reorder", "type":"boolean", "desc":"if tabs can be reordered"},
+            {"name":"anim", "type":"boolean", "desc":"if switching panels is animated, defaults to true"},
+            {"name":"drag", "type":"boolean", "desc":"if the use can switch panels by dragging, defaults to true"},
+            {"name":"flatten", "type":"int|boolean", "desc":"an optional width at which the container flattens, default to false"},
+            {"name":"current", "type":"int", "desc":"optional, the index to show at start"},
+            {"name":"dots", "type":"boolean", "desc":"optional, if Carousel should display dots"}
+        ],
+        "methods":[
+            {"name":"showIndex", "desc":"show nth panel"}            
+        ],
+        "events":[]
+    } 
+}

@@ -1,0 +1,31 @@
+{
+    "title":"StackedTree",
+    "description":"A tree of object rendered in a stack",
+    "oml":{        
+        "selector:StackedTree":"{CONFIG}"        
+    },
+    "demoml":{
+        "#instance:StackedTree":{          
+            "id":"stacked", 
+            "display":{"template":"MenuItem"},
+            "list:Data":"menu.json"
+        }                        
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"constant", "desc":"selector where to create this object"},
+            {"name":"list", "type":"array", "desc":"a list of objects"},
+            {"name":"display", "type":"OGX.Display", "desc":"a display used to render the items"}
+        ],
+        "methods":[
+            {"name":"setTree", "desc":"set a data tree"},
+            {"name":"destroy", "desc":"destroy the component"}
+        ],
+        "events":[
+            {"name":"OGX.StackedTree.BACK", "desc":"when the user navigates back"},
+            {"name":"OGX.StackedTree.ENTER", "desc":"when the user enter a node of the tree"},
+            {"name":"OGX.StackedTree.SELECT", "desc":"when the user selects an item"}
+        ]
+    } 
+}

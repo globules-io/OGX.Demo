@@ -11,7 +11,7 @@
                     "list":[
                         {"label":"OGX.JS is not that great", "value":0},
                         {"label":"OGX.JS is OK I guess", "value":1},
-                        {"label":"I like OGX.JS", "value":2},
+                        {"label":"I like OGX.JS a lot", "value":2},
                         {"label":"I Love OGX.JS", "value":3},
                         {"label":"I'm crazy about OGX.JS", "value":4}
                     ],
@@ -19,16 +19,16 @@
                 },
                 "#instance > .roulettes .rouletteB:Roulette":{   
                     "id":"rouletteB",  
+                    "icon":true,
                     "list":[
-                        {"label":"OGX.JS is not that great", "value":0},
-                        {"label":"OGX.JS is OK I guess", "value":1},
-                        {"label":"I like OGX.JS", "value":2},
-                        {"label":"I Love OGX.JS", "value":3},
-                        {"label":"I'm crazy about OGX.JS", "value":4}
+                        {"label":"OML is JSON based", "value":0},
+                        {"label":"OGX.JS renders OML", "value":1},
+                        {"label":"Object Markup Language", "value":2},
+                        {"label":"This is a Roulette", "value":3},
+                        {"label":"OML is easy to learn", "value":4}
                     ],
                     "value":3          
-                },
-                "ctrl:Controllers.Roulette":{}
+                }
             }            
         }        
     },
@@ -36,6 +36,7 @@
         "extends":["Uxi", "Touch"],
         "properties":[
             {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"list", "type":"array", "desc":"list of values"},
             {"name":"value", "type":"*", "desc":"the current value"},
             {"name":"name", "type":"string", "desc":"name given to hidden input for forms, optional"},
             {"name":"display", "type":"OGX.Display", "desc":"an optional custom display"},

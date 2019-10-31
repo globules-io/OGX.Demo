@@ -24,29 +24,5 @@
             ]
         }
     },
-    "doc":{
-        "extends":["Uxi", "Touch"],
-        "properties":[
-            {"name":"container", "type":"string", "desc":"selector where to create this object"},           
-            {"name":"display_date", "type":"string|date", "desc":"the displayed date"},
-            {"name":"date", "type":"string|date", "desc":"the selected date"},
-            {"name":"format", "type":"string", "desc":"date/time format"},
-            {"name":"layouts", "type":"array", "desc":"array of layouts"},
-            {"name":"layout", "type":"int", "desc":"current layout"},
-            {"name":"selectable", "type":"bool", "desc":"if date selection is allowed"},
-            {"name":"swipeable", "type":"bool", "desc":"if swipe navigation is allowed"}
-        ],
-        "methods":[
-            {"name":"val", "desc":"set or get the selected date"},
-            {"name":"display", "desc":"set or get the displayed date"},
-            {"name":"next", "desc":"show next time period"},
-            {"name":"prev", "desc":"show previous time period"},
-            {"name":"layout", "desc":"get current layout"},
-            {"name":"destroy", "desc":"destroy the component"}
-        ],
-        "events":[
-            {"name":"OGX.Calendar.SELECT", "desc":"when the end user selects a date/time"},
-            {"name":"OGX.Calendar.UNSELECT", "desc":"when the end user unselects a date/time"}
-        ]
-    } 
+    "doc:JSON":"_calendar.json"
 }

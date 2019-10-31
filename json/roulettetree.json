@@ -1,0 +1,29 @@
+{
+    "title":"RouletteTree",
+    "description":"An object to render a parent-children tree, where changing a parent affects all its children.",
+    "oml":{        
+        "selector:RouletteTree":"{CONFIG}"        
+    },
+    "demoml":{
+        "#instance:RouletteTree":{  
+            "id":"#roultree",
+            "groups":["country", "state", "city"],
+            "data:Data":"geo.json",
+            "icon":true
+        }                     
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"constant", "desc":"selector where to create this object"},
+            {"name":"data", "type":"object", "desc":"tree of objects"}           
+        ],
+        "methods":[
+            {"name":"val", "desc":"get the compound object from all roulettes"},
+            {"name":"destroy", "desc":"destroy the component"}
+        ],
+        "events":[
+            {"name":"OGX.RouletteTree.CHANGE", "desc":"when the end user changes a roulette of the tree"}
+        ]
+    } 
+}

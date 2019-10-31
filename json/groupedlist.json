@@ -1,0 +1,74 @@
+{
+    "title":"GroupedList",
+    "description":"GroupedList is a proxy object generating a NestedList by grouping a List.",
+    "oml":{
+        "selector:GroupedList":"{CONFIG}"
+    },
+    "demoml":{
+        "#instance:Html":{
+            "html":"<div class=\"list\"></div>",            
+            "node:OML":{
+                "#instance > .list:GroupedList":{   
+                    "id":"grouped",
+                    "scroll":true,         
+                    "display":{"template":"User", "css":"user"},
+                    "key":"_id",
+                    "group_by":"gender",
+                    "group_order":["female", "male"],
+                    "map":{"title":"gender"},
+                    "list:Data":"users.json"           
+                },
+                "ctrl:Controllers.List":{
+                    "data:Data":{"list":"GroupedList", "id":"grouped"}
+                } 
+            }            
+        }        
+    },
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"group_by", "type":"string", "desc":"the common property to group items"},
+            {"name":"group_mode", "type":"*", "desc":"the grouping mode"},
+            {"name":"group_order", "type":"array", "desc":"an optional group order"},
+            {"name":"group_param", "type":"string", "desc":"grouping parameter"},
+            {"name":"sort", "type":"string", "desc":"if set, a common property to sort the list"},
+            {"name":"list", "type":"array", "desc":"List of objects"},
+            {"name":"key", "type":"boolean", "desc":"a common property defining a unique value to use as key"},
+            {"name":"swipe", "type":"boolean", "desc":"if items of the list are swipe-able"},
+            {"name":"reorder", "type":"boolean", "desc":"if the list is reorder-able"},
+            {"name":"display", "type":"OGX.Display", "desc":"the display to use to render the items"},
+            {"name":"mode", "type":"constant", "desc":"the DynamicList select mode"}
+            
+        ],
+        "methods":[
+            {"name":"val", "desc":"set or retrieve the current value"},
+            {"name":"bind", "desc":"bind other components to it"},
+            {"name":"unbind", "desc":"unbind other components from it"},
+            {"name":"filter", "desc":"filter nests' lists"},
+            {"name":"unfilter", "desc":"unfilter nests' lists"},
+            {"name":"addFilter", "desc":"add filter"},
+            {"name":"removeFilter", "desc":"remove filter"},
+            {"name":"resetFilters", "desc":"remove all filters"},
+            {"name":"getFilters", "desc":"get filters in use"},
+            {"name":"addGroup", "desc":"add a new group"},
+            {"name":"removeGroup", "desc":"remove a new group"},
+            {"name":"addToGroup", "desc":"add items to a group"},
+            {"name":"removeFromGroup", "desc":"remove items from a group"},
+            {"name":"addItem", "desc":"add to base list"},
+            {"name":"removeItem", "desc":"remove from base list"},
+            {"name":"replaceItem", "desc":"replace from base list"},
+            {"name":"updateItem", "desc":"update in base list"},
+            {"name":"addToGroup", "desc":"add an item to a group"},    
+            {"name":"updateGroupItem", "desc":"update an item inside a group"},
+            {"name":"replaceGroupItem", "desc":"replace an item inside a group"},
+            {"name":"getGroupList", "desc":"retrieve the DynamicList given a group"},
+            {"name":"render", "desc":"render the component"},
+            {"name":"refresh", "desc":"refresh the component"},
+            {"name":"getNested", "desc":"retrieve the OGX.NestedList instance"},
+            {"name":"destroy", "desc":"destroy the component"}
+        ],
+        "events":[{"name":"OGX.GroupedList.SELECT", "desc":"when an item of the list is selected"}]
+    },
+    "option":true
+}

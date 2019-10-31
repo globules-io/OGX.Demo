@@ -1,0 +1,85 @@
+{
+    "title":"NestList",
+    "description":"NestList renders a list of items as nests, one nest per item, and one placeholder per nest.",
+    "oml":{
+        "selector:NestList":"{CONFIG}"
+    },
+    "demoml":{
+        "#instance:Html":{
+            "html":"<div class=\"list\"></div>",            
+            "node:OML":{
+                "#instance > .list:NestList":{   
+                    "scroll":true,         
+                    "list":[
+                        {"title":"NestA", "scope":["public"]},
+                        {"title":"NestB", "scope":["public"]},
+                        {"title":"NestC", "scope":["public"]},
+                        {"title":"NestD", "scope":["public"]}
+                    ],
+                    "node:OML":[
+                        {"default:Templates.Lorem":{}},
+                        {"default:Html":{
+                            "html":"<div id=\"icy1\" style=\"width:100%; height:400px;\"></div>",
+                            "node:OML":{
+                                "#icy1:Iceberg":{
+                                    "right":"30%",
+                                    "node:OML":[
+                                        {"main:Html":{
+                                            "html":"<span class=\"msg\">Iceberg</span>"
+                                        }},
+                                        {"right:Html":{
+                                            "html":"<span class=\"msg\">Hidden</span>"
+                                        }}
+                                    ]                         
+                                }
+                            }
+                        }},
+                        {"default:Html":{
+                            "html":"<div id=\"nest_demo\" style=\"display:block; width:100%; height:350px;\"></div>",
+                            "node:OML":{
+                                "#nest_demo:Views.Views":{"data":{"name":"View Demo"}}
+                            }
+                        }},
+                        {"default:Html":{
+                            "html":"<div id=\"icy2\" style=\"width:100%; height:400px;\"></div>",
+                            "node:OML":{
+                                "#icy2:Iceberg":{
+                                    "left":"30%",
+                                    "node:OML":[
+                                        {"main:Html":{
+                                            "html":"<span class=\"msg\">Iceberg</span>"
+                                        }},
+                                        {"left:Html":{
+                                            "html":"<span class=\"msg\">Hidden</span>"
+                                        }}
+                                    ]                         
+                                }
+                            }
+                        }}
+                    ]
+                }
+            }           
+        }        
+    },
+    "help":"Bro, this is a help boax",
+    "doc":{
+        "extends":["Uxi", "Touch"],
+        "properties":[
+            {"name":"container", "type":"string", "desc":"selector where to create this object"},
+            {"name":"list", "type":"array", "desc":"list of nests"},
+            {"name":"name", "type":"string", "desc":"name given to hidden input for forms, optional"},
+            {"name":"map", "type":"object", "desc":"an optional map of properties (title, scope)"},
+            {"name":"order", "type":"array", "desc":"an optional array to define a preferred order"}
+        ],
+        "methods":[
+            {"name":"val", "desc":"set or retrieve the current list of nest"},   
+            {"name":"addNest", "desc":"animate to previous item"},
+            {"name":"removeNest", "desc":"animate to next item"},
+            {"name":"updateNestHeight", "desc":"force refresh"}
+        ],
+        "events":[
+            {"name":"OGX.NestList.OPEN", "desc":"when a nest opens"},
+            {"name":"OGX.NestList.CLOSE", "desc":"when a nest closes"}
+        ]
+    } 
+}

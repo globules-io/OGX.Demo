@@ -1,6 +1,6 @@
 {
     "title":"Iceberg",
-    "description":"Iceberg can be composed of a main view and up to 4 hidden panels, one per side. Unlike Carousel, Iceberg's hidden panels' width are less than the main view's one.",
+    "description":"Iceberg can be composed of a main view and up to 4 hidden panels, one per side.",
     "oml":{
         "selector:Iceberg":"{CONFIG}"
     },

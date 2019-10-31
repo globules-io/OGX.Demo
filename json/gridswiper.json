@@ -1,10 +1,8 @@
 {
     "title":"GridSwiper",
-    "description":"GridSwiper is an infinite, two axis swiper that returns the absolute and relative position of the newly visible cell.",
+    "description":"GridSwiper is an infinite, two axis swiper that returns the position of the newly visible cell.",
     "oml":{
-        "selector:GridSwiper":{          
-            
-        }
+        "selector:GridSwiper":"{CONFIG}"
     },
     "demoml":{
         "#instance:GridSwiper":{

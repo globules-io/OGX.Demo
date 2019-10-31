@@ -1,0 +1,37 @@
+{
+    "extends":["Uxi", "Placeholder", "Touch", "Resize"],
+    "properties":[        
+        {"name":"width", "type":"string", "desc":"the width in % or px"},
+        {"name":"height", "type":"string", "desc":"the height in % or px"},   
+        {"name":"title", "type":"string", "desc":"title, optional"},
+        {"name":"icon", "type":"string", "desc":"main icon, optional"},
+        {"name":"icons", "type":"string", "desc":"sub icons, optional"},
+        {"name":"drag", "type":"boolean", "desc":"if the popup is drab-able"},        
+        {"name":"resize", "type":"boolean", "desc":"if the popup is resize-able"},
+        {"name":"center", "type":"boolean", "desc":"if the popup is always centered"},
+        {"name":"buttons", "type":"array", "desc":"dialogs buttons, optional"},
+        {"name":"buttons_enabled", "type":"boolean", "desc":"enable buttons at start, defaults to true"},
+        {"name":"anim", "type":"constant", "desc":"hide/show animation, optional"},
+        {"name":"overlay", "type":"boolean", "desc":"if the popup has an overlay at start, defaults to false"},
+        {"name":"zindex", "type":"int", "desc":"z-index, optional"},
+        {"name":"html", "type":"string", "desc":"shortcut to creating html in its placeholder, optional"},
+        {"name":"template", "type":"string", "desc":"shortcut to creating a template in its placeholder, optional"},
+        {"name":"view", "type":"string", "desc":"shortcut to creating a view in its placeholder, optional"},
+        {"name":"css", "type":"string", "desc":"additional css for the placeholder, optional"} 
+    ],
+    "methods":[
+        {"name":"show", "desc":"show the popup"},
+        {"name":"hide", "desc":"hide the popup"},
+        {"name":"center", "desc":"center the popup"},
+        {"name":"move", "desc":"move the popup"},
+        {"name":"front", "desc":"bring popup to front"},
+        {"name":"icon", "desc":"get/set main icon"},
+        {"name":"resize", "desc":"force size update"},
+        {"name":"buttons", "desc":"get/set buttons"}
+    ],
+    "events":[
+        {"name":"OGX.Popup.HIDE", "desc":"when the popup is hidden"},
+        {"name":"OGX.Popup.SHOW", "desc":"when the popup is shown"},
+        {"name":"OGX.Popup.CLICK_BUTTON", "desc":"when a button has been clicked"}
+    ]
+} 

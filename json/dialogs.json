@@ -1,0 +1,20 @@
+{
+    "title":"Popup (dialogs)",
+    "description":"Popup can also be used for dialogs.",
+    "mode":"dialogs",
+    "oml":{
+        "id:Popup":{
+            "drag":true,
+            "buttons":[
+                {"label":"OK", "callback":"function"}, 
+                {"label":"CANCEL", "callback":"function"}
+            ]
+        }
+    },
+    "demoml":{   
+        "#instance:Views.PopupAdvanced":{        
+            "mode":"dialogs"
+        }
+    },
+    "doc:JSON":"_popup.json"
+}

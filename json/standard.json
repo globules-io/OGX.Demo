@@ -1,0 +1,14 @@
+{
+    "title":"Popup (standard)",
+    "description":"Popup in its simplest configuration. One or more can be added to any Object.",
+    "oml":{
+        "id:Popup":"{CONFIG}" 
+    },
+    "demoml":{   
+        "#instance:Views.PopupStandard":{
+            "mode":"Standard",
+            "template":"Standard"
+        }
+    },
+    "doc:JSON":"_popup.json"
+}
