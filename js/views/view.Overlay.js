@@ -2,11 +2,11 @@ require('Views.Overlay', 'View');
 OGX.Views.Overlay = function(__obj){
     construct(this, 'Views.Overlay');
 	'use strict';
-	var that = this;    
-    var status = 1;
-    var intv = false;  
-    var loading = __obj.loading;
-    var time = 2000+Math.round(Math.random()*7000);   
+	let that = this;    
+    let status = 1;
+    let intv = false;  
+    let loading = __obj.loading;
+    let time = 2000+Math.round(Math.random()*7000);   
 
     //@Override
 	this.ux = function(__bool){
