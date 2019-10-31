@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="left"><span class="image" style="background-image:url('./img/users/{{$image}}');"></span></span></div><div class="right">
+        <span class="first_name">{{$first_name}}</span><span class="last_name">{{$last_name}}</span><br>
+        <span class="city">{{$city}},</span><span class="country">{{$country}}</span>
+    </div>    
+</div>
+<div class="post">
+    <span class="date">{{$post.date}}</span>
+    {{calc !$post.image?@image="blank.png":@image=$post.image}}
+    {{calc !$post.image?@dsp="display:none;":@dsp=""}}
+    <span class="image" style="background-image:url('./img/posts/{{@image}}'); {{@dsp}}"></span>
+    <span class="body">{{$post.body}}</span>
+</div>
