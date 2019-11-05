@@ -11,19 +11,27 @@
             "top":"200px",
             "bottom":"300px",
             "node:OML":[
-                {"top:Views.Views":{
+                {"top:Views.Balls":{
+                    "css":"balls",
+                    "template":"Balls",
                     "data":{"name":"Hidden Content (View Demo)"}                    
                 }},
-                {"left:Views.Views":{
+                {"left:Views.Balls":{
+                    "css":"balls",
+                    "template":"Balls",
                     "data":{"name":"Hidden Content (View Demo)"}   
                 }},
                 {"main:Html":{
                     "html":"<span class=\"msg\">Main Content</span>"
                 }},
-                {"right:Views.Views":{
+                {"right:Views.Balls":{
+                    "css":"balls",
+                    "template":"Balls",
                     "data":{"name":"Hidden Content (View Demo)"}   
                 }},
-                {"bottom:Views.Views":{
+                {"bottom:Views.Balls":{
+                    "css":"balls",
+                    "template":"Balls",
                     "data":{"name":"Hidden Content (View Demo)"}   
                 }}
             ]

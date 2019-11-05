@@ -184,5 +184,10 @@
         "label":"Windows",
         "icon":"icon_windows",
         "scope":["public"]      
+    },
+    {
+        "label":"Intro",
+        "icon":"icon_intro",
+        "scope":["public"]      
     }
 ]

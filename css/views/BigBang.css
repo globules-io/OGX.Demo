@@ -1,0 +1,75 @@
+#bigbang{
+    position:relative;
+    background:radial-gradient(circle, rgba(0,0,0,0.8) 0%,#222 90%);
+    transition:all 0.2ms;
+}
+#bigbang > .canvas{
+    display:block;   
+    position:relative;
+}
+#bigbang > .wrapper{
+    display:block;
+    position:absolute;    
+    height:100%;
+    width:100%;
+}
+#bigbang > .wrapper > .intro{
+    display:block;  
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:#EEE;
+    width:100%;
+    padding:40px;
+    text-align:center;
+    z-index:5555;
+    text-shadow:0px 0px 2px #000;
+    margin-bottom:10px;
+    opacity:0;
+    transition:all 3s;
+}
+#bigbang > .wrapper > .show{
+    opacity:1 !important;
+}
+#bigbang .love{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#bigbang > .wrapper > .intro > span{
+    display:block;    
+}
+#bigbang > .wrapper > .intro > .s{
+    font-family:RBlight;
+    font-size:12px;
+    letter-spacing:2px;    
+}
+#bigbang > .wrapper > .intro > .m{
+    font-family:RBsemi;
+    font-size:16px;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+#bigbang > .wrapper > .intro > .ogx{
+    font-family:RBbold;
+    font-size:50px; 
+    letter-spacing:-2px;
+    margin-bottom:-10px;
+}
+#bigbang > .wrapper > .intro > .img{ 
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+    margin:auto;
+}
+#bigbang > .wrapper > .intro > .logo{
+    margin-top:10px;
+    width:200px;
+    height:200px;
+    background-image:url('./../../img/ogx_logo.svg');
+}
+#bigbang > .wrapper > .intro > .io{
+    margin-top:15px;
+    width:200px;
+    height:100px;
+    background-image:url('./../../img/globules.svg');
+}

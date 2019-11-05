@@ -1,0 +1,9 @@
+#main{
+    display:block;
+    width:100%;
+    height:100%;
+    background-image:url('../../img/welcome.png');
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-size:contain;
+}

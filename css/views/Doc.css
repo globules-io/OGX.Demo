@@ -1,0 +1,90 @@
+.doc{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+}
+.doc > .header{
+    display:inline-block;   
+}
+.doc > .header > .title{
+    display:block;
+    font-family:RBsemi;
+    font-size:18px;
+    margin-bottom:10px;
+}
+.doc > .header > .block{
+    display:block;
+    margin-bottom:20px;
+}
+.doc .subtitle{
+    display:block;
+    font-family:RBreg;
+    font-size:16px;
+    margin-bottom:5px;
+}
+.doc .block{
+    display:block;
+    margin-top:20px;
+}
+.doc .stack{
+    display:block;
+    padding:10px;
+    background-color:#436963;
+    border-radius:1px;
+}
+.doc .stack > span{
+    display:inline-block;
+    margin-right:5px;
+    font-size:16px;
+    font-family:RBsemi;
+    color:#EEE;
+}
+.doc .hidden{
+    display:none;
+}
+/*DEMO OML*/
+.doc .oml{
+    display:block;
+    padding:10px;
+    font-family:'Courier New', Courier, monospace;
+    font-size:13px;
+    background-color:#EEE;
+    color:#000;
+    word-wrap:break-word;
+}
+.doc .props .property{
+    background-color:#37373B;
+}
+.doc .methods .property{
+    background-color:#43414C;
+}
+.doc .events .property{
+    background-color:#444A4B;
+}
+.doc .properties{
+    display:block;
+}
+.doc .properties > .property{
+    display:block;
+    font-family:RBlight;
+    font-size:16px;
+    margin-bottom:10px;
+    color:#EEE;
+    padding:10px;
+    border-radius:1px;
+}
+.doc .properties > .property > span{
+    display:block;  
+}
+.doc .properties > .property > span > span{
+    display:inline;
+    margin-right:5px;
+}
+.doc .properties > .property > span > span:first-of-type{
+    font-family:RBreg;
+    color:#BBB;
+}
+.split .doc{
+    padding: 20px 20px 40px 0px;
+}

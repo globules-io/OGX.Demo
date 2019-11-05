@@ -1,0 +1,30 @@
+.lorem{
+    display:block;
+    width:100%;
+    padding:15px;
+    font-family:RBlight;
+    font-size:16px;
+    color:#EEE;
+}
+.lorem span{
+    display:block;
+    width:100%;
+    margin-bottom:10px;
+    text-align:justify;
+}
+.lorem > .title{
+    font-family:RBsemi;
+    font-size:20px;
+}
+.lorem .image{
+    height:250px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.lorem .imageA{
+    background-image:url('../../img/abs/globules.jpg');
+}
+.lorem .imageB{
+    background-image:url('../../img/theater.jpg');
+}

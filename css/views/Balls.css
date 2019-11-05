@@ -1,0 +1,11 @@
+.balls{
+    position:relative;
+}
+.balls > .msg{
+    display:block;  
+    position:absolute;
+}
+.balls > .canvas{
+    display:block;   
+    position:relative;
+}

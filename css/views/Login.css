@@ -1,0 +1,26 @@
+#login{
+    display:inline-block;    
+    width:100%;
+    text-align:center;
+    padding:20px;
+}
+#login form{    
+    max-width:300px;
+    margin:auto;
+}
+#login form input{
+    display:block;
+    margin-bottom:10px; 
+    width:100%;     
+}
+#login form input[type=submit]{   
+    background-color:#436963;
+    color:#EEE;  
+    font-family:RBsemi;
+}
+#login .choice{
+    display:block;
+    width:100%; 
+    text-align:center;
+    color:#666;
+}

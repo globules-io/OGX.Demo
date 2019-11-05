@@ -1,0 +1,9 @@
+#instance .switch{
+    display:block;
+    margin-bottom:40px;
+}
+#instance .switch > .title{
+    display:block;
+    margin-bottom:10px;
+    font-size:16px;
+}
