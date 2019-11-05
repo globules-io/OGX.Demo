@@ -169,8 +169,7 @@
             "Sketch":"template.Sketch.html",
             "Split":"template.Split.html", 
             "Switches":"template.Switches.html", 
-            "User":"template.User.html",
-            "Welcome":"template.Welcome.html"           
+            "User":"template.User.html"        
         }
     }, 
     "preload":{
