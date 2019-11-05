@@ -15,14 +15,15 @@ ball.prototype.applyForce = function(force) {
 ball.prototype.calcAttr = function(__ball) {       
     let force = PVector.sub(this.position, __ball.position);
     let distance = force.mag();
+    let G = 1;
     distance = constrain(distance, 5.0, 25.0);                        
     force.normalize();
-    let strength = (1*this.mass*__ball.mass)/(distance*distance);
+    let strength = (G*this.mass*__ball.mass)/(distance*distance);
     force.mult(strength);
     return force;
 };
 ball.prototype.calcMass = function(){
-    this.mass = this.radius*6;
+    this.mass = this.radius*this.radius/5;
 };
 ball.prototype.update = function(){       
     this.velocity.add(this.acceleration);
