@@ -88,6 +88,7 @@
    background-color:#EEE;
 }
 #sketch > .tools > .colors .color > .icon{
+    display:block;
     position:relative;
     width:26px;
     height:26px;
@@ -95,7 +96,6 @@
     top:calc(50% - 13px);
     border:1px solid #111;
 }
-
 #sketch > .canvas{
     display:inline-block;
     flex-grow:1;
