@@ -113,7 +113,7 @@ OGX.Views.Balls = function(__config){
     }
 
     function genBalls(){
-        let total = 3+Math.round(Math.random()*30);  
+        let total = 7+Math.round(Math.random()*20);  
         let b, x, y, dirX, dirY, angle, speed, radius, rgb;          
         for(let i = 0; i < total; i++){
             dirX = 0.1+Math.random()*0.9;
