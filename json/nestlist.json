@@ -37,7 +37,11 @@
                         {"default:Html":{
                             "html":"<div id=\"nest_demo\" style=\"display:block; width:100%; height:350px;\"></div>",
                             "node:OML":{
-                                "#nest_demo:Views.Views":{"data":{"name":"View Demo"}}
+                                "#nest_demo:Views.Balls":{
+                                    "css":"balls",
+                                    "template":"Balls",
+                                    "data":{"name":"View Demo"}
+                                }
                             }
                         }},
                         {"default:Html":{

@@ -14,21 +14,31 @@
                         "list":[{"label":"Tab A"}, {"label":"Tab B"}, {"label":"Tab C"}, {"label":"Tab D"}, {"label":"Tab E"}]
                     },
                     "node:OML":[
-                        {"default:Views.Views":{
+                        {"default:Views.Balls":{
+                            "css":"balls",
+                            "template":"Balls",
                             "data":{"name":"Panel A"}                    
-                        }},
-                        {"default:Views.Views":{
+                        }}, 
+                        {"default:Views.Balls":{
+                            "css":"balls",
+                            "template":"Balls",
                             "data":{"name":"Panel B"}                    
-                        }},
-                        {"default:Views.Views":{
+                        }}, 
+                        {"default:Views.Balls":{
+                            "css":"balls",
+                            "template":"Balls",
                             "data":{"name":"Panel C"}                    
-                        }},
-                        {"default:Views.Views":{
+                        }}, 
+                        {"default:Views.Balls":{
+                            "css":"balls",
+                            "template":"Balls",
                             "data":{"name":"Panel D"}                    
-                        }},
-                        {"default:Views.Views":{
+                        }}, 
+                        {"default:Views.Balls":{
+                            "css":"balls",
+                            "template":"Balls",
                             "data":{"name":"Panel E"}                    
-                        }}
+                        }} 
                     ]
                 }
             }

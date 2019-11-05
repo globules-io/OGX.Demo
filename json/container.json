@@ -28,11 +28,31 @@
                         {"default:Container":{
                             "tabs":{"list":[{"label":"View A"}, {"label":"View B"}, {"label":"View C"}, {"label":"View D"}, {"label":"View E"}]},
                             "node:OML":[
-                                {"default:Views.Views":{"data":{"name":"View Demo A"}}},
-                                {"default:Views.Views":{"data":{"name":"View Demo B"}}},
-                                {"default:Views.Views":{"data":{"name":"View Demo C"}}},
-                                {"default:Views.Views":{"data":{"name":"View Demo D"}}},
-                                {"default:Views.Views":{"data":{"name":"View Demo E"}}}
+                                {"default:Views.Balls":{
+                                    "css":"balls",
+                                    "template":"Balls",
+                                    "data":{"name":"View A"}                    
+                                }}, 
+                                {"default:Views.Balls":{
+                                    "css":"balls",
+                                    "template":"Balls",
+                                    "data":{"name":"View B"}                    
+                                }}, 
+                                {"default:Views.Balls":{
+                                    "css":"balls",
+                                    "template":"Balls",
+                                    "data":{"name":"View C"}                    
+                                }}, 
+                                {"default:Views.Balls":{
+                                    "css":"balls",
+                                    "template":"Balls",
+                                    "data":{"name":"View D"}                    
+                                }}, 
+                                {"default:Views.Balls":{
+                                    "css":"balls",
+                                    "template":"Balls",
+                                    "data":{"name":"View E"}                    
+                                }} 
                             ]
                         }}
                     ]
