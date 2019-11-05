@@ -16,35 +16,35 @@ OGX.Views.BigBang = function(__config){
     let bh = true;
     let status = 'exploding';
     let max_radius = 55;
-    //safe for older phones, desktop can have a lot more
+    //140 safe for older phones, desktop can have a lot more
     let max_balls = 140;
     
     //@Override
 	this.construct = function(){      
-        app.addOverlay({anim:false});
         canvas = this.el.children('.canvas:first')[0];
         //run resize at start to set sw, sh
         this.resize();    
         ctx = canvas.getContext('2d');  
+        ctx.save();
         let x = sw/2;   
         let y = sh/2;        
-        bh = {x:x, y:y, radius:50};       
-        setTimeout(function(){
-            app.removeOverlay(OGX.Overlay.FADE);   
+        bh = {x:x, y:y, radius:50};    
+        //intro
+        setTimeout(function(){            
             that.el.children('.wrapper:first').children('.intro:first').addClass('show');
-        }, 0);
+        }, 8000);
 	};
     
     //@Override
 	this.enable = function(){       
-        if(!intv && !done){
+        if(!intv && !done && canvas){
             intv = requestAnimationFrame(onTick);            
         }       
 	};
 	
     //@Override
 	this.disable = function(){        
-        if(intv && !done){
+        if(intv && !done && canvas){
            cancelAnimationFrame(intv);
            intv = false;
         }       
@@ -76,13 +76,16 @@ OGX.Views.BigBang = function(__config){
         }       
 	}; 	
 
-    function drawBlackHole(){             
+    function drawBlackHole(){      
+        ctx.restore();       
         let grd = ctx.createRadialGradient(bh.x, bh.y, 0, bh.x, bh.y, bh.radius);  
         grd.addColorStop(0.000, 'rgba(0, 0, 0, 0.950)');
         grd.addColorStop(1.000, 'rgba(0, 0, 0, 1.000)');
         ctx.lineWidth = 3;
         ctx.fillStyle = grd;
         ctx.strokeStyle = '#111';
+        ctx.shadowBlur = 8+Math.round(Math.random()*2);
+        ctx.shadowColor = '#e6b00d';
         ctx.beginPath();        
         ctx.arc(bh.x, bh.y, bh.radius, 0, Math.PI * 2, true);
         ctx.stroke();
@@ -94,7 +97,7 @@ OGX.Views.BigBang = function(__config){
         dirX = 0.1+Math.random()*0.9;
         dirY = 0.1+Math.random()*0.9;  
         radius = 2+Math.round(Math.random()*2);
-        rgb = [240+Math.round(Math.random()*15), 150+Math.round(Math.random()*50), Math.round(Math.random()*10)];
+        rgb = [245+Math.round(Math.random()*10), 150+Math.round(Math.random()*50), 5+Math.round(Math.random()*10)];
         x = bh.x;
         y = bh.y;
         angle = Math.random()*360; 
@@ -104,16 +107,14 @@ OGX.Views.BigBang = function(__config){
         balls.push(b);  
     }    
 
-    function drawBalls(){
-        for(let i = 0; i < balls.length; i++){
-            if(balls[i]){
-                ctx.fillStyle = 'rgb('+balls[i].rgb.join(',')+')';
-                ctx.beginPath();     
-                ctx.shadowBlur = 8+Math.round(Math.random()*2);
-                ctx.shadowColor = ctx.fillStyle;
-                ctx.arc(balls[i].position.x, balls[i].position.y, balls[i].radius, 0, Math.PI * 2, true);
-                ctx.fill();
-            }
+    function drawBalls(){ 
+        ctx.restore();        
+        for(let i = 0; i < balls.length; i++){  
+            ctx.fillStyle = 'rgba('+balls[i].rgb.join(',')+', 0.7)';
+            ctx.shadowColor = 'transparent';
+            ctx.beginPath(); 
+            ctx.arc(balls[i].position.x, balls[i].position.y, balls[i].radius, 0, Math.PI * 2, true);
+            ctx.fill();            
         }
     }
   
@@ -125,9 +126,13 @@ OGX.Views.BigBang = function(__config){
                 bh = false;
                 status = 'colliding';                
             }else{
-                if(balls.length < max_balls){
+                if(max_balls){
+                    if(balls.length < max_balls){
+                        genBall();   
+                    }       
+                }else{
                     genBall();   
-                }               
+                }        
             } 
             break;
 
