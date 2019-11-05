@@ -33,6 +33,8 @@ OGX.Views.BigBang = function(__config){
         setTimeout(function(){            
             that.el.children('.wrapper:first').children('.intro:first').addClass('show');
         }, 8000);
+        //overlay
+        app.removeOverlay(OGX.Overlay.FADE);
 	};
     
     //@Override
