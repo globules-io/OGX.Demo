@@ -2,7 +2,7 @@ require('Controllers.Grid', 'Controller');
 OGX.Controllers.Grid = function(__data){
     construct(this, 'Controllers.Grid');
     'use strict';  
-    let oml = JSON.parse('{"default:Views.Views":{}}');
+    let oml = JSON.parse('{"default:Views.Balls":{"css":"balls", "template":"Balls"}}');
     let grid;  
 
     //@Override

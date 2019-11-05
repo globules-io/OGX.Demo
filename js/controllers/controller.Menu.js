@@ -41,8 +41,12 @@ OGX.Controllers.Menu = function(){
         if(__obj.data.hasOwnProperty('theater')){
             stage.removeOverlay(false);
             app.theater.show();
-        }else{                  
-            let url = 'private/object/'+__obj.data.label.toLowerCase();
+        }else{      
+            let lb = __obj.data.label.toLowerCase();    
+            let url = 'private/object/'+lb;      
+            if(lb === 'intro'){
+                url = 'private/intro';
+            }            
             if(stage.url !== url){
                 app.goto(url);                           
             }else{
