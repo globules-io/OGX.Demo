@@ -21,8 +21,12 @@
                 "ctrl:Controllers.Home":{},    
                 "scope":["public"]
             },         
-            "private/main":{  
-                "#main_private:Templates.Welcome":{},
+            "private/intro":{  
+                "#main_private:Views.BigBang":{
+                    "id":"#bigbang",
+                    "template":"BigBang",
+                    "css":"bigbang"
+                },
                 "winmenu:Window":{
                     "head":"OGX.Window.HEAD_BACK", 
                     "anim":"OGX.Window.ANIM_LEFT", 
@@ -92,7 +96,7 @@
                     }
                 },                               
                 "data:Route":["object"],
-                "origin:Route":"private/main",
+                "origin:Route":"private/intro",
                 "scope":["private"]   
             },            
             "messenger/chat":{  
@@ -128,7 +132,7 @@
     },
     "vapps":{
         "public:Stages.Public":{"template":"Public", "observe":false, "closeable":false, "use":true, "home":"home", "scope":["public"], "theater":false},
-        "private:Stages.Private":{"template":"Private", "observe":false, "closeable":false, "home":"main", "scope":["public"], "theater":{"icon":"ogx_logo.svg", "label":"Demo"}},
+        "private:Stages.Private":{"template":"Private", "observe":false, "closeable":false, "home":"intro", "scope":["public"], "theater":{"icon":"ogx_logo.svg", "label":"Demo"}},
         "messenger:Stages.Messenger":{"template":"Chat", "observe":false, "closeable":true, "home":"chat", "scope":["public"], "theater":{"icon":"messenger.svg", "label":"Messenger"}},
         "sketch:Stages.Sketch":{"template":"Basic", "observe":false, "closeable":true, "home":"draw", "scope":["public"], "theater":{"icon":"sketch.svg", "label":"Sketch"}}
     },
@@ -136,8 +140,10 @@
         "path":"html/templates/",
         "files":{ 
             "Ad":"template.Ad.html",
+            "Balls":"template.Balls.html",
+            "BigBang":"template.BigBang.html", 
             "Basic":"template.Basic.html",
-            "Brush":"template.Brush.html",
+            "Brush":"template.Brush.html",            
             "Chat":"template.Chat.html", 
             "Dummy":"template.Dummy.html",  
             "Doc":"template.Doc.html",     
