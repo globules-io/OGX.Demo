@@ -23,7 +23,7 @@ ball.prototype.calcAttr = function(__ball) {
     return force;
 };
 ball.prototype.calcMass = function(){
-    this.mass = this.radius*this.radius/5;
+    this.mass = Math.pow(this.radius, 2)/2;
 };
 ball.prototype.update = function(){       
     this.velocity.add(this.acceleration);
