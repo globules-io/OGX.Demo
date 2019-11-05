@@ -6,11 +6,11 @@ OGX.Stages.Private = function(){
     //Override
 	this.ux = function(__bool){
         if(__bool){
-			$(document).on(this.touch.down, '.icon, .tab, .bt, .snd', playClick);  
-            $(document).on(OGX.StackedTree.BACK+' '+OGX.Window.CLOSING+' '+OGX.Popup.HIDE+' '+OGX.Tabs.SELECT+' '+OGX.Roulette.CHANGE+' '+OGX.RouletteTree.CHANGE+' '+OGX.DynamicList.SELECT, playClick);
+			$(document).on(this.touch.down, '.icon, .tab, .bt, .snd, .ogx_stage_exit, .ogx_popup_button', playClick);  
+            $(document).on(OGX.StackedTree.BACK+' '+OGX.StackedTree.ENTER+' '+OGX.Window.CLOSING+' '+OGX.Popup.HIDE+' '+OGX.Tabs.SELECT+' '+OGX.Roulette.CHANGE, playClick);
         }else{     
-			$(document).off(this.touch.down, '.icon, .tab, .bt, .snd', playClick);  
-            $(document).off(OGX.StackedTree.BACK+' '+OGX.Window.CLOSING+' '+OGX.Popup.HIDE+' '+OGX.Tabs.SELECT+' '+OGX.Roulette.CHANGE+' '+OGX.RouletteTree.CHANGE+' '+OGX.DynamicList.SELECT, playClick);
+			$(document).off(this.touch.down, '.icon, .tab, .bt, .snd, .ogx_stage_exit, .ogx_popup_button', playClick);  
+            $(document).off(OGX.StackedTree.BACK+' '+OGX.StackedTree.ENTER+' '+OGX.Window.CLOSING+' '+OGX.Popup.HIDE+' '+OGX.Tabs.SELECT+' '+OGX.Roulette.CHANGE, playClick);
         }
 	};   
 
