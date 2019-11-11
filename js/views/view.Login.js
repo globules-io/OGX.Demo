@@ -3,7 +3,6 @@ OGX.Views.Login = function(){
     construct(this, 'Views.Login');
 	'use strict';
 	var that = this;
-    var md5 = false;
     
 	//@Override
     this.construct = function(){           
@@ -24,7 +23,7 @@ OGX.Views.Login = function(){
     };    
     
     //@Override
-	this.focus = function(){
+	this.enable = function(){
         $('#login form:first').find('input[name="username"]').focus();
 	};	
 	
