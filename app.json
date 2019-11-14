@@ -36,7 +36,6 @@
                     "show":false, 
                     "drag":true, 
                     "resize":true, 
-                    "close_on_click_out":true,  
                     "node:OML":[
                         {"default:StackedTree":{
                             "id":"#menu_tree", 
