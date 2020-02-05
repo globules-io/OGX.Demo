@@ -86,11 +86,13 @@
 #menu_tree .ogx_stacked_tree_item .icon_intro{
     background-image:url('../../img/ogx_logo.svg');
 }
+#menu_tree .ogx_stacked_tree_item .icon_settings{
+    background-image:url('../../img/settings.svg');
+}
 #menu_tree .ogx_stacked_tree_item .initials{
     display:inline-block;
     width:24px;
     height:24px;
-    border:1px solid #EEE;
     border-radius:12px;
     text-align:center;
     font-family:RBbold;
@@ -117,14 +119,8 @@
         min-width:200px;
     }
     .ogx_stacked_tree_door{
-        display:block;       
-        border-bottom:1px solid #333;
-        background-color: #282828;
-    }
-    .ogx_stacked_tree_level_prev{
-        border-bottom:1px solid #333;
-        background-color: #282828;
-    }
+        display:block; 
+    }    
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width:992px){

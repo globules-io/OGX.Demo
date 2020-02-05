@@ -3,7 +3,7 @@
     width:100%;  
     height:40px;
 }
-#bar .bt{
+#bar > .bt{
     display:block;
     margin-left:5px;
     width:30px;

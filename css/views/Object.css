@@ -31,9 +31,7 @@
 .object > .header > .block > .oml{
     display:block;
     font-family:'Courier New', Courier, monospace;
-    font-size:13px;
-    background-color:#EEE;
-    color:#000;
+    font-size:13px;    
     padding:10px;
     word-wrap:break-word;
     border-radius:1px;
@@ -94,17 +92,16 @@
     padding:20px;
     font-size:12px;
     white-space:pre-wrap;
-    color:skyblue;
 }
 /*INSTANCE*/
 #instance{
     position:absolute;
     width:100%;
-    height:calc(100% - 15px);
-    border:1px solid #444;
+    height:calc(100% - 15px);    
     overflow:hidden;
 }
 /*ICEBERG*/
+/*
 #instance > .ogx_iceberg >  .ogx_iceberg_views > .ogx_iceberg_view_left{
     background-color:#436963;
 }
@@ -120,9 +117,9 @@
 #instance .ogx_iceberg_view_top{
     background-color:#37373B;
 }
+*/
 #instance .msg{
-    display:block;
-    color:#EEE;
+    display:block;    
     font-family:RBreg;
     font-size:16px;
     padding:20px;
@@ -131,51 +128,12 @@
     font-size:18px;
     font-family:RBreg;
 }
-/*CAROUSEL*/
-#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="0"]{
-    background-color:#37373B;
-}
-#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="1"]{
-    background-color:#43414C;
-}
-#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="2"]{
-    background-color:#444A4B;
-}
-#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="3"]{
-    background-color:darkslategray;
-}
-#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="4"]{
-    background-color:#202020;
-}
-/*GRIDSWIPER*/
-#instance  > .ogx_grid_swiper > .ogx_grid_swiper_container > .ogx_grid_swiper_cell{
-    background-color:#333;
-}
 /*CONTAINER*/
-#instance  .ogx_container  .ogx_carousel_view{
-    box-shadow:inset 0px 0px 0px 1px #333;
-}
 #instance  .ogx_container .ogx_carousel_view .title{
     display:block;
     font-family:RBreg;
     font-size:16px;
     padding:20px;
-}
-/*NESTLIST*/
-.ogx_nest_list .lorem{
-    color:#E4E4E4;
-}
-#icy1{
-    background-color:brown;
-}
-#icy1 .ogx_iceberg_view_right{
-    background-color:chocolate;
-}
-#icy2{
-    background-color:slateblue;
-}
-#icy2 .ogx_iceberg_view_left{
-    background-color:cornflowerblue;
 }
 /*ROULETTE*/
 #instance > .roulettes > .block{
@@ -186,7 +144,6 @@
     display:block;
     font-family:RBlight;
     font-size:16px;
-    color:#EEE;
     padding:10px;
 }
 #instance > .roulettes > .block > .ogx_roulette{
@@ -196,17 +153,27 @@
 }
 /*SWITCH*/
 #instance > .switch{
-    margin:20px;
+    display:block;
+    padding:20px;
+    padding-bottom:40px;   
+}
+#instance .switch > .title{
+    display:block;
+    margin-bottom:10px;
+    font-size:16px;
 }
 /*POPUP*/
 #instance .std{
     display:inline-block;
     position:relative;
     width:100%;
-    height:50%;   
+    height:50%;    
 }
-#instance .std:first-of-type{
-    border-bottom:1px solid #222;
+#instance .std:first-of-type{   
+    margin-bottom:-5px;
+}
+#instance .ogx_carousel .popup_message_center {
+    top: calc(50% - 25px);
 }
 /*WINDOWS*/
 #instance .ghostwin{
@@ -227,6 +194,29 @@
 /*DYNLIST*/
 #instance .ogx_dynamic_list_item{
     /*background-color:#222;*/
+}
+#instance .ogx_dynamic_list_item .galery_img{
+    display:block; 
+    width:100%; 
+    height:300px; 
+    background-size:cover;
+}
+/*STACKED TREE*/
+#instance .ogx_stacked_tree .ogx_stacked_tree_item .initials{
+    display:inline-block;
+    width:24px;
+    height:24px;    
+    border-radius:12px;
+    text-align:center;
+    font-family:RBbold;
+    font-size:12px;
+    padding-top:4px;
+    vertical-align:middle;
+    margin-right:10px;  
+    transform:rotateZ(-6deg);
+}
+#instance .ogx_stacked_tree .nodisplay{
+    display:none !important;
 }
 /*TREEDLIST*/
 #treed{

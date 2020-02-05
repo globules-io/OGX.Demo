@@ -12,9 +12,15 @@
         }
     },
     "demoml":{   
-        "#instance:Views.PopupAdvanced":{        
-            "mode":"dialogs"
+        "#instance:Html":{    
+            "html":"<span id=\"bg\" style=\"display:block; width:100%; height:100%; background-color:#436963;\"></span>",
+            "node:OML":{
+                 "#bg:Views.PopupAdvanced":{        
+                     "mode":"dialogs"
+                }                
+            }
         }
+       
     },
     "doc:JSON":"_popup.json"
 }

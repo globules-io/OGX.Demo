@@ -12,19 +12,13 @@ OGX.Views.PopupStandard = function(__config){
     //@Override 
     this.construct = function(){
 		time = 2000+Math.round(Math.random()*2000);
-		$('#instance').css('background-color', 'cadetblue');
 	};
    	
     //@Override   
     this.ux = function(__bool){
         onOff(__bool);
-    };  
-    
-	//@Override   
-    this.destroy = function(){
-        $('#instance').css('background-color', 'unset');
-    };  
-
+    };     
+	
     function onOff(__bool){
         if(__bool){
             intv = setInterval(onTime, time);

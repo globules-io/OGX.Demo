@@ -1,12 +1,10 @@
 .user_post > .post{
-    display:block;
-    border-bottom:1px solid #333;
+    display:block;    
 }
 .user_post > .post > .date{
     display:block;
     font-family:RBlight;
-    font-size:14px;
-    color:#999;
+    font-size:14px;   
     margin-left:10px;
     margin-bottom:5px;
 }

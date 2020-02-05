@@ -5,9 +5,7 @@
     display:inline-flex;
     flex-direction:row;
     width:100%;
-    padding:10px;
-    border-bottom:1px solid #333;
-    background-color:#222;
+    padding:10px;   
 }
 .user > .container > div{
     display:inline-block;
@@ -21,7 +19,6 @@
     background-repeat:no-repeat;
     background-size:cover;
     margin-right:10px;
-    border:1px solid #333;
 }
 .user > .container > .right{
     flex-grow:1;

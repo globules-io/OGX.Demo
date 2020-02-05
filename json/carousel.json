@@ -20,34 +20,24 @@
                     "template":"Balls",
                     "data":{"name":"View Demo"}                    
                 }},                       
-                {"default:Templates.Overlay":{
-                        "node:OML":{
-                            "#overlay0:Views.Overlay":{
-                                "loading":true, "data":{"loading":true}
-                            },
-                            "#overlay1:Views.Overlay":{
-                                "loading":true, "data":{"loading":true}
-                            },
-                            "#overlay2:Views.Overlay":{
-                                "loading":true, "data":{"loading":true}
-                            },
-                            "#overlay3:Views.Overlay":{
-                                "loading":true, "data":{"loading":true}
-                            },
-                            "#overlay4:Views.Overlay":{
-                                "loading":true, "data":{"loading":true}
-                            }
+                {"default:Ghost":{
+                    "node:OML":[{
+                        "default:Popup":{
+                            "html":"<span class=\"popup_message_center\">Even Popups can be instanciated within Carousel's placeholders</span>",
+                            "title":"Info",
+                            "height":150,
+                            "show":true
                         }
-                    }
-                },        
+                    }]
+                }},        
                 {"default:Iceberg":{
                     "bottom":200,
                     "node:OML":[
                         {"main:Html":{
-                            "html":"<span class=\"msg msg_large\">Here is an Icebreg with content hidden at the bottom.</span>"
+                            "html":"<span class=\"msg msg_large\">Here is an Icebreg with content hidden at the bottom.</span>"                            
                         }},
                         {"bottom:Html":{
-                            "html":"<span class=\"msg msg_large\">Hidden content!</span>"
+                            "html":"<span class=\"msg msg_large\">Hidden content!</span>"                            
                         }}
                     ]
                 }},

@@ -15,7 +15,7 @@
     width:100%;
     flex-grow:1;
     box-shadow:inset 0px 0px 0px 1px #555;
-    background-color:cadetblue;
+    background-color:#436963;
 }
 #overlay > .col > .overlay > .ogx_view{
     position:absolute;

@@ -189,5 +189,10 @@
         "label":"Intro",
         "icon":"icon_intro",
         "scope":["public"]      
+    },
+    {
+        "label":"Settings",
+        "icon":"icon_settings",
+        "scope":["public"]      
     }
 ]

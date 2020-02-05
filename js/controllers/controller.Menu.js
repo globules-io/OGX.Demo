@@ -46,7 +46,9 @@ OGX.Controllers.Menu = function(){
             let url = 'private/object/'+lb;      
             if(lb === 'intro'){
                 url = 'private/intro';
-            }            
+            }else if(lb === 'settings'){
+                url = 'private/settings';
+            }          
             if(stage.url !== url){
                 app.goto(url);                           
             }else{

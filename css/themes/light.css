@@ -1,0 +1,163 @@
+#bar > .bt{
+    filter:invert(1);
+}
+#home > .top > .logo{
+    filter:invert(1);
+}
+.ab{
+    background-color:#EEE;
+}
+.ab > .ab_title{
+    background-color:#D6D6D6;
+}
+.ab > .ab_body{       
+    border-bottom:1px solid #CCC;
+}
+.user > .container{
+    background-color:#EEE;
+    border-bottom:1px solid #DDD;
+}  
+.user > .container > .right{
+    color:#000;
+}
+.user > .container > .left > .image{
+    border:1px solid #DDD;
+}
+.user > .post{
+    border-bottom:1px solid #CCC;
+    background-color:#EEE;
+} 
+.profile > .bio{
+    color:#111;
+}
+.lorem{
+    color:#111;
+    background-color:#EEE;       
+}
+#menu_tree .ogx_stacked_tree_item > .icon{
+    filter:invert(1);
+}
+#menu_tree .ogx_stacked_tree_item > .initials{
+    border:1px solid #000;
+}
+#instance{
+    border-top:1px solid #CCC;
+    background-color:#EEE;
+}
+#instance .msg{
+    color:#111;
+}
+#instance .ogx_iceberg_view > .msg{
+    color:#EEE;
+}
+#instance .ogx_grid_swiper_cell_content > .msg{
+    color:#EEE;
+}
+#instance  .ogx_container  .ogx_carousel_view{
+    box-shadow:inset 0px 0px 0px 1px #CCC;
+}
+#instance .std{
+    background-color:#436963;
+}
+#instance .std:first-of-type{
+    border-bottom:1px solid #222;
+}
+.object>.demo>.row>.icon{
+    filter:invert(1);
+}
+.ogx_nest_list .lorem{
+    color:#111;
+}
+.demoml .json{
+    color:#000;
+}
+#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="0"]{
+    background-color:#DDD;
+}
+#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="1"]{
+    background-color:#CCC;
+}  
+#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="2"]{
+    background-color:#444A4B;
+}
+#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="3"]{
+    background-color:darkslategray;
+}
+#instance > .ogx_carousel > .ogx_carousel_views > .ogx_carousel_view[data-ogx-panel-id="4"]{
+    background-color:#202020;
+}
+#instance  > .ogx_grid_swiper > .ogx_grid_swiper_container > .ogx_grid_swiper_cell{
+    background-color:#333;
+}
+#icy1{
+    background-color:brown;
+}
+#icy1 .ogx_iceberg_view_right{
+    background-color:chocolate;
+}
+#icy2{
+    background-color:slateblue;
+}
+#icy2 .ogx_iceberg_view_left{
+    background-color:cornflowerblue;
+}
+#instance > .ogx_iceberg > .ogx_iceberg_views > .ogx_iceberg_view_left{
+    background-color:#DDD;
+}  
+#instance > .ogx_iceberg > .ogx_iceberg_views > .ogx_iceberg_view_main{
+    background-color:#EEE;
+}
+#instance > .ogx_iceberg > .ogx_iceberg_views > .ogx_iceberg_view_right{
+    background-color:#CCC;
+} 
+#instance > .ogx_iceberg > .ogx_iceberg_views > .ogx_iceberg_view_bottom{
+    background-color:#CCC;
+} 
+#instance > .ogx_iceberg > .ogx_iceberg_views > .ogx_iceberg_view_top{
+    background-color:#CCC;
+} 
+#instance > .ogx_iceberg > .ogx_iceberg_views > .ogx_iceberg_view_main > .msg{
+    color:#111;
+} 
+#instance > .roulettes{
+    background-color:#EEE;
+} 
+#instance > .roulettes > .block > .title{
+    color:#111;
+}   
+#instance > .ogx_roulette_tree{
+    background-color:#222;
+}
+#instance .ogx_roulette{
+    background-color:#EEE;
+} 
+#instance .ogx_stacked_tree{
+    background-color:#EEE;
+}
+#instance .ogx_stacked_tree .ogx_stacked_tree_item .initials{
+    border:1px solid #EEE;
+}
+#instance > .switch{
+    background-color:#EEE;
+}
+#instance .ogx_tags{
+    background-color:#EEE;
+}
+#overlay > .col > .overlay{
+    background-color:#DDD;
+}
+.quad{
+    background-color:#DDD; 
+}
+/*MEDIA QUERIES*/
+/* Small Devices, Tablets */
+@media only screen and (min-width:768px){	
+    .ogx_stacked_tree_door{       
+        border-bottom:1px solid #DDD;
+        background-color: #E4E4E4;
+    }
+    .ogx_stacked_tree_level_prev{
+        border-bottom:1px solid #DDD;
+        background-color: #E4E4E4;
+    }
+}
