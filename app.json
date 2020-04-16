@@ -207,10 +207,10 @@
     "popups":{
         "width":300,
         "height":400,
-        "anim":"OGX.Popup.ANIM_FADE"
+        "anim":"OGX.Popup.FADE"
     },
     "overlays":{
-        "anim":"OGX.Overlay.ANIM_FADE"
+        "anim":"OGX.Overlay.FADE"
     },
     "windows":{
         "head":"OGX.Window.HEAD_BACK",
