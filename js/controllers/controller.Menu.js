@@ -7,14 +7,14 @@ OGX.Controllers.Menu = function(){
     //@Override
     this.construct = function(){
         stage = app.getStage();
-        win = stage.find(OGX.Window.NAME, 'winmenu');  
+        win = stage.find('Window', 'winmenu');  
     };
         
     //@Override
     this.ux = function(__bool){
         if(__bool){
             $('#bar').on(this.touch.down, '.bt', function(){
-                stage.addOverlay({anim:OGX.Overlay.FADE, close_on_click:false});  
+                stage.addOverlay({anim:'fade', close_on_click:false});  
                 win.show();
             });
             win.el.on(OGX.StackedTree.SELECT, function(__e, __data){  

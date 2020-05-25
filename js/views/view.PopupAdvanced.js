@@ -19,8 +19,8 @@ OGX.Views.PopupAdvanced = function(__config){
             popup = this.create('Popup', conf);     
         }             
         popup.show(OGX.Popup.FADE); 
-        OGX.Audio.playSound('click.mp3', 0.1);
-    };  
+        OGX.Audio.play('click', 0.1);
+    }; 
     
     function genConf(){
         let conf = {
@@ -69,12 +69,12 @@ OGX.Views.PopupAdvanced = function(__config){
                     case 2:
                     popup = that.create(OGX.Popup.NAME, genConf());  
                     popup.show(OGX.Popup.FADE);  
-                    OGX.Audio.playSound('click.mp3', 0.1);    
+                    OGX.Audio.play('click', 0.1);    
                     return;                    
                 }  
                 popup = that.create(OGX.Popup.NAME, conf);           
                 popup.show(OGX.Popup.FADE);
-                OGX.Audio.playSound('click.mp3', 0.1);
+                OGX.Audio.play('click', 0.1);
             }, 1500)}
         );       
     }

@@ -7,5 +7,5 @@
     "demoml":{
         "#instance:Calendar":{}
     },
-    "doc:JSON":"_calendar.json"
+    "doc:OSE":"{{json _calendar}}"
 }

@@ -1,7 +1,7 @@
 {
     "extends":["Uxi", "Touch"],
     "properties":[
-        {"name":"container", "type":"string", "desc":"selector where to create this object"},           
+        {"name":"el", "type":"string", "desc":"selector where to create this object"},           
         {"name":"display_date", "type":"string|date", "desc":"the displayed date"},
         {"name":"date", "type":"string|date", "desc":"the selected date"},
         {"name":"format", "type":"string", "desc":"date/time format"},

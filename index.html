@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>    
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' gap://ready file://* 'unsafe-inline' *; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; img-src * data:;">
 <meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-<title>OrGaniX Demo</title>
+<title>OGX.JS DEMO</title>
+<script type="text/javascript" src="cordova.js"></script>
 <link rel="icon" href="data:,">
 <!--CSS LIB-->
 <link href="css/lib/globules/ogx.min.css" rel="stylesheet" type="text/css">
@@ -12,81 +16,65 @@
 <link href="themes/io-globules-ogx/base/css/theme.min.css" rel="stylesheet" type="text/css">
 <link href="themes/io-globules-ogx/light/css/theme.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" type="text/css" data="light">
 <link href="themes/io-globules-ogx/dark/css/theme.min.css" rel="stylesheet" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" type="text/css" data="dark">
-<!--CSS PROJECT THEME-->
-<link href="css/themes/light.css" rel="stylesheet" media="(prefers-color-scheme: light)" type="text/css" data="light">
-<link href="css/themes/dark.css" rel="stylesheet" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" type="text/css" data="dark">
+<link href="css/themes/light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" type="text/css" data="light">
+<link href="css/themes/dark.min.css" rel="stylesheet" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" type="text/css" data="dark">
 <!--CSS BIN-->
-<!--All css files left uncompressed-->
-<link href="css/bin/ab.css" rel="stylesheet" type="text/css">
-<link href="css/bin/fonts.css" rel="stylesheet" type="text/css">
-<link href="css/bin/main.css" rel="stylesheet" type="text/css">
-<link href="css/bin/objects.css" rel="stylesheet" type="text/css">
-<link href="css/bin/post.css" rel="stylesheet" type="text/css">
-<link href="css/bin/user.css" rel="stylesheet" type="text/css">
-<link href="css/bin/profile.css" rel="stylesheet" type="text/css">
-<!--CSS STAGES-->
-<link href="css/stages/Public.css" rel="stylesheet" type="text/css"> 
-<link href="css/stages/Private.css" rel="stylesheet" type="text/css"> 
-<!--CSS VIEWS-->
-<link href="css/views/Balls.css" rel="stylesheet" type="text/css">
-<link href="css/views/BigBang.css" rel="stylesheet" type="text/css">
-<link href="css/views/Chat.css" rel="stylesheet" type="text/css">
-<link href="css/views/Doc.css" rel="stylesheet" type="text/css">
-<link href="css/views/Filters.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Home.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Login.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Lorem.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Menu.css" rel="stylesheet" type="text/css">
-<link href="css/views/Object.css" rel="stylesheet" type="text/css">
-<link href="css/views/Overlay.css" rel="stylesheet" type="text/css">
-<link href="css/views/Quad.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Register.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Scroller.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Sketch.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Split.css" rel="stylesheet" type="text/css"> 
-<link href="css/views/Switches.css" rel="stylesheet" type="text/css"> 
+<link href="css/min/min.css" rel="stylesheet" type="text/css">
 <!--JS LIB-->
 <script type="text/javascript" src="js/lib/jquery/jquery.min.js"></script>  
 <script type="text/javascript" src="js/lib/moment/moment.min.js"></script>
 <script type="text/javascript" src="js/lib/moment/moment-duration-format.min.js"></script>
 <script type="text/javascript" src="js/lib/processing/processing.min.js"></script>
 <!--OGX-->
-<script type="text/javascript" src="js/lib/globules/ogx.min.js"></script>
-<!--JS BIN-->
-<!--
-When compressed using upcoming CLI    
-<script type="text/javascript" src="js/stages/stages.min.js"></script>
-<script type="text/javascript" src="js/views/views.min.js"></script>
-<script type="text/javascript" src="js/controllers/controllers.min.js"></script>
-<script type="text/javascript" src="js/bin/main.min.js"></script> 
--->
-<!--STAGES-->
-<script type="text/javascript" src="js/stages/stage.Public.js"></script>
-<script type="text/javascript" src="js/stages/stage.Private.js"></script>
-<script type="text/javascript" src="js/stages/stage.Messenger.js"></script>
-<script type="text/javascript" src="js/stages/stage.Sketch.js"></script>
-<!--VIEWS-->
-<script type="text/javascript" src="js/views/view.Balls.js"></script>
-<script type="text/javascript" src="js/views/view.BigBang.js"></script>
-<script type="text/javascript" src="js/views/view.Gallery.js"></script>
-<script type="text/javascript" src="js/views/view.Overlay.js"></script>
-<script type="text/javascript" src="js/views/view.Login.js"></script>
-<script type="text/javascript" src="js/views/view.Object.js"></script>
-<script type="text/javascript" src="js/views/view.PopupAdvanced.js"></script>
-<script type="text/javascript" src="js/views/view.PopupStandard.js"></script>
-<script type="text/javascript" src="js/views/view.Register.js"></script>
-<script type="text/javascript" src="js/views/view.Settings.js"></script>
-<script type="text/javascript" src="js/views/view.Sketch.js"></script>
-<script type="text/javascript" src="js/views/view.Windows.js"></script>
-<!--CONTROLLERS-->
-<script type="text/javascript" src="js/controllers/controller.Chat.js"></script>
-<script type="text/javascript" src="js/controllers/controller.Grid.js"></script>
-<script type="text/javascript" src="js/controllers/controller.List.js"></script>
-<script type="text/javascript" src="js/controllers/controller.Home.js"></script>
-<script type="text/javascript" src="js/controllers/controller.Menu.js"></script>
-<!--BIN-->
-<script type="text/javascript" src="js/bin/ball.js"></script>
-<script type="text/javascript" src="js/bin/main.js"></script>
+<script type="text/javascript" src="js/lib/globules/ogx.dev.min.js"></script>
+<!--USER FILES-->
+<link href="css/bin/fonts.css" rel="stylesheet" type="text/css">
+<script type="application/javascript" src="js/controllers/controller.Chat.js"></script>
+<script type="application/javascript" src="js/controllers/controller.Grid.js"></script>
+<script type="application/javascript" src="js/controllers/controller.Home.js"></script>
+<script type="application/javascript" src="js/controllers/controller.List.js"></script>
+<script type="application/javascript" src="js/controllers/controller.Menu.js"></script>
+<script type="application/javascript" src="js/views/view.Balls.js"></script>
+<link rel="stylesheet" href="css/views/view.Balls.css">
+<script type="application/javascript" src="js/views/view.BigBang.js"></script>
+<link rel="stylesheet" href="css/views/view.BigBang.css">
+<script type="application/javascript" src="js/views/view.Gallery.js"></script>
+<link rel="stylesheet" href="css/views/view.Gallery.css">
+<script type="application/javascript" src="js/views/view.Login.js"></script>
+<link rel="stylesheet" href="css/views/view.Login.css">
+<script type="application/javascript" src="js/views/view.Object.js"></script>
+<link rel="stylesheet" href="css/views/view.Object.css">
+<script type="application/javascript" src="js/views/view.Overlay.js"></script>
+<link rel="stylesheet" href="css/views/view.Overlay.css">
+<script type="application/javascript" src="js/views/view.PopupAdvanced.js"></script>
+<link rel="stylesheet" href="css/views/view.PopupAdvanced.css">
+<script type="application/javascript" src="js/views/view.PopupStandard.js"></script>
+<link rel="stylesheet" href="css/views/view.PopupStandard.css">
+<script type="application/javascript" src="js/views/view.Register.js"></script>
+<link rel="stylesheet" href="css/views/view.Register.css">
+<script type="application/javascript" src="js/views/view.Settings.js"></script>
+<link rel="stylesheet" href="css/views/view.Settings.css">
+<script type="application/javascript" src="js/views/view.Sketch.js"></script>
+<link rel="stylesheet" href="css/views/view.Sketch.css">
+<script type="application/javascript" src="js/views/view.Windows.js"></script>
+<link rel="stylesheet" href="css/views/view.Windows.css">
+<script type="application/javascript" src="js/stages/stage.Messenger.js"></script>
+<link rel="stylesheet" href="css/stages/stage.Messenger.css">
+<script type="application/javascript" src="js/stages/stage.Private.js"></script>
+<link rel="stylesheet" href="css/stages/stage.Private.css">
+<script type="application/javascript" src="js/stages/stage.Public.js"></script>
+<link rel="stylesheet" href="css/stages/stage.Public.css">
+<script type="application/javascript" src="js/stages/stage.Sketch.js"></script>
+<link rel="stylesheet" href="css/stages/stage.Sketch.css">
+<link rel="stylesheet" href="css/bin/ab.css">
+<link rel="stylesheet" href="css/bin/fonts.css">
+<link rel="stylesheet" href="css/bin/main.css">
+<link rel="stylesheet" href="css/bin/objects.css">
+<link rel="stylesheet" href="css/bin/post.css">
+<link rel="stylesheet" href="css/bin/profile.css">
+<link rel="stylesheet" href="css/bin/user.css">
+<script type="application/javascript" src="js/bin/ball.js"></script>
+<script type="application/javascript" src="js/bin/main.js"></script>
 </head>
 <body>
     <div class="ogx_overlay ogx_loading" style="opacity:1"></div>

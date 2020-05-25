@@ -9,7 +9,7 @@ OGX.Controllers.List = function(__config){
     //@Override
     this.construct = function(){
         //find groupedlist or dynamiclist
-        list = app.getStage().find(OGX[config.data.list].NAME, config.data.id);      
+        list = app.getStage().find(config.data.list, config.data.id);      
     };	
     
     //@Override
@@ -31,7 +31,7 @@ OGX.Controllers.List = function(__config){
                         show:true, 
                         drag:true, 
                         resize:true, 
-                        anim:OGX.Window.ANIM_RIGHT,
+                        anim:'right',
                         'node:OML':[{
                             'default:Templates.Profile':{
                                 css:'user profile',
@@ -67,7 +67,7 @@ OGX.Controllers.List = function(__config){
                 height:'100%',
                 drag:true, 
                 resize:false, 
-                anim:OGX.Window.ANIM_RIGHT,
+                anim:'right',
                 'node:OML':[{
                     'default:Templates.Filters':{
                         id:'#filters',                       
@@ -77,7 +77,7 @@ OGX.Controllers.List = function(__config){
                                 list:ls,
                                 icon:true,
                                 group_by:['state', 'city'],
-                                renderer:OGX.RouletteTree.NAME
+                                renderer:'RouletteTree'
                             }
                         }
                     }
@@ -87,7 +87,7 @@ OGX.Controllers.List = function(__config){
             list.bind({property:'first_name', object:'#filter_fname', mode:'in'});
             list.bind({property:'last_name', object:'#filter_lname', mode:'in'});          
             //treedlist automatically adds _roultree to the id to target RouletteTree
-            let rt = app.getStage().find(OGX.RouletteTree.NAME, 'geotree_roultree');
+            let rt = app.getStage().find('RouletteTree', 'geotree_roultree');
             //no need to name a property here but must be unique so name it anyway - DynamicList will do the links
             list.bind({property:'whatever', object:rt, mode:'in'});
         }

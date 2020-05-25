@@ -6,6 +6,7 @@ $(document).ready(function(){
         $('.ogx_overlay').remove();        
     });
     app = new OGX.App();  
+    OGX.Debug.level(1,2,3);
 });
 /*GLOBALS*/
 function exists(__var){

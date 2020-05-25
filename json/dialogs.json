@@ -22,5 +22,5 @@
         }
        
     },
-    "doc:JSON":"_popup.json"
+    "doc:OSE":"{{json _popup}}"
 }

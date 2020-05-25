@@ -8,7 +8,7 @@
         "#instance:StackedTree":{          
             "id":"stacked", 
             "display":{"template":"MenuItem"},
-            "list:Data":"menu.json"
+            "list:OSE":"{{json menu}}"
         }                        
     },
     "doc":{

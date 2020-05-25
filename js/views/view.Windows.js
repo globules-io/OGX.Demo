@@ -6,7 +6,7 @@ OGX.Views.Windows = function(__config){
 
 	//@Override
     this.construct = function(){  
-        var wins = this.gather(OGX.Window.NAME);
+        var wins = this.gather('Window');
         var t = 0;
         for(var i = 0; i < wins.length; i++){
             showWin(wins[i], t);     
@@ -19,7 +19,7 @@ OGX.Views.Windows = function(__config){
         if(__bool){
             this.el.on(OGX.Window.CLOSED, function(__e, __data){
                 setTimeout(function(){
-                    that.find(OGX.Window.NAME, __data).show();
+                    that.find('Window', __data).show();
                 }, 1000+Math.round(Math.random()*3000));
             });
         }else{

@@ -7,7 +7,7 @@ OGX.Views.Login = function(){
 	//@Override
     this.construct = function(){           
         OGX.Form.bindForm({
-            container:'#login form', 
+            el:'#login form', 
             forbidden:/<>/,
             submit_cb:onSubmit,     
             validate:true,           
@@ -53,7 +53,6 @@ OGX.Views.Login = function(){
     
     this.destroy = function(){
         OGX.Form.unbindForm('#login form');
-        this.removeLoading();
     };        
    
 };

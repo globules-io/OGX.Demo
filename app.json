@@ -1,229 +1,487 @@
 {
-    "routing":{ 
-        "routes":{
-            "public/home":{                
-                "#main_public:Templates.Home":{  
-                    "node:OML":{
-                        "#home > .carousel:Carousel":{
-                            "id":"carousel",
-                            "dots":{"position":"top"},    
-                            "node:OML":[
-                                {"default:Views.Login":{
-                                    "id":"#login", "template":"Login", "scroll":false, "observe":false
-                                }},
-                                {"default:Views.Register":{
-                                    "id":"#register", "template":"Register", "scroll":false, "observe":false
-                                }}
-                            ]                       
-                        } 
-                    }                                
-                },
-                "ctrl:Controllers.Home":{},    
-                "scope":["public"]
-            },         
-            "private/intro":{  
-                "#main_private:Views.BigBang":{
-                    "id":"#bigbang",
-                    "template":"BigBang",
-                    "css":"bigbang"
-                },
-                "winmenu:Window":{
-                    "head":"OGX.Window.HEAD_BACK", 
-                    "anim":"OGX.Window.ANIM_LEFT", 
-                    "width":"60%", 
-                    "min_width":200,
-                    "height":"100%", 
-                    "show":false, 
-                    "drag":true, 
-                    "resize":true, 
-                    "node:OML":[
-                        {"default:StackedTree":{
-                            "id":"#menu_tree", 
-                            "display":{
-                                "template":"MenuItem"                                          
+    "routing": {
+        "routes": {
+            "public/home": {
+                "#main_public:Templates.Home": {
+                    "node:OML": {
+                        "#home > .carousel:Carousel": {
+                            "id": "carousel",
+                            "dots": {
+                                "position": "top"
                             },
-                            "list:Data":"menu.json"
-                        }}                            
-                    ]                     
-                },
-                "ctrl:Controllers.Menu":{},
-                "scope":["public"]                 
-            }, 
-            "private/settings":{
-                "#main_private:Views.Settings":{
-                    "id":"#settings",
-                    "template":"Settings",
-                    "node:OML":{
-                       "#theme_roul:Roulette":{
-                            "id":"theme_roul",
-                            "icon":true,
-                            "list":[
-                                {"label":"Dark", "value":true},
-                                {"label":"Light", "value":false}                                
-                            ],
-                            "value":0         
-                        } 
-                    }
-                }
-            },   
-            "private/object/([a-zA-Z]+)":{
-                "#main_private:Point":{
-                    "id":"#point",
-                    "live":["object", "#doc"],
-                    "0:479":{  
-                        "winobj:Window":{
-                            "title:Route.Data":"{{$object}}",  
-                            "width":"100%",
-                            "height":"100%",
-                            "anim":"OGX.Window.ANIM_RIGHT",
-                            "node:OML":[
-                                {"default:Templates.Doc":{
-                                    "id":"#doc",                                      
-                                    "scroll":true,     
-                                    "data:Route.Data":"{{$object}}.json"
-                                }}
-                            ]
-                        },                         
-                        "default:Views.Object":{
-                            "id":"object",
-                            "template":"Object", 
-                            "data:Route.Data":"{{$object}}.json"
-                        }                                              
-                    },
-                    "480:5000":{
-                        "default:Templates.Split":{
-                            "node:OML":[
-                                { 
-                                    "#point > .split > .right:Templates.Doc":{
-                                        "id":"#doc",
-                                        "scroll":true,
-                                        "data:Route.Data":"{{$object}}.json"
+                            "node:OML": [
+                                {
+                                    "default:Views.Login": {
+                                        "id": "#login",
+                                        "template": "Login"
                                     }
                                 },
                                 {
-                                    "#point > .split > .left:Views.Object":{
-                                        "id":"object",
-                                        "template":"Object",
-                                        "data:Route.Data":"{{$object}}.json"
-                                    }   
-                                }                             
+                                    "default:Views.Register": {
+                                        "id": "#register",
+                                        "template": "Register"
+                                    }
+                                }
                             ]
                         }
                     }
-                },                               
-                "data:Route":["object"],
-                "origin:Route":"private/intro",
-                "scope":["private"]   
-            },            
-            "messenger/chat":{  
-                ".chat:Chat":{
-                    "id":"chat",
-                    "key":"_id"
                 },
-                "chatController:Controllers.Chat":{}    
-            },           
-            "sketch/draw":{  
-                "#basic:Views.Sketch":{
-                    "id":"draw",                     
-                    "template":"Sketch",
-                    "observe":true,
-                    "node:OML":{
-                        "#sketch .controls:DynamicList":{
-                            "id":"controls", "key":"id", "scroll":false, "reorder":false, "mode":"hit", "list:Data":"controls.json", "display":{"html":"<span class=\"icon\"></span>", "css":{"bind":"id", "add":"control"}}                           
-                        },
-                        "#sketch .colors:DynamicList":{
-                            "id":"colors", "key":"color", "scroll":true, "reorder":false, "list:Data":"colors.json", "display":{"html":"<span class=\"icon\" style=\"background-color:{{$color}};\"></span>", "css":"color"}                           
-                        },
-                        "#sketch .brushes:DynamicList":{
-                            "id":"brushes", "key":"size", "scroll":true, "reorder":false, "list:Data":"brushes.json", "display":{"template":"Brush", "css":"brush"}
-                        }                 
+                "ctrl:Controllers.Home": {},
+                "scope": [
+                    "public"
+                ]
+            },
+            "private/intro": {
+                "#main_private:Views.BigBang": {
+                    "id": "#bigbang",
+                    "template": "BigBang",
+                    "css": "bigbang"
+                },
+                "winmenu:Window": {
+                    "head": "back",
+                    "anim": "left",
+                    "width": "60%",
+                    "min_width": 200,
+                    "height": "100%",
+                    "show": false,
+                    "drag": true,
+                    "resize": true,
+                    "node:OML": [
+                        {
+                            "default:StackedTree": {
+                                "id": "#menu_tree",
+                                "display": {
+                                    "template": "MenuItem"
+                                },
+                                "list:OSE": "{{json menu}}"
+                            }
+                        }
+                    ]
+                },
+                "ctrl:Controllers.Menu": {},
+                "scope": [
+                    "public"
+                ]
+            },
+            "private/settings": {
+                "#main_private:Views.Settings": {
+                    "id": "#settings",
+                    "template": "Settings",
+                    "node:OML": {
+                        "#theme_roul:Roulette": {
+                            "id": "theme_roul",
+                            "icon": true,
+                            "list": [
+                                {
+                                    "label": "Dark",
+                                    "value": true
+                                },
+                                {
+                                    "label": "Light",
+                                    "value": false
+                                }
+                            ],
+                            "value": 0
+                        }
                     }
-                }                
+                }
+            },
+            "private/object/object:([a-zA-Z]+)": {
+                "#main_private:Point": {
+                    "id": "#point",
+                    "live": [
+                        "object",
+                        "#doc"
+                    ],
+                    "0:479": {
+                        "winobj:Window": {
+                            "title:OSE": "{{$object}}",
+                            "width": "100%",
+                            "height": "100%",
+                            "anim": "right",
+                            "node:OML": [
+                                {
+                                    "default:Templates.Doc": {
+                                        "id": "#doc",
+                                        "scroll": true,
+                                        "data:OSE": "{{json crumb object}}"
+                                    }
+                                }
+                            ]
+                        },
+                        "default:Views.Object": {
+                            "id": "object",
+                            "template": "Object",
+                            "data:OSE": "{{json crumb object}}"
+                        }
+                    },
+                    "480:5000": {
+                        "default:Templates.Split": {
+                            "node:OML": [
+                                {
+                                    "#point > .split > .right:Templates.Doc": {
+                                        "id": "#doc",
+                                        "scroll": true,
+                                        "data:OSE": "{{json crumb object}}"
+                                    }
+                                },
+                                {
+                                    "#point > .split > .left:Views.Object": {
+                                        "id": "object",
+                                        "template": "Object",
+                                        "data:OSE": "{{json crumb object}}"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "origin:Route": "self,private/intro",
+                "scope": [
+                    "private"
+                ]
+            },
+            "messenger/chat": {
+                ".chat:Chat": {
+                    "id": "chat",
+                    "key": "_id"
+                },
+                "chatController:Controllers.Chat": {}
+            },
+            "sketch/draw": {
+                "#basic:Views.Sketch": {
+                    "id": "draw",
+                    "template": "Sketch",
+                    "observe": true,
+                    "node:OML": {
+                        "#sketch .controls:DynamicList": {
+                            "id": "controls",
+                            "key": "id",
+                            "mode": "hit",
+                            "list:OSE": "{{json controls}}",
+                            "display": {
+                                "html": "<span class=\"icon\"></span>",
+                                "css": {
+                                    "bind": "id",
+                                    "add": "control"
+                                }
+                            }
+                        },
+                        "#sketch .colors:DynamicList": {
+                            "id": "colors",
+                            "key": "color",
+                            "list:OSE": "{{json colors}}",
+                            "display": {
+                                "html": "<span class=\"icon\" style=\"background-color:{{$color}};\"></span>",
+                                "css": "color"
+                            }
+                        },
+                        "#sketch .brushes:DynamicList": {
+                            "id": "brushes",
+                            "key": "size",
+                            "scroll": true,
+                            "reorder": false,
+                            "list:OSE": "{{json brushes}}",
+                            "display": {
+                                "template": "Brush",
+                                "css": "brush"
+                            }
+                        }
+                    }
+                }
             }
         },
-        "options":{
-            "history":true,
-            "bookmarkable":false      
+        "options": {
+            "history": true,
+            "bookmarkable": false
         }
     },
-    "vapps":{
-        "public:Stages.Public":{"template":"Public", "observe":false, "closeable":false, "use":true, "home":"home", "scope":["public"], "theater":false},
-        "private:Stages.Private":{"template":"Private", "observe":false, "closeable":false, "home":"intro", "scope":["public"], "theater":{"icon":"ogx_logo.svg", "label":"Demo"}},
-        "messenger:Stages.Messenger":{"template":"Chat", "observe":false, "closeable":true, "home":"chat", "scope":["public"], "theater":{"icon":"messenger.svg", "label":"Messenger"}},
-        "sketch:Stages.Sketch":{"template":"Basic", "observe":false, "closeable":true, "home":"draw", "scope":["public"], "theater":{"icon":"sketch.svg", "label":"Sketch"}}
-    },
-    "templates":{
-        "path":"html/templates/",
-        "files":{ 
-            "Ad":"template.Ad.html",
-            "Balls":"template.Balls.html",
-            "BigBang":"template.BigBang.html", 
-            "Basic":"template.Basic.html",
-            "Brush":"template.Brush.html",            
-            "Chat":"template.Chat.html", 
-            "Dummy":"template.Dummy.html",  
-            "Doc":"template.Doc.html",     
-            "Filters":"template.Filters.html",               
-            "Home":"template.Home.html",            
-            "Login":"template.Login.html",  
-            "Lorem":"template.Lorem.html",            
-            "Menu":"template.Menu.html", 
-            "MenuItem":"template.MenuItem.html", 
-            "Method":"template.Method.html",            
-            "News":"template.News.html",
-            "Object":"template.Object.html", 
-            "Overlay":"template.Overlay.html",  
-            "Quad":"template.Quad.html",
-            "Register":"template.Register.html",  
-            "Roulette":"template.Roulette.html",  
-            "Scroller":"template.Scroller.html",  
-            "Standard":"template.Standard.html",      
-            "Post":"template.Post.html",       
-            "Public":"template.Public.html",
-            "Private":"template.Private.html",
-            "Profile":"template.Profile.html",
-            "Settings":"template.Settings.html",
-            "Sketch":"template.Sketch.html",
-            "Split":"template.Split.html", 
-            "Switches":"template.Switches.html", 
-            "User":"template.User.html"        
+    "vapps": {
+        "public:Stages.Public": {
+            "template": "Public",
+            "closeable": false,
+            "use": true,
+            "home": "home",
+            "scope": [
+                "public"
+            ],
+            "theater": false
+        },
+        "private:Stages.Private": {
+            "template": "Private",
+            "closeable": false,
+            "home": "intro",
+            "scope": [
+                "public"
+            ],
+            "theater": {
+                "icon": "ogx_logo.svg",
+                "label": "Demo"
+            }
+        },
+        "messenger:Stages.Messenger": {
+            "template": "Chat",
+            "closeable": true,
+            "home": "chat",
+            "scope": [
+                "public"
+            ],
+            "theater": {
+                "icon": "messenger.svg",
+                "label": "Messenger"
+            }
+        },
+        "sketch:Stages.Sketch": {
+            "template": "Basic",
+            "closeable": true,
+            "home": "draw",
+            "scope": [
+                "public"
+            ],
+            "theater": {
+                "icon": "sketch.svg",
+                "label": "Sketch"
+            }
         }
-    }, 
-    "preload":{
-        "images":{
-            "path":"img/",
-            "files": ["calendar.svg", "clear.svg", "code.svg", "dialogs.svg", "globules.svg", "help.svg", "lists.svg", "loaders.svg", "loop.svg", "menu.svg", "messenger.svg", "ogx_logo.svg", "oml.svg", "overlay.svg", "overlays.svg", "popup.svg", "popups.svg", "routing.svg", "save.svg", "scrollers.svg", "settings.svg", "sketch.svg", "storage.svg", "subapps.svg", "swipers.svg", "switches.svg", "tabs.svg", "tags.svg", "theater.jpg", "trees.svg", "views.svg", "windows.svg"]
-        },
-        "sounds":{
-            "path":"snd/",
-            "files":["click.mp3"]
-        },
-        "json":{
-            "path":"json/",
-            "files":["_calendar.json", "_popup.json", "advanced.json", "brushes.json", "carousel.json", "colors.json", "container.json", "controls.json", "dialogs.json", "dynamiclist.json", "feed.json", "geo.json", "gridswiper.json", "groupedlist.json", "iceberg.json", "list.json", "loading.json", "menu.json", "multi.json", "nestlist.json", "overlay.json", "roulette.json", "roulettetree.json", "scroller.json", "simple.json", "stackedtree.json", "standard.json", "switch.json", "tabs.json", "tags.json", "tree.json", "treedlist.json", "users.json", "views.json", "windows.json"]
-        },
-        "fonts":[]
     },
-    "popups":{
-        "width":300,
-        "height":400,
-        "anim":"OGX.Popup.FADE"
+    "preload": {
+        "/fonts": [
+            "OpenSans-Bold.ttf",
+            "OpenSans-BoldItalic.ttf",
+            "OpenSans-ExtraBold.ttf",
+            "OpenSans-ExtraBoldItalic.ttf",
+            "OpenSans-Italic.ttf",
+            "OpenSans-Light.ttf",
+            "OpenSans-LightItalic.ttf",
+            "OpenSans-Regular.ttf",
+            "OpenSans-Semibold.ttf",
+            "OpenSans-SemiboldItalic.ttf",
+            "Roboto-Black.ttf",
+            "Roboto-BlackItalic.ttf",
+            "Roboto-Bold.ttf",
+            "Roboto-BoldItalic.ttf",
+            "Roboto-Italic.ttf",
+            "Roboto-Light.ttf",
+            "Roboto-LightItalic.ttf",
+            "Roboto-Medium.ttf",
+            "Roboto-MediumItalic.ttf",
+            "Roboto-Regular.ttf",
+            "Roboto-Thin.ttf",
+            "Roboto-ThinItalic.ttf"
+        ],
+        "/img": [
+            "calendar.svg",
+            "clear.svg",
+            "code.svg",
+            "dialogs.svg",
+            "globules.svg",
+            "help.svg",
+            "lists.svg",
+            "loaders.svg",
+            "loop.svg",
+            "menu.svg",
+            "messenger.svg",
+            "ogx_logo.svg",
+            "oml.svg",
+            "overlay.svg",
+            "overlays.svg",
+            "popup.svg",
+            "popups.svg",
+            "routing.svg",
+            "save.svg",
+            "scrollers.svg",
+            "settings.svg",
+            "sketch.svg",
+            "storage.svg",
+            "subapps.svg",
+            "swipers.svg",
+            "switches.svg",
+            "tabs.svg",
+            "tags.svg",
+            "theater.jpg",
+            "trees.svg",
+            "views.svg",
+            "windows.svg"
+        ],
+        "/themes/io-globules-ogx/light/img": [
+            "down.svg",
+            "left.svg",
+            "remove.svg",
+            "right.svg",
+            "up.svg"
+        ],
+        "/themes/io-globules-ogx/dark/img": [
+            "about.svg",
+            "add.svg",
+            "arrow.svg",
+            "copy.svg",
+            "down.svg",
+            "edit.svg",
+            "edit_off.svg",
+            "file.svg",
+            "folder_close.svg",
+            "folder_closed.svg",
+            "folder_empty.svg",
+            "folder_open.svg",
+            "globules.svg",
+            "key.svg",
+            "left.svg",
+            "loading.svg",
+            "loop.svg",
+            "remove.svg",
+            "right.svg",
+            "send.svg",
+            "settings.svg",
+            "trash.svg",
+            "up.svg",
+            "view.svg",
+            "view_off.svg"
+        ],
+        "/img/abs": [
+            "globules.jpg",
+            "landscape01.jpg",
+            "landscape02.jpg",
+            "landscape03.jpg"
+        ],
+        "/img/posts": [
+            "blank.png",
+            "theater.jpg"
+        ],
+        "/img/users": [
+            "1.jpg",
+            "10.jpg",
+            "11.jpg",
+            "12.jpg",
+            "13.jpg",
+            "14.jpg",
+            "15.jpg",
+            "16.jpg",
+            "17.jpg",
+            "18.jpg",
+            "19.jpg",
+            "2.jpg",
+            "20.jpg",
+            "21.jpg",
+            "22.jpg",
+            "23.jpg",
+            "24.jpg",
+            "25.jpg",
+            "26.jpg",
+            "27.jpg",
+            "28.jpg",
+            "29.jpg",
+            "3.jpg",
+            "30.jpg",
+            "4.jpg",
+            "5.jpg",
+            "6.jpg",
+            "7.jpg",
+            "8.jpg",
+            "9.jpg"
+        ],
+        "/json": [
+            "advanced.json",
+            "brushes.json",
+            "carousel.json",
+            "colors.json",
+            "container.json",
+            "controls.json",
+            "dialogs.json",
+            "dynamiclist.json",
+            "feed.json",
+            "geo.json",
+            "gridswiper.json",
+            "groupedlist.json",
+            "iceberg.json",
+            "list.json",
+            "loading.json",
+            "menu.json",
+            "multi.json",
+            "nestlist.json",
+            "overlay.json",
+            "roulette.json",
+            "roulettetree.json",
+            "scroller.json",
+            "simple.json",
+            "stackedtree.json",
+            "standard.json",
+            "switch.json",
+            "tabs.json",
+            "tags.json",
+            "tree.json",
+            "treedlist.json",
+            "users.json",
+            "views.json",
+            "windows.json",
+            "_calendar.json",
+            "_popup.json"
+        ],
+        "/snd": [
+            "click.mp3"
+        ],
+        "/html": [
+            "template.Ad.html",
+            "template.Balls.html",
+            "template.Basic.html",
+            "template.BigBang.html",
+            "template.Brush.html",
+            "template.Chat.html",
+            "template.Contacts.html",
+            "template.Doc.html",
+            "template.Dummy.html",
+            "template.Filters.html",
+            "template.Gallery.html",
+            "template.Home.html",
+            "template.Login.html",
+            "template.Lorem.html",
+            "template.Main.html",
+            "template.Menu.html",
+            "template.MenuItem.html",
+            "template.Method.html",
+            "template.News.html",
+            "template.Object.html",
+            "template.Overlay.html",
+            "template.Post.html",
+            "template.Private.html",
+            "template.Profile.html",
+            "template.Public.html",
+            "template.Quad.html",
+            "template.Register.html",
+            "template.Roulette.html",
+            "template.Scroller.html",
+            "template.Settings.html",
+            "template.Sketch.html",
+            "template.Split.html",
+            "template.Standard.html",
+            "template.Switches.html",
+            "template.Tweet.html",
+            "template.User.html"
+        ]
     },
-    "overlays":{
-        "anim":"OGX.Overlay.FADE"
+    "popups": {
+        "width": 300,
+        "height": 400,
+        "anim": "fade"
     },
-    "windows":{
-        "head":"OGX.Window.HEAD_BACK",
-        "width":"100%",
-        "icons":["img/ogx_logo.svg"],
-        "fade":false,
-        "scroll":false,
-        "blured":true,
-        "show":false
+    "overlays": {
+        "anim": "fade"
     },
-    "theater":{
-        "icon_size":50,
-        "timeout":30
+    "windows": {
+        "head": "back",
+        "width": "100%",
+        "icons": [
+            "img/ogx_logo.svg"
+        ],
+        "fade": false,
+        "scroll": false,
+        "blured": true,
+        "show": false
     },
-    "scope":["public"]    
+    "theater": {
+        "icon_size": 50,
+        "timeout": 30
+    },
+    "scope": [
+        "public"
+    ]
 }

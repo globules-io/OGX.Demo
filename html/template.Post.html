@@ -6,8 +6,10 @@
 </div>
 <div class="post">
     <span class="date">{{$post.date}}</span>
-    {{calc !$post.image?@image="blank.png":@image=$post.image}}
-    {{calc !$post.image?@dsp="display:none;":@dsp=""}}
+    {{
+        !$post.image?@image="blank.png":@image=$post.image;
+        !$post.image?@dsp="display:none;":@dsp="";
+    }}
     <span class="image" style="background-image:url('./img/posts/{{@image}}'); {{@dsp}}"></span>
     <span class="body">{{$post.body}}</span>
 </div>

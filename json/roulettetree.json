@@ -8,7 +8,7 @@
         "#instance:RouletteTree":{  
             "id":"#roultree",
             "groups":["country", "state", "city"],
-            "data:Data":"geo.json",
+            "data:OSE":"{{json geo}}",
             "icon":true
         }                     
     },

@@ -13,12 +13,12 @@
                     "mode":"hit",
                     "display":{"template":"User", "css":"user"}, 
                     "key":"_id",
-                    "list:Data":"users.json"
+                    "list:OSE":"{{json users}}"
                 }
             }
         },
         "ctrl:Controllers.List":{
-            "data:Data":{"list":"DynamicList", "id":"users"}
+            "data":{"list":"DynamicList", "id":"users"}
         }
     },
     "doc":{

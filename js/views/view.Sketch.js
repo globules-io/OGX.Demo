@@ -13,9 +13,9 @@ OGX.Views.Sketch = function(){
     this.construct = function(){       
         canvas = $('#sketch').find('.board:first');
         ctx = canvas[0].getContext('2d');
-        controls = app.find(OGX.DynamicList.NAME, 'controls');
-        colors = app.find(OGX.DynamicList.NAME, 'colors');
-        brushes = app.find(OGX.DynamicList.NAME, 'brushes'); 
+        controls = app.find('DynamicList', 'controls');
+        colors = app.find('DynamicList', 'colors');
+        brushes = app.find('DynamicList', 'brushes'); 
         colors.select('color', '#000000');
         brushes.select('size', 1);
         that.resize();   

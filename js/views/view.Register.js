@@ -7,7 +7,7 @@ OGX.Views.Register = function(){
 	//@Override
     this.construct = function(){        
         OGX.Form.bindForm({
-            container:'#register form', 
+            el:'#register form', 
             forbidden:/<>/,
             submit_cb:onSubmit,     
             validate:true,           
@@ -33,7 +33,6 @@ OGX.Views.Register = function(){
 	//@Override
     this.destroy = function(){
         OGX.Form.bindForm('#register form');
-        that.removeLoading();
     };
 
     function onSubmit(__data){       

@@ -6,8 +6,8 @@ OGX.Controllers.Home = function(){
 
     this.construct = function(){
         stage = app.getStage();
-        login = stage.find(OGX.View.NAME, '#login');
-        carousel = stage.find(OGX.Carousel.NAME, 'carousel'); 
+        login = stage.find('View', '#login');
+        carousel = stage.find('Carousel', 'carousel'); 
     };   
 
     this.ux = function(__bool){     
@@ -29,14 +29,14 @@ OGX.Controllers.Home = function(){
 
     function onLogin(){
         //backend integration - skipped
-        OGX.Audio.playSound('click.mp3', 1);    
+        OGX.Audio.play('click', 0.3);    
         app.scope(['public', 'private']);
         app.goto('private/intro');
     }     
 
     function playClick(){		
         setTimeout(function(){
-            OGX.Audio.playSound('click.mp3', 1);           
+            OGX.Audio.play('click', 0.3);           
         }, 0);			
 	}  
 };

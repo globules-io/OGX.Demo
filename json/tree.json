@@ -7,7 +7,7 @@
     "demoml":{
         "#instance:Tree":{
             "scroll":true,
-            "data:Data":"menu.json"
+            "data:OSE":"{{json menu}}"
         }
     },
     "doc":{

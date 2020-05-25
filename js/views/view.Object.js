@@ -18,9 +18,8 @@ OGX.Views.Object = function(__config){
         }
         if(!config.data.hasOwnProperty('option') || !config.data.option){
             $('.demo .option:first').addClass('disabled');
-        }
-        //overlay
-        app.removeOverlay(OGX.Overlay.FADE);
+        }        
+        app.removeOverlay('fade');
     };
 
     //@Override
@@ -37,14 +36,14 @@ OGX.Views.Object = function(__config){
     }  
 
     function showDocs(){
-        app.getStage().reveal(OGX.Html.NAME, '#doc');      
+        app.getStage().reveal('Html', '#doc');      
     }  
 
     function showHelp(){
         if(config.data.hasOwnProperty('help') && config.data.help){
-            that.addOverlay(OGX.Overlay.FADE);
+            that.addOverlay('fade');
             if(!popup){
-                popup = that.create(OGX.Popup.NAME, {
+                popup = that.create('Popup', {
                     id:'help',
                     title:'Help',
                     width:300,
@@ -53,13 +52,13 @@ OGX.Views.Object = function(__config){
                     buttons:[{label:'CLOSE', callback:closePopup}]            
                 });   
             }        
-            popup.show(OGX.Popup.FADE);
+            popup.show('fade');
         }
     }
 
     function closePopup(){
-        that.removeOverlay(OGX.Overlay.FADE);
-        popup.hide(OGX.Popup.FADE);
+        that.removeOverlay('fade');
+        popup.hide('fade');
     }
    
     function showOML(){
@@ -69,9 +68,9 @@ OGX.Views.Object = function(__config){
         app.addWindow({
             id:'oml',
             title:'Demo OML',
-            style:OGX.Window.STYLE_BACK,
+            head:'back',
             width:'100%',
-            anim:OGX.Window.ANIM_RIGHT,
+            anim:'right',
             'node:OML':[
                 {'default:Html':{
                     instance:true,

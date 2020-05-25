@@ -16,7 +16,7 @@ OGX.Stages.Private = function(){
 
 	function playClick(){		
         setTimeout(function(){
-            OGX.Audio.playSound('click.mp3', 0.1);           
+            OGX.Audio.play('click', 0.3);           
         }, 0);			
 	} 
 };

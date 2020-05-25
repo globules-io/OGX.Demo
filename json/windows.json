@@ -14,9 +14,9 @@
                         {"winA:Window":{           
                             "width":"100%",
                             "height":"100%",
-                            "style":"OGX.Window.STYLE_BACK",
+                            "head":"back",
                             "title":"Window A",
-                            "anim":"OGX.Window.ANIM_LEFT"
+                            "anim":"left"
                         }}
                     ]
                 },
@@ -26,9 +26,9 @@
                         {"winB:Window":{           
                             "width":"100%",
                             "height":"100%",
-                            "style":"OGX.Window.STYLE_BACK",
+                            "head":"back",
                             "title":"Window B",
-                            "anim":"OGX.Window.ANIM_RIGHT"
+                            "anim":"right"
                         }}
                     ]
                 },
@@ -38,9 +38,9 @@
                         {"winC:Window":{           
                             "width":"100%",
                             "height":"100%",
-                            "style":"OGX.Window.STYLE_BACK",
+                            "head":"back",
                             "title":"Window C",
-                            "anim":"OGX.Window.ANIM_TOP"
+                            "anim":"top"
                         }}
                     ]
                 },
@@ -50,9 +50,9 @@
                         {"winD:Window":{           
                             "width":"100%",
                             "height":"100%",
-                            "style":"OGX.Window.STYLE_BACK",
+                            "head":"back",
                             "title":"Window D",
-                            "anim":"OGX.Window.ANIM_BOTTOM"
+                            "anim":"bottom"
                         }}
                     ]
                 }              

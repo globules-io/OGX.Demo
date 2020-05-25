@@ -26,10 +26,10 @@
                 }
             },
             "key":"_id",
-            "list:Data":"feed.json"
+            "list:OSE":"{{json feed}}"
         },
         "ctrl:Controllers.List":{
-            "data:Data":{"list":"DynamicList", "id":"feed"}
+            "data":{"list":"DynamicList", "id":"feed"}
         }
     },
     "doc":{

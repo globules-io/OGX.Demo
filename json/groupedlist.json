@@ -16,10 +16,10 @@
                     "group_by":"gender",
                     "group_order":["female", "male"],
                     "map":{"title":"gender"},
-                    "list:Data":"users.json"           
+                    "list:OSE":"{{json users}}"           
                 },
                 "ctrl:Controllers.List":{
-                    "data:Data":{"list":"GroupedList", "id":"grouped"}
+                    "data":{"list":"GroupedList", "id":"grouped"}
                 } 
             }            
         }        

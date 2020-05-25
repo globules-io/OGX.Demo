@@ -1,0 +1,28 @@
+<div class="doc">
+    <span class="title">Documentation</span>
+    {{!$doc.extends.length ? @cssx="hidden" : @cssx=""}} 
+    <div class="block {{@cssx}}">
+        <span class="subtitle">Stack</span>  
+        <span class="stack">{{loop $doc.extends as index extend {echo <span class="extend">&extend</span>}}}</span>         
+    </div>
+    {{!$doc.oml ? @csso="hidden" : @csso=""}} 
+    <div class="block {{@csso}}">
+        <span class="subtitle">OML</span>
+        <span class="oml"><code>{{@oml=JSON.stringify($oml)}}{{@oml}}</code></span>
+    </div> 
+    {{!$doc.properties.length ? @cssp="hidden" : @cssp=""}} 
+    <div class="block props {{@cssp}}">
+        <span class="subtitle">Properties (config)</span>    
+        <span class="properties">{{loop $doc.properties as index prop {echo <span class="property"><span class="name"><span>name:</span><span>&prop.name</span></span><span class="type"><span>type:</span><span>&prop.type</span></span><span class="desc"><span>desc:</span><span>&prop.desc</span></span></span>}}}</span>                
+    </div>  
+    {{!$doc.methods.length ? @cssm="hidden" : @cssm=""}} 
+    <div class="block methods {{@cssm}}">
+        <span class="subtitle">Methods</span>     
+        <span class="properties">{{loop $doc.methods as index method {echo <span class="property"><span class="name"><span>name:</span><span>&method.name</span></span><span class="desc"><span>desc:</span><span>&method.desc</span></span></span>}}}</span>                      
+    </div> 
+    {{!$doc.events.length ? @csse="hidden" : @csse=""}} 
+    <div class="block events {{@csse}}">
+        <span class="subtitle">Events</span>     
+        <span class="properties">{{loop $doc.events as index event {echo <span class="property"><span class="name"><span>event:</span><span>&event.name</span></span><span class="name"><span>desc:</span><span>&event.desc</span></span></span>}}}</span>     
+    </div>  
+</div>

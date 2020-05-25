@@ -7,14 +7,14 @@
     "demoml":{
         "#instance:TreedList":{  
             "id":"#treed",
-            "list:Data":"users.json",
+            "list:OSE":"{{json users}}",
             "renderer":"StackedTree",
             "group_by":["gender", "state"],
             "display":{"template":"User", "css":"user"},
             "mode":"hit"
         }, 
         "ctrl:Controllers.List":{
-            "data:Data":{"list":"StackedTree", "id":"#treed_stacked"}
+            "data":{"list":"StackedTree", "id":"#treed_stacked"}
         }                       
     },
     "doc":{
