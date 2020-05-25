@@ -2,7 +2,7 @@
     display:block;
     width:100%;
     padding:15px;
-    font-family:RBlight;
+    font-family:Roboto-Light;
     font-size:16px;    
 }
 .lorem span{
@@ -12,7 +12,7 @@
     text-align:justify;
 }
 .lorem > .title{
-    font-family:RBsemi;
+    font-family:Roboto-Medium;
     font-size:20px;
 }
 .lorem .image{

@@ -39,18 +39,18 @@
     display:block;    
 }
 #bigbang > .wrapper > .intro > .s{
-    font-family:RBlight;
+    font-family:Roboto-Light;
     font-size:12px;
     letter-spacing:2px;    
 }
 #bigbang > .wrapper > .intro > .m{
-    font-family:RBsemi;
+    font-family:Roboto-Medium;
     font-size:16px;
     margin-top:10px;
     margin-bottom:5px;
 }
 #bigbang > .wrapper > .intro > .ogx{
-    font-family:RBbold;
+    font-family:Roboto-Bold;
     font-size:50px; 
     letter-spacing:-2px;
     margin-bottom:-10px;

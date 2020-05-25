@@ -22,7 +22,7 @@
 #register form input[type=submit]{   
     background-color:#436963;
     color:#EEE;    
-    font-family:RBsemi;
+    font-family:Roboto-Medium;
 }
 #register .choice{
     display:block;

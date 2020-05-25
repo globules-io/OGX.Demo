@@ -26,17 +26,17 @@
 .user > .container > .right  > *{
     display:inline-block;
     text-transform:capitalize;
-    font-family:RBsemi;
+    font-family:Roboto-Medium;
 }
 .user  > .container > .right > .last_name{  
     margin-left:5px;    
 }
 .user  > .container > .right > .city{   
-    font-family:RBreg;
+    font-family:Roboto-Regular;
     font-size:16px;
     margin-right:5px;
 }
 .user  > .container > .right > .country{    
-    font-family:RBreg;
+    font-family:Roboto-Regular;
     font-size:16px;
 }

@@ -3,14 +3,14 @@
 }
 .user_post > .post > .date{
     display:block;
-    font-family:RBlight;
+    font-family:Roboto-Light;
     font-size:14px;   
     margin-left:10px;
     margin-bottom:5px;
 }
 .user_post > .post > .body{
     display:block;
-    font-family:RBlight;
+    font-family:Roboto-Light;
     font-size:16px;
     padding:0px 10px 20px 10px;   
 }

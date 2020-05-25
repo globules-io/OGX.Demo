@@ -9,7 +9,7 @@
 }
 .doc > .header > .title{
     display:block;
-    font-family:RBsemi;
+    font-family:Roboto-Medium;
     font-size:18px;
     margin-bottom:10px;
 }
@@ -19,7 +19,7 @@
 }
 .doc .subtitle{
     display:block;
-    font-family:RBreg;
+    font-family:Roboto-Regular;
     font-size:16px;
     margin-bottom:5px;
 }
@@ -37,7 +37,7 @@
     display:inline-block;
     margin-right:5px;
     font-size:16px;
-    font-family:RBsemi;
+    font-family:Roboto-Medium;
     color:#EEE;
 }
 .doc .hidden{
@@ -67,7 +67,7 @@
 }
 .doc .properties > .property{
     display:block;
-    font-family:RBlight;
+    font-family:Roboto-Light;
     font-size:16px;
     margin-bottom:10px;
     color:#EEE;
@@ -82,7 +82,7 @@
     margin-right:5px;
 }
 .doc .properties > .property > span > span:first-of-type{
-    font-family:RBreg;
+    font-family:Roboto-Regular;
     color:#BBB;
 }
 .split .doc{
