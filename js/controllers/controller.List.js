@@ -71,11 +71,12 @@ OGX.Controllers.List = function(__config){
                     'default:Templates.Filters':{
                         id:'#filters',  
                         'node:OML':{                            
-                            '#filter_geo:RouletteTree':{
-                                id:'geotree',                               
+                            '#filter_geo:TreedList':{
+                                id:'geotree',
+                                list:ls,
                                 icon:true,
-                                groups:['country', 'state', 'city'],
-                                'data:OSE':'{{json geo}}'
+                                group_by:['location.state', 'location.city'],
+                                renderer:'RouletteTree'                               
                             }
                         }
                     }
@@ -84,7 +85,7 @@ OGX.Controllers.List = function(__config){
             //bind the list to input and roulette group
             list.bind({property:'first_name', object:'#filter_fname', mode:'in'});
             list.bind({property:'last_name', object:'#filter_lname', mode:'in'});          
-            var rt = app.getStage().find('RouletteTree', 'geotree');
+            let rt = app.getStage().find('RouletteTree', 'geotree_roultree');
             list.bind({property:'location', object:rt, mode:'in', remote_property:['state', 'city']});
         }
         filters.show();
