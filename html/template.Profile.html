@@ -1,9 +1,9 @@
 <div class="container">
     <div class="left"><span class="image" style="background-image:url('./img/users/{{$image}}');"></span></span></div><div class="right">
         <span class="first_name">{{$first_name}}</span><span class="last_name">{{$last_name}}</span><span class="age">, {{@age=moment().year()-moment($birth).year()}}{{@age}}</span><br>        
-        <span class="city">{{$city}}</span>
-        <span class="state">{{$state}}</span>
-        <span class="country">{{$country}}</span>        
+        <span class="city">{{$location.city}}</span>
+        <span class="state">{{$location.state}}</span>
+        <span class="country">{{$location.country}}</span>        
         <span class="email">{{$email}}</span>       
     </div>
 </div>

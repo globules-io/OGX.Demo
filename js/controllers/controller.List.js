@@ -21,8 +21,7 @@ OGX.Controllers.List = function(__config){
                     if(app.windowExists('winuser')){
                         app.removeWindow('winuser');
                     }
-                    //shortcut to adding to current stage
-                    //could consider a break point here
+                    //shortcut to adding to current stage              
                     app.addWindow({
                         id:'winuser',
                         title:__data.first_name+' '+__data.last_name,
@@ -70,14 +69,13 @@ OGX.Controllers.List = function(__config){
                 anim:'right',
                 'node:OML':[{
                     'default:Templates.Filters':{
-                        id:'#filters',                       
+                        id:'#filters',  
                         'node:OML':{                            
-                            '#filter_geo:TreedList':{
-                                id:'geotree',
-                                list:ls,
+                            '#filter_geo:RouletteTree':{
+                                id:'geotree',                               
                                 icon:true,
-                                group_by:['state', 'city'],
-                                renderer:'RouletteTree'
+                                groups:['country', 'state', 'city'],
+                                'data:OSE':'{{json geo}}'
                             }
                         }
                     }
@@ -86,10 +84,8 @@ OGX.Controllers.List = function(__config){
             //bind the list to input and roulette group
             list.bind({property:'first_name', object:'#filter_fname', mode:'in'});
             list.bind({property:'last_name', object:'#filter_lname', mode:'in'});          
-            //treedlist automatically adds _roultree to the id to target RouletteTree
-            let rt = app.getStage().find('RouletteTree', 'geotree_roultree');
-            //no need to name a property here but must be unique so name it anyway - DynamicList will do the links
-            list.bind({property:'whatever', object:rt, mode:'in'});
+            var rt = app.getStage().find('RouletteTree', 'geotree');
+            list.bind({property:'location', object:rt, mode:'in', remote_property:['state', 'city']});
         }
         filters.show();
     }     

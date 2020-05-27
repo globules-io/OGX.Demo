@@ -5,9 +5,11 @@
         "last_name" : "lo", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova scotia"
+        },        
         "email" : "h.lo@ricpnlvm.com", 
         "image" : "1.jpg", 
         "country_code" : "ca",
@@ -20,9 +22,11 @@
         "last_name" : "macdonald", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "cambridge", 
-        "country" : "canada", 
-        "state" : "ontario",         
+        "location":{
+            "city" : "cambridge", 
+            "country" : "canada", 
+            "state" : "ontario"
+        },   
         "email" : "x.macdonald@onyxoobn.com", 
         "image" : "2.jpg", 
         "country_code" : "ca",
@@ -35,9 +39,11 @@
         "last_name" : "young", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",        
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"       
+        }, 
         "email" : "l.young@xzgqltbw.com", 
         "image" : "3.jpg", 
         "country_code" : "ca",
@@ -50,9 +56,11 @@
         "last_name" : "novak", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "regina", 
-        "country" : "canada", 
-        "state" : "saskatchewan",        
+        "location":{
+            "city" : "regina", 
+            "country" : "canada", 
+            "state" : "saskatchewan"
+        },     
         "email" : "j.novak@mkrnxwph.com", 
         "image" : "4.jpg", 
         "country_code" : "ca",
@@ -65,9 +73,11 @@
         "last_name" : "bouchard", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova scotia"
+        },        
         "email" : "j.bouchard@apzjrpkm.com", 
         "image" : "5.jpg", 
         "country_code" : "ca",
@@ -80,9 +90,11 @@
         "last_name" : "brar", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "port coquitlam", 
-        "country" : "canada", 
-        "state" : "british columbia",         
+        "location":{
+            "city" : "port coquitlam", 
+            "country" : "canada", 
+            "state" : "british columbia"
+        },         
         "email" : "c.brar@ghyworfg.com", 
         "image" : "6.jpg", 
         "country_code" : "ca",
@@ -95,9 +107,11 @@
         "last_name" : "lavoie", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova scotia"
+        },       
         "email" : "m.lavoie@yfivhwvh.com", 
         "image" : "7.jpg", 
         "country_code" : "ca",
@@ -110,9 +124,11 @@
         "last_name" : "patel", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova scotia",          
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova scotia"
+        },          
         "email" : "m.patel@wcvyoxyk.com", 
         "image" : "8.jpg", 
         "country_code" : "ca",
@@ -125,9 +141,11 @@
         "last_name" : "wong", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },         
         "email" : "j.wong@ttgzfpji.com", 
         "image" : "9.jpg", 
         "country_code" : "ca",
@@ -140,9 +158,11 @@
         "last_name" : "harris", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "longueuil", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "longueuil", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },       
         "email" : "l.harris@ixisxqtv.com", 
         "image" : "10.jpg", 
         "country_code" : "ca",
@@ -155,9 +175,11 @@
         "last_name" : "mitchell", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "calgary", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "calgary", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },        
         "email" : "m.mitchell@jhuwmvzp.com", 
         "image" : "11.jpg", 
         "country_code" : "ca",
@@ -170,9 +192,11 @@
         "last_name" : "claire", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "kirkland", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "kirkland", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },         
         "email" : "r.claire@prkfqwrl.com", 
         "image" : "12.jpg", 
         "country_code" : "ca",
@@ -185,9 +209,11 @@
         "last_name" : "singh", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "regina", 
-        "country" : "canada", 
-        "state" : "saskatchewan",         
+        "location":{
+            "city" : "regina", 
+            "country" : "canada", 
+            "state" : "saskatchewan"
+        },         
         "email" : "e.singh@vuxmcmrb.com", 
         "image" : "13.jpg", 
         "country_code" : "ca",
@@ -200,9 +226,11 @@
         "last_name" : "mitchell", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova scotia",        
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova scotia"
+        },        
         "email" : "e.mitchell@tkblrnrh.com", 
         "image" : "14.jpg", 
         "country_code" : "ca",
@@ -215,9 +243,11 @@
         "last_name" : "harcourt", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "levis", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "levis", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },       
         "email" : "a.harcourt@dhqvbqmu.com", 
         "image" : "15.jpg", 
         "country_code" : "ca",
@@ -230,9 +260,11 @@
         "last_name" : "ambrose", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "kelowna", 
-        "country" : "canada", 
-        "state" : "british columbia",         
+        "location":{
+            "city" : "kelowna", 
+            "country" : "canada", 
+            "state" : "british columbia"
+        },         
         "email" : "d.ambrose@tdijbqui.com", 
         "image" : "16.jpg", 
         "country_code" : "ca",
@@ -245,9 +277,11 @@
         "last_name" : "lo", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "vancouver", 
-        "country" : "canada", 
-        "state" : "british columbia",        
+        "location":{
+            "city" : "vancouver", 
+            "country" : "canada", 
+            "state" : "british columbia"
+        },        
         "email" : "n.lo@hsywjhjr.com", 
         "image" : "17.jpg", 
         "country_code" : "ca",
@@ -260,9 +294,11 @@
         "last_name" : "chan", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "calgary", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "calgary", 
+            "country" : "canada", 
+            "state" : "alberta" 
+        },        
         "email" : "c.chan@oueaugzp.com", 
         "image" : "18.jpg", 
         "country_code" : "ca",
@@ -275,9 +311,11 @@
         "last_name" : "tremblay", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "granby", 
-        "country" : "canada", 
-        "state" : "quebec",        
+        "location":{
+            "city" : "granby", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },       
         "email" : "e.tremblay@hdvqajjv.com", 
         "image" : "19.jpg", 
         "country_code" : "ca",
@@ -290,9 +328,11 @@
         "last_name" : "brown", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },         
         "email" : "e.brown@glqkvigc.com", 
         "image" : "20.jpg", 
         "country_code" : "ca",
@@ -305,9 +345,11 @@
         "last_name" : "morin", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "victoria", 
-        "country" : "canada", 
-        "state" : "british columbia",         
+        "location":{
+            "city" : "victoria", 
+            "country" : "canada", 
+            "state" : "british columbia"  
+        },       
         "email" : "m.morin@dmicaxle.com", 
         "image" : "21.jpg", 
         "country_code" : "ca",
@@ -320,9 +362,11 @@
         "last_name" : "gill", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },        
         "email" : "n.gill@tbrmgwqu.com", 
         "image" : "22.jpg", 
         "country_code" : "ca",
@@ -335,9 +379,11 @@
         "last_name" : "abraham", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "kirkland", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "kirkland", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },         
         "email" : "j.abraham@vwlhiyqt.com", 
         "image" : "23.jpg", 
         "country_code" : "ca",
@@ -350,9 +396,11 @@
         "last_name" : "gagnon", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "regina", 
-        "country" : "canada", 
-        "state" : "saskatchewan",        
+        "location":{
+            "city" : "regina", 
+            "country" : "canada", 
+            "state" : "saskatchewan"
+        },        
         "email" : "e.gagnon@dqihawds.com", 
         "image" : "24.jpg", 
         "country_code" : "ca",
@@ -365,9 +413,11 @@
         "last_name" : "patel", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova scotia"
+        },        
         "email" : "c.patel@jecfalxn.com", 
         "image" : "25.jpg", 
         "country_code" : "ca",
@@ -380,9 +430,11 @@
         "last_name" : "bouchard", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "welland", 
-        "country" : "canada", 
-        "state" : "ontario",         
+        "location":{
+            "city" : "welland", 
+            "country" : "canada", 
+            "state" : "ontario"
+        },        
         "email" : "j.bouchard@ieovdjrw.com", 
         "image" : "26.jpg", 
         "country_code" : "ca",
@@ -395,9 +447,11 @@
         "last_name" : "jean-baptiste", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },         
         "email" : "p.jean-baptiste@tlkwbkgn.com", 
         "image" : "27.jpg", 
         "country_code" : "ca",
@@ -410,9 +464,11 @@
         "last_name" : "novak", 
         "gender" : "male", 
         "birth" : "1980-01-01",
-        "city" : "levis", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "levis", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },         
         "email" : "l.novak@jsjcoijg.com", 
         "image" : "28.jpg", 
         "country_code" : "ca",
@@ -425,9 +481,11 @@
         "last_name" : "brar", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "regina", 
-        "country" : "canada", 
-        "state" : "saskatchewan",        
+        "location":{
+            "city" : "regina", 
+            "country" : "canada", 
+            "state" : "saskatchewan"
+        },        
         "email" : "f.brar@zsgfkvst.com", 
         "image" : "29.jpg", 
         "country_code" : "ca",
@@ -440,9 +498,11 @@
         "last_name" : "lavigne", 
         "gender" : "female", 
         "birth" : "1980-01-01",
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },         
         "email" : "a.lavigne@geubjscv.com", 
         "image" : "30.jpg", 
         "country_code" : "ca",
