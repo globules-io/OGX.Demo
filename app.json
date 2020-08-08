@@ -91,7 +91,7 @@
                     "id": "#point",
                     "live": [
                         "object",
-                        "#doc"
+                        "doc"
                     ],
                     "0:479": {
                         "winobj:Window": {
@@ -379,7 +379,9 @@
             "8.jpg",
             "9.jpg"
         ],
-        "/json": [
+        "/json": [    
+            "_calendar.json",
+            "_popup.json",
             "advanced.json",
             "brushes.json",
             "carousel.json",
@@ -412,9 +414,7 @@
             "treedlist.json",
             "users.json",
             "views.json",
-            "windows.json",
-            "_calendar.json",
-            "_popup.json"
+            "windows.json"
         ],
         "/snd": [
             "click.mp3"

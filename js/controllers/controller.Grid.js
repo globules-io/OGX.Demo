@@ -8,7 +8,7 @@ OGX.Controllers.Grid = function(__data){
     //@Override
     this.construct = function(){       
         
-        grid = app.getStage().find(OGX.GridSwiper.NAME, 'grid');
+        grid = app.cfind('GridSwiper', 'grid');
         grid.setMap([
             [displayPoint, oml, displayPoint],
             [displayPoint, displayPoint, displayPoint],

@@ -9,7 +9,7 @@ OGX.Controllers.List = function(__config){
     //@Override
     this.construct = function(){
         //find groupedlist or dynamiclist
-        list = app.getStage().find(config.data.list, config.data.id);      
+        list = app.cfind(config.data.list, config.data.id);      
     };	
     
     //@Override

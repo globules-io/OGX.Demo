@@ -6,8 +6,8 @@ OGX.Controllers.Home = function(){
 
     this.construct = function(){
         stage = app.getStage();
-        login = stage.find('View', '#login');
-        carousel = stage.find('Carousel', 'carousel'); 
+        login = app.cfind('View', 'login');
+        carousel = app.cfind('Carousel', 'carousel'); 
     };   
 
     this.ux = function(__bool){     

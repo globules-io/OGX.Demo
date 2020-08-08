@@ -7,7 +7,7 @@ OGX.Controllers.Menu = function(){
     //@Override
     this.construct = function(){
         stage = app.getStage();
-        win = stage.find('Window', 'winmenu');  
+        win = app.cfind('Window', 'winmenu');  
     };
         
     //@Override
@@ -22,7 +22,7 @@ OGX.Controllers.Menu = function(){
                 //stop listening to window closing (from swipe or window icon)
                 win.el.off(OGX.Window.CLOSING, onClosing);
                 //hide the window then show the theater, pass data and window
-                win.hide(null, onClosed, {data:__data, win:win});
+                win.hide(true, onClosed, {data:__data, win:win});
             });
             win.el.on(OGX.Window.CLOSING, onClosing);
         }else{
