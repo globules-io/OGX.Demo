@@ -136,7 +136,7 @@
                         }
                     }
                 },
-                "origin:Route": "self,private/intro",
+                "origin:Route": "self,private/intro,private/settings",
                 "scope": [
                     "private"
                 ]
