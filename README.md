@@ -1,7 +1,7 @@
 # OGX.Demo
 ### Demo app showcasing OGX.JS features
 
-> Currently refactoring for OGX.JS version 1.2.x. Previous tags are for OGX.JS version 1.1.x
+> Made with/for OGX.JS version 1.2.x.
 
 > All css and js files other than libs left raw
 
