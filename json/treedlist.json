@@ -14,7 +14,7 @@
             "mode":"hit"
         }, 
         "ctrl:Controllers.List":{
-            "data":{"list":"StackedTree", "id":"#treed_stacked"}
+            "data":{"list":"StackedTree", "id":"treed_stacked"}
         }                       
     },
     "doc":{
