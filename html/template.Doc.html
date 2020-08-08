@@ -1,14 +1,17 @@
 <div class="doc">
     <span class="title">Documentation</span>
-    {{!$doc.extends.length ? @cssx="hidden" : @cssx=""}} 
+    {{
+        !$doc.extends.length ? @cssx="hidden" : @cssx="";
+        !$doc.oml ? @csso="hidden" : @csso="";
+        @oml = JSON.stringify($oml);
+    }} 
     <div class="block {{@cssx}}">
         <span class="subtitle">Stack</span>  
         <span class="stack">{{loop $doc.extends as index extend {echo <span class="extend">&extend</span>}}}</span>         
-    </div>
-    {{!$doc.oml ? @csso="hidden" : @csso=""}} 
+    </div>  
     <div class="block {{@csso}}">
         <span class="subtitle">OML</span>
-        <span class="oml"><code>{{@oml=JSON.stringify($oml)}}{{@oml}}</code></span>
+        <span class="oml"><code>{{@oml}}</code></span>
     </div> 
     {{!$doc.properties.length ? @cssp="hidden" : @cssp=""}} 
     <div class="block props {{@cssp}}">
