@@ -9,7 +9,7 @@
             "id":"#treed",
             "list:OSE":"{{json users}}",
             "renderer":"StackedTree",
-            "group_by":["gender", "state"],
+            "group_by":["gender", "location.state"],
             "display":{"template":"User", "css":"user"},
             "mode":"hit"
         }, 
