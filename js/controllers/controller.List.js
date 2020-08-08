@@ -84,9 +84,13 @@ OGX.Controllers.List = function(__config){
             }); 
             //bind the list to input and roulette group
             list.bind({property:'first_name', object:'#filter_fname', mode:'in'});
-            list.bind({property:'last_name', object:'#filter_lname', mode:'in'});          
-            let rt = app.getStage().find('RouletteTree', 'geotree_roultree');
+            list.bind({property:'last_name', object:'#filter_lname', mode:'in'});   
+
+            //currently broken : fix in progress
+            /*       
+            var rt = app.cfind('RouletteTree', 'geotree_roultree');
             list.bind({property:'location', object:rt, mode:'in', remote_property:['state', 'city']});
+            */
         }
         filters.show();
     }     
