@@ -4,9 +4,11 @@
         "first_name" : "hudson", 
         "last_name" : "lo", 
         "gender" : "male", 
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova_scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova_scotia"
+        },    
         "email" : "h.lo@ricpnlvm.com", 
         "image" : "1.jpg", 
         "country_code" : "ca",
@@ -22,9 +24,11 @@
         "first_name" : "xavier", 
         "last_name" : "macdonald", 
         "gender" : "male", 
-        "city" : "cambridge", 
-        "country" : "canada", 
-        "state" : "ontario",         
+        "location":{
+            "city" : "cambridge", 
+            "country" : "canada", 
+            "state" : "ontario"
+        },       
         "email" : "x.macdonald@onyxoobn.com", 
         "image" : "2.jpg", 
         "country_code" : "ca",
@@ -40,9 +44,11 @@
         "first_name" : "louis", 
         "last_name" : "young", 
         "gender" : "male", 
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",        
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },     
         "email" : "l.young@xzgqltbw.com", 
         "image" : "3.jpg", 
         "country_code" : "ca",
@@ -65,9 +71,11 @@
         "first_name" : "jack", 
         "last_name" : "novak", 
         "gender" : "male", 
-        "city" : "regina", 
-        "country" : "canada", 
-        "state" : "saskatchewan",        
+        "location":{
+            "city" : "regina", 
+            "country" : "canada", 
+            "state" : "saskatchewan"
+        },        
         "email" : "j.novak@mkrnxwph.com", 
         "image" : "4.jpg", 
         "country_code" : "ca",
@@ -83,9 +91,11 @@
         "first_name" : "jasmine", 
         "last_name" : "bouchard", 
         "gender" : "female", 
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova_scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova_scotia"
+        },         
         "email" : "j.bouchard@apzjrpkm.com", 
         "image" : "5.jpg", 
         "country_code" : "ca",
@@ -101,9 +111,11 @@
         "first_name" : "carter", 
         "last_name" : "brar", 
         "gender" : "male", 
-        "city" : "port_coquitlam", 
-        "country" : "canada", 
-        "state" : "british_columbia",         
+        "location":{
+            "city" : "port_coquitlam", 
+            "country" : "canada", 
+            "state" : "british_columbia"
+        },         
         "email" : "c.brar@ghyworfg.com", 
         "image" : "6.jpg", 
         "country_code" : "ca",
@@ -125,9 +137,11 @@
         "first_name" : "mia", 
         "last_name" : "lavoie", 
         "gender" : "female", 
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova_scotia",         
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova_scotia"
+        },        
         "email" : "m.lavoie@yfivhwvh.com", 
         "image" : "7.jpg", 
         "country_code" : "ca",
@@ -143,9 +157,11 @@
         "first_name" : "matthew", 
         "last_name" : "patel", 
         "gender" : "male", 
-        "city" : "halifax", 
-        "country" : "canada", 
-        "state" : "nova_scotia",          
+        "location":{
+            "city" : "halifax", 
+            "country" : "canada", 
+            "state" : "nova_scotia"
+        },        
         "email" : "m.patel@wcvyoxyk.com", 
         "image" : "8.jpg", 
         "country_code" : "ca",
@@ -161,9 +177,11 @@
         "first_name" : "julia", 
         "last_name" : "wong", 
         "gender" : "female", 
-        "city" : "edmonton", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "edmonton", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },         
         "email" : "j.wong@ttgzfpji.com", 
         "image" : "9.jpg", 
         "country_code" : "ca",
@@ -186,9 +204,11 @@
         "first_name" : "logan", 
         "last_name" : "harris", 
         "gender" : "male", 
-        "city" : "longueuil", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "longueuil", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },         
         "email" : "l.harris@ixisxqtv.com", 
         "image" : "10.jpg", 
         "country_code" : "ca",
@@ -204,9 +224,11 @@
         "first_name" : "megan", 
         "last_name" : "mitchell", 
         "gender" : "female", 
-        "city" : "calgary", 
-        "country" : "canada", 
-        "state" : "alberta",         
+        "location":{
+            "city" : "calgary", 
+            "country" : "canada", 
+            "state" : "alberta"
+        },         
         "email" : "m.mitchell@jhuwmvzp.com", 
         "image" : "11.jpg", 
         "country_code" : "ca",
@@ -222,9 +244,11 @@
         "first_name" : "rose", 
         "last_name" : "claire", 
         "gender" : "female", 
-        "city" : "kirkland", 
-        "country" : "canada", 
-        "state" : "quebec",         
+        "location":{
+            "city" : "kirkland", 
+            "country" : "canada", 
+            "state" : "quebec"
+        },         
         "email" : "r.claire@prkfqwrl.com", 
         "image" : "12.jpg", 
         "country_code" : "ca",
