@@ -7,6 +7,7 @@ OGX.Views.Object = function(__config){
     let popup = false;
     let oml;
 
+	//@Override
     this.construct = function(__data, __route_data){
         //demo
         oml = JSON.parse(JSON.stringify(config.data.demoml));
