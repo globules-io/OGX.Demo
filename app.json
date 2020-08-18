@@ -393,7 +393,7 @@
             "treedlist.json",
             "users.json",
             "views.json",
-            "windows.json",
+            "windows.json"
         ],
         "/oml": [
             "menu.oml"
