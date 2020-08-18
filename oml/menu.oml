@@ -1,0 +1,24 @@
+ {
+    "winmenu:Window": {
+        "head": "back",
+        "anim": "left",
+        "width": "60%",
+        "min_width": 200,
+        "height": "100%",
+        "show": false,
+        "drag": true,
+        "resize": true,
+        "node:OML": [
+            {
+                "default:StackedTree": {
+                    "id": "#menu_tree",
+                    "display": {
+                        "template": "MenuItem"
+                    },
+                    "list:OSE": "{{json menu}}"
+                }
+            }
+        ]
+    },
+    "ctrl:Controllers.Menu": {}
+ }

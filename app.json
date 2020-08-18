@@ -37,28 +37,6 @@
                     "template": "BigBang",
                     "css": "bigbang"
                 },
-                "winmenu:Window": {
-                    "head": "back",
-                    "anim": "left",
-                    "width": "60%",
-                    "min_width": 200,
-                    "height": "100%",
-                    "show": false,
-                    "drag": true,
-                    "resize": true,
-                    "node:OML": [
-                        {
-                            "default:StackedTree": {
-                                "id": "#menu_tree",
-                                "display": {
-                                    "template": "MenuItem"
-                                },
-                                "list:OSE": "{{json menu}}"
-                            }
-                        }
-                    ]
-                },
-                "ctrl:Controllers.Menu": {},
                 "scope": [
                     "public"
                 ]
@@ -217,7 +195,8 @@
             "theater": {
                 "icon": "ogx_logo.svg",
                 "label": "Demo"
-            }
+            },
+            "node:OML":"{{oml menu}}"           
         },
         "messenger:Stages.Messenger": {
             "template": "Chat",
@@ -414,7 +393,10 @@
             "treedlist.json",
             "users.json",
             "views.json",
-            "windows.json"
+            "windows.json",
+        ],
+        "/oml": [
+            "menu.oml"
         ],
         "/snd": [
             "click.mp3"
