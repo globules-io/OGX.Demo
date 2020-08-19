@@ -50,6 +50,7 @@
 }
 #sketch > .tools > .brushes .brush{
     display:block;   
+    position:relative;
     width:30px;
     height:30px;
     margin-bottom:-1px; 
@@ -62,7 +63,7 @@
 }
 #sketch > .tools > .brushes .brush > .icon{
     display:block;  
-    position:relative;
+    position:absolute;
     background-color:#222;
 }
 #sketch > .tools > .colors{
