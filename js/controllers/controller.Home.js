@@ -30,7 +30,8 @@ OGX.Controllers.Home = function(){
     function onLogin(){
         //backend integration - skipped
         OGX.Audio.play('click', 0.3);    
-        app.scope(['public', 'private']);
+        //no JWT here because jwt = false in config
+        OGX.Scope.setScope(['public', 'private']);
         app.goto('private/intro');
     }     
 

@@ -465,5 +465,6 @@
     },
     "scope": [
         "public"
-    ]
+    ],
+    "jwt":false
 }
