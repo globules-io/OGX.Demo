@@ -1,3 +1,4 @@
-@Theme:io-globules-ogx
-@Author:globules.io
-@Version:1.0.0
+@Theme:io-globules-ogx 
+@Author:globules.io 
+@Version:1.2.0.2
+@Description:default theme 
