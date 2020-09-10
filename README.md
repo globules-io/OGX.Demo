@@ -1,7 +1,7 @@
 # OGX.Demo
 ### Demo app showcasing OGX.JS features
 
-> Made with/for OGX.JS version 1.4+
+> Made with/for OGX.JS version 1.5+
 
 > All css and js files other than libs left raw
 
