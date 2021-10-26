@@ -7,7 +7,7 @@ OGX.Views.Settings = function(__config){
 
     //@Override
     this.construct = function(){        
-        roul = this.find(OGX.Roulette.NAME, 'theme_roul'); 
+        roul = app.cfind('Roulette', 'theme_roul'); 
         if(supported === -1){           
             cordova.plugins.ThemeDetection.isAvailable(function(__res){
                 supported = __res.value;  

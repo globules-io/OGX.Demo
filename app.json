@@ -172,7 +172,8 @@
         "options": {
             "history": true,
             "bookmarkable": false
-        }
+        },
+ 		"errors": {}
     },
     "vapps": {
         "public:Stages.Public": {

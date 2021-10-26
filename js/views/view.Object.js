@@ -37,7 +37,7 @@ OGX.Views.Object = function(__config){
     }  
 
     function showDocs(){
-        app.getStage().reveal('Html', '#doc');      
+        app.cfind('Html', 'doc').reveal();      
     }  
 
     function showHelp(){

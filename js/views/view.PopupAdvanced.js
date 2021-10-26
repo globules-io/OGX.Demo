@@ -14,7 +14,7 @@ OGX.Views.PopupAdvanced = function(__config){
     this.construct = function(){
         let conf = genConf();
         if(!conf){
-            popup = this.find(OGX.Popup.NAME, 'container');
+            popup = app.cfind('Popup', 'container');
         }else{
             popup = this.create('Popup', conf);     
         }             

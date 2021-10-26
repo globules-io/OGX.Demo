@@ -26,6 +26,12 @@
     width:100%;
     height:calc(60% - 30px);
 }
+#home  > .carousel .carousel_dots{
+    margin-bottom: 0px;
+}
+#home  > .carousel .carousel_dots .ogx_dots{
+    z-index: 1000;
+}
 #home .shrink{
     height:100px !important;
 }

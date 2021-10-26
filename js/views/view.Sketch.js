@@ -13,9 +13,9 @@ OGX.Views.Sketch = function(){
     this.construct = function(){       
         canvas = $('#sketch').find('.board:first');
         ctx = canvas[0].getContext('2d');
-        controls = app.find('DynamicList', 'controls');
-        colors = app.find('DynamicList', 'colors');
-        brushes = app.find('DynamicList', 'brushes'); 
+        controls = app.cfind('DynamicList', 'controls');
+        colors = app.cfind('DynamicList', 'colors');
+        brushes = app.cfind('DynamicList', 'brushes'); 
         colors.select('color', '#000000');
         brushes.select('size', 1);
         that.resize();   
@@ -57,24 +57,26 @@ OGX.Views.Sketch = function(){
             controls.el.on(OGX.DynamicList.SELECT, function(__e, __data){
                 switch(__data.id){
                     case 'clear':
-                    app.addOverlay({}, that);
+                    that.addOverlay();
                     app.addPopup({
                         id:'popup',
                         title:'Clear Artboard?',
                         width:300,
                         height:180,
+                        anim:'scale',
                         html:'<span class="popup_message">Please confirm that you want to clear the artboard.</span>',
                         buttons:[{label:'CLEAR', callback:clearBoard}, {label:'CANCEL', callback:closePopup}]
                     }, that);                 
                     break;
 
                     case 'save':
-                    app.addOverlay({}, that);
+                    that.addOverlay();
                     app.addPopup({
                         id:'popup',
                         title:'Send Sketch?',
                         width:300,
                         height:180,
+                        anim:'scale',
                         html:'<span class="popup_message">Please confirm that you want to send out the artboard.</span>',
                         buttons:[{label:'SEND', callback:sendSketch}, {label:'CANCEL', callback:closePopup}]
                     }, that);                 
@@ -110,24 +112,25 @@ OGX.Views.Sketch = function(){
     }
 
     function closePopup(){
-        app.removeOverlay(OGX.Overlay.FADE, that);
-        app.removePopup('popup', that);
+        that.removeOverlay(false);
+        app.removePopup('popup', false);
     }
 
     function sendSketch(){
-        app.removePopup('popup', that);
-        app.removeOverlay(false, that);
+        app.removePopup('popup', false);
+        that.removeOverlay(false);
         that.addLoading();
         //api...
         setTimeout(function(){
             resizeCanvas();
             that.removeLoading(false);
-            app.addOverlay({anim:false}, that);
+            that.addOverlay(false);
             app.addPopup({
                 id:'popup',
                 title:'Sketch Sent!',
                 width:300,
                 height:180,
+                anim:'scale',
                 html:'<span class="popup_message">Your sketch has been submitted!</span>',
                 buttons:[{label:'CLOSE', callback:closePopup}]
             }, that);
