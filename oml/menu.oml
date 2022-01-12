@@ -1,4 +1,4 @@
- {
+{
     "winmenu:Window": {
         "head": "back",
         "anim": "left",
@@ -20,5 +20,5 @@
             }
         ]
     },
-    "ctrl:Controllers.Menu": {}
+    "menu_ctrl:Controllers.Menu": {}
  }

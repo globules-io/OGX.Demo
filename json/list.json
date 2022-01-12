@@ -2,8 +2,8 @@
     "title":"List",
     "description":"List is an editale, filterable and searchable super Array, inspired by MongoDB, here demo'd via DynamicList.",
     "oml":false,
-    "demoml":{        
-        "#instance:Html":{ 
+    "demoml":[        
+        {"#instance:Html":{ 
             "html":"<div class=\"list\"></div>",
             "node:OML":{
                 "#instance > .list:DynamicList":{ 
@@ -16,11 +16,11 @@
                     "list:OSE":"{{json users}}"
                 }
             }
-        },
-        "ctrl:Controllers.List":{
+        }},
+        {"ctrl:Controllers.List":{
             "data":{"list":"DynamicList", "id":"users"}
-        }
-    },
+        }}
+    ],
     "doc":{
         "extends":[],
         "properties":[],

@@ -36,17 +36,18 @@ OGX.Views.PopupStandard = function(__config){
             let rnd = Math.random();
             let title = false;
             rnd > 0.5 ? title = 'I have a title!' : null;
-             objs[current].popup = OGX.Object.create(OGX.Popup.NAME, {
+            objs[current].popup = OGX.Object.create(OGX.Popup.NAME, {
                 id:'popup'+current,
                 el:objs[current].node,
                 parent:that,
                 width:220,
                 height:100,
+                anim:OGX.Popup.SCALE,
                 title:title,
                 html:'<span class="popup_message_center">'+words[Math.floor(Math.random()*words.length)]+'</span>'
             });     
             that.add(objs[current].popup);   
-            objs[current].popup.show(OGX.Popup.FADE); 
+            objs[current].popup.show(true); 
             OGX.Audio.play('click', 0.1);
         }
         current ? current = 0 : current = 1;

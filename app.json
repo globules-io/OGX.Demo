@@ -2,37 +2,41 @@
     "routing": {
         "routes": {
             "public/home": {
-                "#main_public:Templates.Home": {
-                    "node:OML": {
-                        "#home > .carousel:Carousel": {
-                            "id": "carousel",
-                            "dots": {
-                                "position": "top"
-                            },
-                            "node:OML": [
-                                {
-                                    "default:Views.Login": {
-                                        "id": "#login",
-                                        "template": "Login"
-                                    }
+                "default:Templates.Home": {
+                    "node:OML": [
+                        {
+                            "#home > .carousel:Carousel": {
+                                "id": "carousel",
+                                "dots": {
+                                    "position": "top"
                                 },
-                                {
-                                    "default:Views.Register": {
-                                        "id": "#register",
-                                        "template": "Register"
+                                "node:OML": [
+                                    {
+                                        "default:Views.Login": {
+                                            "id": "#login",
+                                            "template": "Login"
+                                        }
+                                    },
+                                    {
+                                        "default:Views.Register": {
+                                            "id": "#register",
+                                            "template": "Register"
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            }
+                        },
+                        {
+                            "ctrl:Controllers.Home": {}
                         }
-                    }
+                    ]
                 },
-                "ctrl:Controllers.Home": {},
                 "scope": [
                     "public"
                 ]
             },
             "private/intro": {
-                "#main_private:Views.BigBang": {
+                "default:Views.BigBang": {
                     "id": "#bigbang",
                     "template": "BigBang",
                     "css": "bigbang"
@@ -42,7 +46,7 @@
                 ]
             },
             "private/settings": {
-                "#main_private:Views.Settings": {
+                "default:Views.Settings": {
                     "id": "#settings",
                     "template": "Settings",
                     "node:OML": {
@@ -65,7 +69,7 @@
                 }
             },
             "private/object/object:([a-zA-Z]+)": {
-                "#main_private:Point": {
+                "default:Point": {
                     "id": "#point",
                     "live": [
                         "object",
@@ -120,14 +124,14 @@
                 ]
             },
             "messenger/chat": {
-                ".chat:Chat": {
+                "default:Chat": {
                     "id": "chat",
                     "key": "_id"
                 },
                 "chatController:Controllers.Chat": {}
             },
             "sketch/draw": {
-                "#basic:Views.Sketch": {
+                "default:Views.Sketch": {
                     "id": "draw",
                     "template": "Sketch",
                     "observe": true,
@@ -173,7 +177,7 @@
             "history": true,
             "bookmarkable": false
         },
- 		"errors": {}
+        "errors": {}
     },
     "vapps": {
         "public:Stages.Public": {
@@ -181,6 +185,7 @@
             "closeable": false,
             "use": true,
             "home": "home",
+            "placeholder": "#main_public",
             "scope": [
                 "public"
             ],
@@ -190,6 +195,7 @@
             "template": "Private",
             "closeable": false,
             "home": "intro",
+            "placeholder": "#main_private",
             "scope": [
                 "public"
             ],
@@ -203,6 +209,7 @@
             "template": "Chat",
             "closeable": true,
             "home": "chat",
+            "placeholder": ".chat",
             "scope": [
                 "public"
             ],
@@ -215,6 +222,7 @@
             "template": "Basic",
             "closeable": true,
             "home": "draw",
+            "placeholder": "#basic",
             "scope": [
                 "public"
             ],
@@ -235,7 +243,19 @@
             "OpenSans-LightItalic.ttf",
             "OpenSans-Regular.ttf",
             "OpenSans-Semibold.ttf",
-            "OpenSans-SemiboldItalic.ttf"            
+            "OpenSans-SemiboldItalic.ttf",
+            "Roboto-Black.ttf",
+            "Roboto-BlackItalic.ttf",
+            "Roboto-Bold.ttf",
+            "Roboto-BoldItalic.ttf",
+            "Roboto-Italic.ttf",
+            "Roboto-Light.ttf",
+            "Roboto-LightItalic.ttf",
+            "Roboto-Medium.ttf",
+            "Roboto-MediumItalic.ttf",
+            "Roboto-Regular.ttf",
+            "Roboto-Thin.ttf",
+            "Roboto-ThinItalic.ttf"
         ],
         "/themes/io-globules-ogx/base/fonts": [
             "Roboto-Black.ttf",
@@ -290,6 +310,7 @@
             "left.svg",
             "remove.svg",
             "right.svg",
+            "send.svg",
             "up.svg"
         ],
         "/themes/io-globules-ogx/dark/img": [
@@ -361,9 +382,7 @@
             "8.jpg",
             "9.jpg"
         ],
-        "/json": [    
-            "_calendar.json",
-            "_popup.json",
+        "/json": [
             "advanced.json",
             "brushes.json",
             "carousel.json",
@@ -396,13 +415,13 @@
             "treedlist.json",
             "users.json",
             "views.json",
-            "windows.json"
-        ],
-        "/oml": [
-            "menu.oml"
+            "windows.json",
+            "_calendar.json",
+            "_popup.json"
         ],
         "/snd": [
-            "click.mp3"
+            "click.mp3",
+            "drop.mp3"
         ],
         "/html": [
             "template.Ad.html",
@@ -411,9 +430,7 @@
             "template.BigBang.html",
             "template.Brush.html",
             "template.Chat.html",
-            "template.Contacts.html",
             "template.Doc.html",
-            "template.Dummy.html",
             "template.Filters.html",
             "template.Gallery.html",
             "template.Home.html",
@@ -423,7 +440,6 @@
             "template.Menu.html",
             "template.MenuItem.html",
             "template.Method.html",
-            "template.News.html",
             "template.Object.html",
             "template.Overlay.html",
             "template.Post.html",
@@ -439,8 +455,10 @@
             "template.Split.html",
             "template.Standard.html",
             "template.Switches.html",
-            "template.Tweet.html",
             "template.User.html"
+        ],
+        "/oml": [
+            "menu.oml"
         ]
     },
     "popups": {
@@ -469,5 +487,5 @@
     "scope": [
         "public"
     ],
-    "jwt":false
+    "jwt": false
 }

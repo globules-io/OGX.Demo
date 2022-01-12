@@ -4,19 +4,19 @@
     "oml":{        
         "selector:TreedList":"{CONFIG}"        
     },
-    "demoml":{
-        "#instance:TreedList":{  
+    "demoml":[
+        {"#instance:TreedList":{  
             "id":"#treed",
             "list:OSE":"{{json users}}",
             "renderer":"StackedTree",
             "group_by":["gender", "location.state"],
             "display":{"template":"User", "css":"user"},
             "mode":"hit"
-        }, 
-        "ctrl:Controllers.List":{
+        }}, 
+        {"ctrl:Controllers.List":{
             "data":{"list":"StackedTree", "id":"treed_stacked"}
-        }                       
-    },
+        }}                       
+    ],
     "doc":{
         "extends":["Uxi", "Touch"],
         "properties":[

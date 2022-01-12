@@ -4,14 +4,14 @@
     "oml":{
         "selector:GridSwiper":"{CONFIG}"
     },
-    "demoml":{
-        "#instance:GridSwiper":{
+    "demoml":[
+        {"#instance:GridSwiper":{
             "id":"grid",
             "loop":true,
             "axis":{"x":true, "y":true}
-        },
-        "ctrl:Controllers.Grid":{}
-    },
+        }},
+        {"ctrl:Controllers.Grid":{}}
+    ],
     "doc":{
         "extends":["Uxi", "Touch"],
         "properties":[

@@ -11,8 +11,8 @@ OGX.Views.Object = function(__config){
     this.construct = function(__data, __route_data){
         //demo
         oml = JSON.parse(JSON.stringify(config.data.demoml));
-        if(oml){
-            OGX.OML.render(this, oml); 
+        if(oml){ 
+            OGX.OML.render(this, oml);  
         }
         if(!config.data.hasOwnProperty('help') || !config.data.help){
             $('.demo .help:first').addClass('disabled');
@@ -35,6 +35,11 @@ OGX.Views.Object = function(__config){
             this.el.off(this.touch.down, '.help', showHelp);
         }
     }  
+
+    //@Override
+    this.destroy = function(){
+        app.removeWindow('oml', false);          
+    };
 
     function showDocs(){
         app.cfind('Html', 'doc').reveal();      

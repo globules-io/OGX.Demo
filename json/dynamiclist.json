@@ -4,8 +4,8 @@
     "oml":{
         "selector:DynamicList":"{CONFIG}"
     },
-    "demoml":{
-        "#instance:DynamicList":{ 
+    "demoml": [
+        {"#instance:DynamicList":{ 
             "id":"feed",
             "scroll":true, 
             "swipe":false,
@@ -27,11 +27,11 @@
             },
             "key":"_id",
             "list:OSE":"{{json feed}}"
-        },
-        "ctrl:Controllers.List":{
+        }},
+        {"ctrl:Controllers.List":{
             "data":{"list":"DynamicList", "id":"feed"}
-        }
-    },
+        }}
+    ],
     "doc":{
         "extends":["Uxi", "Touch"],
         "properties":[

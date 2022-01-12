@@ -7,8 +7,8 @@
     "demoml":{
         "#instance:Html":{
             "html":"<div class=\"list\"></div>",            
-            "node:OML":{
-                "#instance > .list:GroupedList":{   
+            "node:OML":[
+                {"#instance > .list:GroupedList":{   
                     "id":"grouped",
                     "scroll":true,         
                     "display":{"template":"User", "css":"user"},
@@ -17,11 +17,11 @@
                     "group_order":["female", "male"],
                     "map":{"title":"gender"},
                     "list:OSE":"{{json users}}"           
-                },
-                "ctrl:Controllers.List":{
+                }},
+                {"ctrl:Controllers.List":{
                     "data":{"list":"GroupedList", "id":"grouped"}
-                } 
-            }            
+                }} 
+            ]            
         }        
     },
     "doc":{

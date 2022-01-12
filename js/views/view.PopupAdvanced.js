@@ -16,16 +16,17 @@ OGX.Views.PopupAdvanced = function(__config){
         if(!conf){
             popup = app.cfind('Popup', 'container');
         }else{
-            popup = this.create('Popup', conf);     
-        }             
-        popup.show(OGX.Popup.FADE); 
+            popup = this.create('Popup', conf); 
+        }
         OGX.Audio.play('click', 0.1);
     }; 
     
     function genConf(){
         let conf = {
             id:'popup',
-            width:220,            
+            anim:OGX.Popup.SCALE,
+            width:220,   
+            show:true,         
             drag:true                
         };
         switch(config.mode){ 
@@ -39,7 +40,7 @@ OGX.Views.PopupAdvanced = function(__config){
             case 'dialogs': 
             conf.title = 'Confirm';
             conf.html = '<span class="popup_message_dialogs">You are sure you want to do that?</span>';
-            conf.buttons = [{label:"YES", callback:onAction, params:0}, {label:"MAYBE", callback:onAction, params:1}]
+            conf.buttons = [{label:'YES', callback:onAction, params:0}, {label:'MAYBE', callback:onAction, params:1}]
             conf.height = 180;   
             break;
 
@@ -68,12 +69,10 @@ OGX.Views.PopupAdvanced = function(__config){
 
                     case 2:
                     popup = that.create(OGX.Popup.NAME, genConf());  
-                    popup.show(OGX.Popup.FADE);  
                     OGX.Audio.play('click', 0.1);    
                     return;                    
                 }  
                 popup = that.create(OGX.Popup.NAME, conf);           
-                popup.show(OGX.Popup.FADE);
                 OGX.Audio.play('click', 0.1);
             }, 1500)}
         );       
