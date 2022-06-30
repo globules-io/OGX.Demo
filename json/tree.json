@@ -7,6 +7,7 @@
     "demoml":{
         "#instance:Tree":{
             "scroll":true,
+            "show_root": false,
             "data:OSE":"{{json menu}}"
         }
     },
@@ -20,12 +21,10 @@
             {"name":"sort", "type":"object", "desc":"a sort object"},
             {"name":"toggle", "type":"boolean", "desc":"if tree items toggle on select"},
             {"name":"drag_after", "type":"int", "desc":"time in ms after which an item becomes drag-able"},
-            {"name":"icon_size", "type":"int", "desc":"size of icons"},
             {"name":"types", "type":"object", "desc":"the object defining the mode and icon per item"},
             {"name":"data", "type":"object", "desc":"the data tree"}
         ],
         "methods":[
-            {"name":"setIconSize", "desc":"change icon size"},
             {"name":"selectItemByPropVal", "desc":"select item given propery value pair"},
             {"name":"selectItemByPath", "desc":"select item given its path"},
             {"name":"updateSelectedItemDataProperty", "desc":"update the value of a property of the selected item"},
