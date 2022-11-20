@@ -8,18 +8,18 @@
         "#instance:Calendar":{
             "format":"YYYY-MM-DD HH:mm:ss",
             "layouts":[
-                {"layout":"CENTURY_DECADES", "engine":"DECADE_NUMBER", "config":false},
-                {"layout":"CENTURY_YEARS", "engine":"YEAR_NUMBER", "config":false},
-                {"layout":"DECADE_YEARS", "engine":"YEAR_NUMBER", "config":false},
-                {"layout":"DECADE_MONTHS", "engine":"MONTH_NUMBER", "config":false}, 
-                {"layout":"YEAR_MONTHS", "engine":"MONTH_NUMBER", "config":false}, 
-                {"layout":"YEAR_WEEKS", "engine":"WEEK_NUMBER", "config":false},            
-                {"layout":"MONTH_WEEKS", "engine":"WEEK_NUMBER", "config":false},  
-                {"layout":"MONTH_DAYS", "engine":"DAY_NUMBER", "config":false},
-                {"layout":"WEEK_DAYS", "engine":"DAY_NUMBER", "config":false},                
-                {"layout":"DAY", "engine":"DAY_NUMBER", "config":false},
-                {"layout":"DAY_HOURS",  "engine":"CELL_VALUE", "config":{"format":"HH:[00]"}},
-                {"layout":"DAY_WORK_HOURS",  "engine":"CELL_VALUE", "config":{"format":"HH:[00]"}}
+                {"layout":{"name":"CENTURY_DECADES"}, "engine":{"name":"DECADE_NUMBER", "config":false}},
+                {"layout":{"name":"CENTURY_YEARS"}, "engine":{"name":"YEAR_NUMBER", "config":false}},
+                {"layout":{"name":"DECADE_YEARS"}, "engine":{"name":"YEAR_NUMBER", "config":false}},
+                {"layout":{"name":"DECADE_MONTHS"}, "engine":{"name":"MONTH_NUMBER", "config":false}}, 
+                {"layout":{"name":"YEAR_MONTHS"}, "engine":{"name":"MONTH_NUMBER", "config":false}}, 
+                {"layout":{"name":"YEAR_WEEKS"}, "engine":{"name":"WEEK_NUMBER", "config":false}},            
+                {"layout":{"name":"MONTH_WEEKS"}, "engine":{"name":"WEEK_NUMBER", "config":false}},  
+                {"layout":{"name":"MONTH_DAYS"}, "engine":{"name":"DAY_NUMBER", "config":false}},
+                {"layout":{"name":"WEEK_DAYS"}, "engine":{"name":"DAY_NUMBER", "config":false}},                
+                {"layout":{"name":"DAY"}, "engine":{"name":"DAY_NUMBER", "config":false}},
+                {"layout":{"name":"DAY_HOURS"}, "engine":{"name":"CELL_VALUE", "config":{"format":"HH:[00]"}}},
+                {"layout":{"name":"DAY_WORK_HOURS"}, "engine":{"name":"CELL_VALUE", "config":{"format":"HH:[00]"}}}
             ]
         }
     },
