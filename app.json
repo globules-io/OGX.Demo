@@ -233,7 +233,21 @@
         }
     },
     "preload": {
-        "/fonts": [
+        "/themes/io-globules-ogx/base/fonts": [
+            "Roboto-Black.ttf",
+            "Roboto-BlackItalic.ttf",
+            "Roboto-Bold.ttf",
+            "Roboto-BoldItalic.ttf",
+            "Roboto-Italic.ttf",
+            "Roboto-Light.ttf",
+            "Roboto-LightItalic.ttf",
+            "Roboto-Medium.ttf",
+            "Roboto-MediumItalic.ttf",
+            "Roboto-Regular.ttf",
+            "Roboto-Thin.ttf",
+            "Roboto-ThinItalic.ttf"
+        ],
+        "fonts": [
             "OpenSans-Bold.ttf",
             "OpenSans-BoldItalic.ttf",
             "OpenSans-ExtraBold.ttf",
@@ -257,7 +271,7 @@
             "Roboto-Thin.ttf",
             "Roboto-ThinItalic.ttf"
         ],
-        "/themes/io-globules-ogx/base/fonts": [
+        "themes/io-globules-ogx/base/fonts": [
             "Roboto-Black.ttf",
             "Roboto-BlackItalic.ttf",
             "Roboto-Bold.ttf",
@@ -278,6 +292,7 @@
             "dialogs.svg",
             "globules.svg",
             "help.svg",
+            "item.svg",
             "lists.svg",
             "loaders.svg",
             "loop.svg",
@@ -419,6 +434,9 @@
             "_calendar.json",
             "_popup.json"
         ],
+        "/oml": [
+            "menu.oml"
+        ],
         "/snd": [
             "click.mp3",
             "drop.mp3"
@@ -456,9 +474,6 @@
             "template.Standard.html",
             "template.Switches.html",
             "template.User.html"
-        ],
-        "/oml": [
-            "menu.oml"
         ]
     },
     "popups": {
