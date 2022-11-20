@@ -15,8 +15,8 @@ OGX.Controllers.List = function(__config){
     //@Override
 	this.ux = function(__bool){
         if(__bool){
-            $('.demo .option').on(this.touch.down, showFilters);
-            list.el.on(OGX.DynamicList.SELECT, function(__e, __data){
+            $('.demo .option').on(this.touch.down, showFilters);            
+            list.el.on(OGX.DynamicList.SELECT+' '+OGX.StackedTree.SELECT, function(__e, __data){
                 if(['user'].indexOf(__data.type) !== -1){
                     if(app.windowExists('winuser')){
                         app.removeWindow('winuser');
@@ -43,7 +43,7 @@ OGX.Controllers.List = function(__config){
             });
         }else{
             $('.demo .option').off(this.touch.down, showFilters);
-            list.el.off(OGX.DynamicList.SELECT);
+            list.el.off(OGX.DynamicList.SELECT+' '+OGX.StackedTree.SELECT);
         }
     };    
 
