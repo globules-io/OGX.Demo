@@ -52,7 +52,7 @@ OGX.Views.PopupAdvanced = function(__config){
 
     function onAction(__action){
         popup.hide(OGX.Popup.FADE, function(){
-            that.remove(OGX.Popup.NAME, 'popup');
+            that.remove('Popup', 'popup');
             setTimeout(function(){
                 let conf = genConf();
                 conf.buttons = [{label:'OK', callback:onAction, params:2}];
@@ -68,11 +68,11 @@ OGX.Views.PopupAdvanced = function(__config){
                     break;
 
                     case 2:
-                    popup = that.create(OGX.Popup.NAME, genConf());  
+                    popup = that.create('Popup', genConf());  
                     OGX.Audio.play('click', 0.1);    
                     return;                    
                 }  
-                popup = that.create(OGX.Popup.NAME, conf);           
+                popup = that.create('Popup', conf);           
                 OGX.Audio.play('click', 0.1);
             }, 1500)}
         );       

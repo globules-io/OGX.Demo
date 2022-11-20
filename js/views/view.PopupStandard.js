@@ -36,7 +36,7 @@ OGX.Views.PopupStandard = function(__config){
             let rnd = Math.random();
             let title = false;
             rnd > 0.5 ? title = 'I have a title!' : null;
-            objs[current].popup = OGX.Object.create(OGX.Popup.NAME, {
+            objs[current].popup = OGX.Object.create('Popup', {
                 id:'popup'+current,
                 el:objs[current].node,
                 parent:that,
@@ -54,7 +54,7 @@ OGX.Views.PopupStandard = function(__config){
     }  
 
     function onHidden(__current){          
-        that.remove(OGX.Popup.NAME, objs[__current].popup.id);
+        that.remove('Popup', objs[__current].popup.id);
         objs[__current].popup = 0;
     }
     
