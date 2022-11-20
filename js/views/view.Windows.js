@@ -17,9 +17,9 @@ OGX.Views.Windows = function(__config){
     //@Override
     this.ux = function(__bool){
         if(__bool){
-            this.el.on(OGX.Window.CLOSED, function(__e, __data){
-                setTimeout(function(){
-                    that.find('Window', __data).show();
+            this.el.on(OGX.Window.CLOSED, function(__e, __window){
+                setTimeout(() => {
+                    that.find('Window', __window.id).show();
                 }, 1000+Math.round(Math.random()*3000));
             });
         }else{
@@ -28,7 +28,7 @@ OGX.Views.Windows = function(__config){
     };
      
     function showWin(__win, __t){       
-        setTimeout(function(){
+        setTimeout(() => {
             __win.show();
         }, __t);     
     }
