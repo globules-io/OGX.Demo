@@ -25,10 +25,10 @@
                                     }
                                 ]
                             }
-                        }                        
+                        }
                     ]
-                },                
-                "ctrl:Controllers.Home": {}, 
+                },
+                "ctrl:Controllers.Home": {},
                 "scope": [
                     "public"
                 ]
@@ -99,14 +99,14 @@
                         "default:Templates.Split": {
                             "node:OML": [
                                 {
-                                    "#point > .split > .right:Templates.Doc": {
+                                    "#point .split > .right:Templates.Doc": {
                                         "id": "#doc",
                                         "scroll": true,
                                         "data:OSE": "{{json crumb object}}"
                                     }
                                 },
                                 {
-                                    "#point > .split > .left:Views.Object": {
+                                    "#point .split > .left:Views.Object": {
                                         "id": "object",
                                         "template": "Object",
                                         "data:OSE": "{{json crumb object}}"
