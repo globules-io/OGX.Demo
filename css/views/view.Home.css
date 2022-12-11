@@ -49,21 +49,7 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width:768px){
     #home > .top{
-        padding-bottom: 50%;
-        background-size: 40%;
-    }
-}
-/* Medium Devices, Desktops */
-@media only screen and (min-width:992px){
-	#home > .top{
-        padding-bottom: 40%;
-        background-size: 30%;
-    }
-}
-/* Large Devices, Wide Screens */
-@media only screen and (min-width:1400px){	
-	#home > .top{
         padding-bottom: 30%;
-        background-size: 20%;
+        background-size: 25%;
     }
 }
