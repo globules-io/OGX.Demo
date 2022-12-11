@@ -5,10 +5,12 @@
 }
 #home > .top{
     display: block;
-    width: 100%;   
+    width: 100%;
+    padding-bottom: 100%;
     transition: all 0.4s ease-out;
     position: relative;
-    background-image:url('../../img/ogx_logo.svg');  
+    background-image:url('../../img/ogx_logo.svg');
+    background-size: 70%;
     background-position:center center;
     background-repeat:no-repeat;
     transition:all ease-in-out;
@@ -35,27 +37,33 @@
 /*MEDIA QUERIES*/
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width: 320px){
-	#home > .top{
-	    padding-bottom: 100%;
-        background-size: 70%;
-    }
+	
 }
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width:480px){	
-	
+	#home > .top{
+        padding-bottom: 80%;
+        background-size: 60%;
+    }
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width:768px){
     #home > .top{
-	    padding-bottom: 50%;
-        background-size: 30%;
+        padding-bottom: 50%;
+        background-size: 40%;
     }
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width:992px){
-	
+	#home > .top{
+        padding-bottom: 40%;
+        background-size: 30%;
+    }
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width:1400px){	
-	
+	#home > .top{
+        padding-bottom: 30%;
+        background-size: 20%;
+    }
 }
