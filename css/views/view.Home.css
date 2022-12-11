@@ -5,22 +5,13 @@
 }
 #home > .top{
     display: block;
-    width: 100%;
-    padding-bottom: 100%;
+    width: 100%;   
     transition: all 0.4s ease-out;
     position: relative;
-}
-#home > .top > .logo{
-    display:inline-block;
-    width:100%;
-    height:100%;
-    background-image:url('../../img/ogx_logo.svg');
-    background-size: 70%;
+    background-image:url('../../img/ogx_logo.svg');  
     background-position:center center;
     background-repeat:no-repeat;
-    /*animation:fadeloop 4s infinite;*/
     transition:all ease-in-out;
-    position: absolute;
 }
 #home > .carousel{
     display:block;
@@ -41,3 +32,30 @@
   50%  { opacity:0.03; transform:scale(0.98)}
   100% { opacity:1; filter:drop-shadow(0px 0px 5px #ffffff);}
 }  
+/*MEDIA QUERIES*/
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width: 320px){
+	#home > .top{
+	    padding-bottom: 100%;
+        background-size: 70%;
+    }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width:480px){	
+	
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width:768px){
+    #home > .top{
+	    padding-bottom: 50%;
+        background-size: 30%;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width:992px){
+	
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width:1400px){	
+	
+}

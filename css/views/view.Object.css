@@ -232,10 +232,10 @@
 /*MEDIA QUERIES*/
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width: 320px){
-    .split .right{
+    .split > .right{
         display:none;
     }
-    .split .left{
+    .split > .left{
         flex-grow:1;
     }    
 }
@@ -245,10 +245,10 @@
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width:768px){
-    .split .right{
+    .split > .right{
         display:inline-block;
     }
-    .split .left{
+    .split > .left{
         flex-grow:0;
     }
     .object{
