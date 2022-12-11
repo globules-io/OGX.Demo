@@ -25,12 +25,10 @@
                                     }
                                 ]
                             }
-                        },
-                        {
-                            "ctrl:Controllers.Home": {}
-                        }
+                        }                        
                     ]
-                },
+                },                
+                "ctrl:Controllers.Home": {}, 
                 "scope": [
                     "public"
                 ]

@@ -8,7 +8,7 @@
         "#instance:Html":{
             "html":"<div class=\"list\"></div>",            
             "node:OML":[
-                {"#instance > .list:GroupedList":{   
+                {"#instance .list:GroupedList":{   
                     "id":"grouped",
                     "scroll":true,         
                     "display":{"template":"User", "css":"user"},

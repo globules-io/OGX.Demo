@@ -4,7 +4,7 @@
     height:100%;
     position:absolute;
 }
-#menu_tree .ogx_stacked_tree_item .icon{
+.icon{
     display:inline-block;
     width:22px;
     height:22px;
@@ -23,70 +23,70 @@
 #menu_tree .ogx_stacked_tree_item .nodisplay{
     display:none !important;
 }
-#menu_tree .ogx_stacked_tree_item .icon_windows{
+.icon_windows{
     background-image:url('../../img/windows.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_popup{
+.icon_popup{
     background-image:url('../../img/popup.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_popups{
+.icon_popups{
     background-image:url('../../img/popups.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_windows{
+.icon_windows{
     background-image:url('../../img/windows.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_subapps{
+.icon_subapps{
     background-image:url('../../img/subapps.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_routing{
+.icon_routing{
     background-image:url('../../img/routing.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_dialogs{
+.icon_dialogs{
     background-image:url('../../img/dialogs.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_tags{
+.icon_tags{
     background-image:url('../../img/tags.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_tabs{
+.icon_tabs{
     background-image:url('../../img/tabs.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_views{
+.icon_views{
     background-image:url('../../img/views.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_templates{
+.icon_templates{
     background-image:url('../../img/templates.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_overlay{
+.icon_overlay{
     background-image:url('../../img/overlay.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_overlays{
+.icon_overlays{
     background-image:url('../../img/overlays.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_loaders{
+.icon_loaders{
     background-image:url('../../img/loaders.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_scroller{
+.icon_scroller{
     background-image:url('../../img/scrollers.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_lists{
+.icon_lists{
     background-image:url('../../img/lists.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_trees{
+.icon_trees{
     background-image:url('../../img/trees.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_swipers{
+.icon_swipers{
     background-image:url('../../img/swipers.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_calendar{
+.icon_calendar{
     background-image:url('../../img/calendar.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_switches{
+.icon_switches{
     background-image:url('../../img/switches.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_intro{
+.icon_intro{
     background-image:url('../../img/ogx_logo.svg');
 }
-#menu_tree .ogx_stacked_tree_item .icon_settings{
+.icon_settings{
     background-image:url('../../img/settings.svg');
 }
 #menu_tree .ogx_stacked_tree_item .initials{

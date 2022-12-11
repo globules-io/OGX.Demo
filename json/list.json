@@ -6,7 +6,7 @@
         {"#instance:Html":{ 
             "html":"<div class=\"list\"></div>",
             "node:OML":{
-                "#instance > .list:DynamicList":{ 
+                "#instance .list:DynamicList":{ 
                     "id":"users",
                     "scroll":true, 
                     "swipe":true,

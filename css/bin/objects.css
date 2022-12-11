@@ -4,6 +4,9 @@
 .ogx_iceberg_view:last-of-type{
     border-right:none;
 }
+.ogx_tree_item_icon {
+    background-image: url('../../img/item.svg');
+}
 .popup_message{
     display:block;
     padding:20px 20px 0px 20px;

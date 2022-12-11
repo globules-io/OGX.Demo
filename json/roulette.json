@@ -7,7 +7,7 @@
     "demoml":{
         "#instance:Templates.Roulette":{
             "node:OML":{
-                "#instance > .roulettes .rouletteA:Roulette":{     
+                "#instance .roulettes .rouletteA:Roulette":{     
                     "list":[
                         {"label":"OGX.JS is not that great", "value":0},
                         {"label":"OGX.JS is OK I guess", "value":1},
@@ -17,7 +17,7 @@
                     ],
                     "value":3          
                 },
-                "#instance > .roulettes .rouletteB:Roulette":{   
+                "#instance .roulettes .rouletteB:Roulette":{   
                     "id":"rouletteB",  
                     "icon":true,
                     "list":[

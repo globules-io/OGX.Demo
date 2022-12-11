@@ -8,7 +8,7 @@
         "#instance:Html":{
             "html":"<div class=\"container ogx_view\"></div>",
             "node:OML":{
-                "#instance > .container:Container":{
+                "#instance .container:Container":{
                     "editable":false,
                     "tabs":{
                         "list":[{"label":"Tab A"}, {"label":"Tab B"}, {"label":"Tab C"}, {"label":"Tab D"}, {"label":"Tab E"}]

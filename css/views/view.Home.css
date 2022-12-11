@@ -4,22 +4,23 @@
     height:100%;
 }
 #home > .top{
-    display:block;
-    width:100%;
-    height:40%; 
-    padding:60px;   
-    transition:all 0.4s ease-out;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    transition: all 0.4s ease-out;
+    position: relative;
 }
 #home > .top > .logo{
     display:inline-block;
     width:100%;
     height:100%;
     background-image:url('../../img/ogx_logo.svg');
-    background-size:contain;
+    background-size: 70%;
     background-position:center center;
     background-repeat:no-repeat;
     /*animation:fadeloop 4s infinite;*/
     transition:all ease-in-out;
+    position: absolute;
 }
 #home > .carousel{
     display:block;
