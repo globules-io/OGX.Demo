@@ -223,6 +223,10 @@
 #instance .ogx_stacked_tree .nodisplay{
     display:none !important;
 }
+/*CALENDAR*/
+#instance .ogx_calendar{
+    display: flex;
+}
 /*TREEDLIST*/
 #treed{
     display:block;
