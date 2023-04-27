@@ -10,12 +10,12 @@ OGX.Views.PopupStandard = function(__config){
     let time;  
 
     //@Override 
-    this.construct = function(){
-		time = 2000+Math.round(Math.random()*2000);
+    this.construct = () => {
+		time = 2000+Math.round(Math.random()*2000);		
 	};
    	
     //@Override   
-    this.ux = function(__bool){
+    this.ux = (__bool) => {
         onOff(__bool);
     };     
 	

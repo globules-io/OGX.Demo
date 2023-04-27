@@ -20,7 +20,7 @@ OGX.Views.BigBang = function(__config){
     let max_balls = 140;
     
     //@Override
-	this.construct = function(){      
+	this.construct = () => {      
         canvas = this.el.children('.canvas:first')[0];
         //run resize at start to set sw, sh
         this.resize();    
@@ -38,14 +38,14 @@ OGX.Views.BigBang = function(__config){
 	};
     
     //@Override
-	this.enable = function(){       
+	this.onFocus = () => {       
         if(!intv && !done && canvas){
             intv = requestAnimationFrame(onTick);            
         }       
 	};
 	
     //@Override
-	this.disable = function(){        
+	this.onBlur = () => {        
         if(intv && !done && canvas){
            cancelAnimationFrame(intv);
            intv = false;
@@ -53,7 +53,7 @@ OGX.Views.BigBang = function(__config){
 	};   
 
     //@Override
-	this.resize = function(){	        
+	this.resize = () => {	        
         sw = this.el.width();
         sh = this.el.height();
         //canvas 

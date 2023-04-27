@@ -4,13 +4,13 @@ OGX.Controllers.Home = function(){
     'use strict';    
     let stage, login, carousel;
 
-    this.construct = function(){
+    this.construct = () => {
         stage = app.getStage();
         login = app.cfind('View', 'login');
         carousel = app.cfind('Carousel', 'carousel'); 
     };   
 
-    this.ux = function(__bool){     
+    this.ux = (__bool) => {     
         if(__bool){
             login.el.on('LOGIN', onLogin);
             carousel.el.on(OGX.Carousel.CHANGE,  playClick);
@@ -31,7 +31,7 @@ OGX.Controllers.Home = function(){
         //backend integration - skipped
         OGX.Audio.play('click', 0.3);    
         //no JWT here because jwt = false in config
-        OGX.Scope.setScope(['public', 'private']);
+        OGX.Scope.scope(['public', 'private']);
         app.goto('private/intro');
     }     
 

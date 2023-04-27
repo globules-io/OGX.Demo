@@ -16,7 +16,7 @@ OGX.Views.Balls = function(__config){
     }
 
     //@Override - __data passed if coming from GridSwiper : points
-	this.construct = function(__points){   
+	this.construct = (__points) => {   
         if(typeof(__points) !== 'undefined'){
             msg = 'Relative Point:'+JSON.stringify(__points.rel)+'<br>Absolute Point:'+JSON.stringify(__points.abs);    
         }
@@ -32,14 +32,14 @@ OGX.Views.Balls = function(__config){
 	};
     
     //@Override
-	this.enable = function(){
-        if(!intv && !done){
+	this.onFocus = () => {
+        if(!intv && !done){            
             intv = requestAnimationFrame(onTick);            
         }
 	};
 	
     //@Override
-	this.disable = function(){
+	this.onBlur = () => {
         if(intv && !done){
            cancelAnimationFrame(intv);
            intv = false;
@@ -47,7 +47,7 @@ OGX.Views.Balls = function(__config){
 	};   
 
     //@Override
-	this.resize = function(){	        
+	this.resize = () => {	        
         sw = this.el.width();
         sh = this.el.height();
         //canvas 

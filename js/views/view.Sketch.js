@@ -10,7 +10,7 @@ OGX.Views.Sketch = function(){
     let offX, offY;
 
     //@Override
-    this.construct = function(){       
+    this.construct = () => {       
         canvas = $('#sketch').find('.board:first');
         ctx = canvas[0].getContext('2d');
         controls = app.cfind('DynamicList', 'controls');
@@ -22,7 +22,7 @@ OGX.Views.Sketch = function(){
     };
 
     //@Override
-    this.resize = function(){
+    this.resize = () => {
         offY = canvas.offset().top;
         offX = canvas.offset().left; 
         image = ctx.getImageData(0, 0, canvas[0].width, canvas[0].height);
@@ -31,7 +31,7 @@ OGX.Views.Sketch = function(){
     };
 
     //@Override
-    this.ux = function(__bool){        
+    this.ux = (__bool) => {        
         if(__bool){       
             canvas.on(this.touch.down, function(__e){               
                 if(!started){

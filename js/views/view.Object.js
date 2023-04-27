@@ -8,7 +8,7 @@ OGX.Views.Object = function(__config){
     let oml;
 
 	//@Override
-    this.construct = function(__data, __route_data){
+    this.construct = (__data) => { 
         //demo
         oml = JSON.parse(JSON.stringify(config.data.demoml));
         if(oml){ 
@@ -24,7 +24,7 @@ OGX.Views.Object = function(__config){
     };
 
     //@Override
-    this.ux = function(__bool){
+    this.ux = (__bool) => {
         if(__bool){
             this.el.on(this.touch.down, '.woml', showOML);
             this.el.on(this.touch.down, '.code', showDocs);
@@ -37,7 +37,7 @@ OGX.Views.Object = function(__config){
     }  
 
     //@Override
-    this.destroy = function(){
+    this.destroy = () => {
         app.removeWindow('oml', false);          
     };
 

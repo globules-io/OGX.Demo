@@ -6,7 +6,7 @@ OGX.Views.Settings = function(__config){
     let roul;
 
     //@Override
-    this.construct = function(){        
+    this.construct = () => {        
         roul = app.cfind('Roulette', 'theme_roul'); 
         if(supported === -1){           
             cordova.plugins.ThemeDetection.isAvailable(function(__res){
@@ -32,7 +32,7 @@ OGX.Views.Settings = function(__config){
     };  
 	
     //@Override
-	this.ux = function(__bool){
+	this.ux = (__bool) => {
         if(__bool){
             roul.el.on(OGX.Roulette.CHANGE, switchTheme);
         }else{

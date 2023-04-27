@@ -6,8 +6,7 @@ OGX.Controllers.Grid = function(__data){
     let grid;  
 
     //@Override
-    this.construct = function(){       
-        
+    this.construct = () => {   
         grid = app.cfind('GridSwiper', 'grid');
         grid.setMap([
             [displayPoint, oml, displayPoint],

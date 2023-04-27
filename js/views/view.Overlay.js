@@ -8,10 +8,10 @@ OGX.Views.Overlay = function(__obj){
     let loading = __obj.loading;
     let time = 2000+Math.round(Math.random()*7000);   
 
-    //@Override
-	this.ux = function(__bool){
+    //@Override    
+	this.ux = (__bool) => {
         onOff(__bool);
-    };    
+    }; 
 
     function onOff(__bool){
         if(__bool){

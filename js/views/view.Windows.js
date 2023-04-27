@@ -5,7 +5,7 @@ OGX.Views.Windows = function(__config){
 	var that = this;    
 
 	//@Override
-    this.construct = function(){  
+    this.construct = () => {  
         var wins = this.gather('Window');
         var t = 0;
         for(var i = 0; i < wins.length; i++){
@@ -15,7 +15,7 @@ OGX.Views.Windows = function(__config){
     };    
 
     //@Override
-    this.ux = function(__bool){
+    this.ux = (__bool) => {
         if(__bool){
             this.el.on(OGX.Window.CLOSED, function(__e, __window){
                 setTimeout(() => {

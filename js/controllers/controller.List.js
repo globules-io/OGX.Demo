@@ -7,13 +7,13 @@ OGX.Controllers.List = function(__config){
     let filters = false;
 
     //@Override
-    this.construct = function(){
+    this.construct = () => {
         //find groupedlist or dynamiclist
         list = app.cfind(config.data.list, config.data.id);      
     };	
     
     //@Override
-	this.ux = function(__bool){
+	this.ux = (__bool) => {
         if(__bool){
             $('.demo .option').on(this.touch.down, showFilters);            
             list.el.on(OGX.DynamicList.SELECT+' '+OGX.StackedTree.SELECT, function(__e, __data){

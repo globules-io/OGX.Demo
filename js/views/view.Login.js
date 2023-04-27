@@ -4,8 +4,8 @@ OGX.Views.Login = function(){
 	'use strict';
 	var that = this;
     
-	//@Override
-    this.construct = function(){           
+    //@Override
+    this.construct = () => {           
         OGX.Form.bindForm({
             el:'#login form', 
             forbidden:/<>/,
@@ -23,8 +23,8 @@ OGX.Views.Login = function(){
     };    
     
     //@Override
-	this.enable = function(){
-        $('#login form:first').find('input[name="username"]').focus();
+	this.onFocus = () => {
+        $('#login form:first').find('input[name="username"]').focus();	
 	};	
 	
     function onSubmit(__data){  
@@ -51,7 +51,8 @@ OGX.Views.Login = function(){
         that.el.trigger('LOGIN');
     }  
     
-    this.destroy = function(){
+    //@Override
+    this.destroy = () => {
         OGX.Form.unbindForm('#login form');
     };        
    

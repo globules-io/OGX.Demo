@@ -2,169 +2,177 @@
     "routing": {
         "routes": {
             "public/home": {
-                "default:Templates.Home": {
-                    "node:OML": [
-                        {
-                            "#home > .carousel:Carousel": {
-                                "id": "carousel",
-                                "dots": {
-                                    "position": "top"
-                                },
-                                "node:OML": [
-                                    {
-                                        "default:Views.Login": {
-                                            "id": "#login",
-                                            "template": "Login"
-                                        }
+                "scope": "public",
+                "oml":{
+                    "default:Templates.Home": {
+                        "node:OML": [
+                            {
+                                "#home > .carousel:Carousel": {
+                                    "id": "carousel",
+                                    "dots": {
+                                        "position": "top"
                                     },
-                                    {
-                                        "default:Views.Register": {
-                                            "id": "#register",
-                                            "template": "Register"
+                                    "node:OML": [
+                                        {
+                                            "default:Views.Login": {
+                                                "id": "#login",
+                                                "template": "Login"
+                                            }
+                                        },
+                                        {
+                                            "default:Views.Register": {
+                                                "id": "#register",
+                                                "template": "Register"
+                                            }
                                         }
-                                    }
-                                ]
+                                    ]
+                                }
                             }
-                        }
-                    ]
-                },
-                "ctrl:Controllers.Home": {},
-                "scope": [
-                    "public"
-                ]
+                        ]
+                    },
+                    "ctrl:Controllers.Home": {}
+                }
             },
             "private/intro": {
-                "default:Views.BigBang": {
-                    "id": "#bigbang",
-                    "template": "BigBang",
-                    "css": "bigbang"
-                },
-                "scope": [
-                    "public"
-                ]
+                "scope": "public",
+                "oml":{
+                    "default:Views.BigBang": {
+                        "id": "#bigbang",
+                        "template": "BigBang",
+                        "css": "bigbang"
+                    }
+                }                
             },
             "private/settings": {
-                "default:Views.Settings": {
-                    "id": "#settings",
-                    "template": "Settings",
-                    "node:OML": {
-                        "#theme_roul:Roulette": {
-                            "id": "theme_roul",
-                            "icon": true,
-                            "list": [
-                                {
-                                    "label": "Dark",
-                                    "value": true
-                                },
-                                {
-                                    "label": "Light",
-                                    "value": false
-                                }
-                            ],
-                            "value": 0
+                "scope": "public",
+                "oml": {
+                    "default:Views.Settings": {
+                        "id": "#settings",
+                        "template": "Settings",
+                        "node:OML": {
+                            "#theme_roul:Roulette": {
+                                "id": "theme_roul",
+                                "icon": true,
+                                "list": [
+                                    {
+                                        "label": "Dark",
+                                        "value": true
+                                    },
+                                    {
+                                        "label": "Light",
+                                        "value": false
+                                    }
+                                ],
+                                "value": 0
+                            }
                         }
                     }
                 }
             },
             "private/object/object:([a-zA-Z]+)": {
-                "default:Point": {
-                    "id": "#point",
-                    "live": [
-                        "object",
-                        "doc"
-                    ],
-                    "0-479": {
-                        "winobj:Window": {
-                            "title:OSE": "{{$object}}",
-                            "width": "100%",
-                            "height": "100%",
-                            "anim": "right",
-                            "node:OML": [
-                                {
-                                    "default:Templates.Doc": {
-                                        "id": "#doc",
-                                        "scroll": true,
-                                        "data:OSE": "{{json crumb object}}"
+                "scope": "public",
+                "origin:Route": "self,private/intro,private/settings",
+                "oml": {
+                    "default:Point": {
+                        "id": "#point",
+                        "live": [
+                            "object",
+                            "doc"
+                        ],
+                        "0-479": {
+                            "winobj:Window": {
+                                "title:OSE": "{{crumb object}}",
+                                "width": "100%",
+                                "height": "100%",
+                                "anim": "right",
+                                "node:OML": [
+                                    {
+                                        "default:Templates.Doc": {
+                                            "id": "#doc",
+                                            "scroll": true,
+                                            "data:OSE": "{{json crumb object}}"
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            },
+                            "default:Views.Object": {
+                                "id": "object",
+                                "template": "Object",
+                                "data:OSE": "{{json crumb object}}"
+                            }
                         },
-                        "default:Views.Object": {
-                            "id": "object",
-                            "template": "Object",
-                            "data:OSE": "{{json crumb object}}"
-                        }
-                    },
-                    "480-5000": {
-                        "default:Templates.Split": {
-                            "node:OML": [
-                                {
-                                    "#point .split > .right:Templates.Doc": {
-                                        "id": "#doc",
-                                        "scroll": true,
-                                        "data:OSE": "{{json crumb object}}"
+                        "480-5000": {
+                            "default:Templates.Split": {
+                                "node:OML": [
+                                    {
+                                        "#point .split > .right:Templates.Doc": {
+                                            "id": "#doc",
+                                            "scroll": true,
+                                            "data:OSE": "{{json crumb object}}"
+                                        }
+                                    },
+                                    {
+                                        "#point .split > .left:Views.Object": {
+                                            "id": "object",
+                                            "template": "Object",
+                                            "data:OSE": "{{json crumb object}}"
+                                        }
                                     }
-                                },
-                                {
-                                    "#point .split > .left:Views.Object": {
-                                        "id": "object",
-                                        "template": "Object",
-                                        "data:OSE": "{{json crumb object}}"
-                                    }
-                                }
-                            ]
+                                ]
+                            }
                         }
                     }
-                },
-                "origin:Route": "self,private/intro,private/settings",
-                "scope": [
-                    "private"
-                ]
+                }                
             },
             "messenger/chat": {
-                "default:Chat": {
-                    "id": "chat",
-                    "key": "_id"
-                },
-                "chatController:Controllers.Chat": {}
+                "scope": "public",
+                "oml":{
+                    "default:Chat": {
+                        "id": "chat",
+                        "key": "_id"
+                    },
+                    "chatController:Controllers.Chat": {}
+                }
             },
             "sketch/draw": {
-                "default:Views.Sketch": {
-                    "id": "draw",
-                    "template": "Sketch",
-                    "observe": true,
-                    "node:OML": {
-                        "#sketch .controls:DynamicList": {
-                            "id": "controls",
-                            "key": "id",
-                            "mode": "hit",
-                            "list:OSE": "{{json controls}}",
-                            "display": {
-                                "html": "<span class=\"icon\"></span>",
-                                "css": {
-                                    "bind": "id",
-                                    "add": "control"
+                "scope": "public",
+                "oml":{
+                    "default:Views.Sketch": {
+                        "id": "draw",
+                        "template": "Sketch",
+                        "node:OML": {
+                            "#sketch .controls:DynamicList": {
+                                "id": "controls",
+                                "key": "id",
+                                "mode": "hit",
+                                "list:OSE": "{{json controls}}",
+                                "display": {
+                                    "html": "<span class=\"icon\"></span>",
+                                    "css": {
+                                        "bind": "id",
+                                        "add": "control"
+                                    }
                                 }
-                            }
-                        },
-                        "#sketch .colors:DynamicList": {
-                            "id": "colors",
-                            "key": "color",
-                            "list:OSE": "{{json colors}}",
-                            "display": {
-                                "html": "<span class=\"icon\" style=\"background-color:{{$color}};\"></span>",
-                                "css": "color"
-                            }
-                        },
-                        "#sketch .brushes:DynamicList": {
-                            "id": "brushes",
-                            "key": "size",
-                            "scroll": true,
-                            "reorder": false,
-                            "list:OSE": "{{json brushes}}",
-                            "display": {
-                                "template": "Brush",
-                                "css": "brush"
+                            },
+                            "#sketch .colors:DynamicList": {
+                                "id": "colors",
+                                "key": "color",
+                                "list:OSE": "{{json colors}}",
+                                "display": {
+                                    "html": "<span class=\"icon\" style=\"background-color:{{$color}};\"></span>",
+                                    "css": "color"
+                                }
+                            },
+                            "#sketch .brushes:DynamicList": {
+                                "id": "brushes",
+                                "key": "size",
+                                "scroll": true,
+                                "reorder": false,
+                                "list:OSE": "{{json brushes}}",
+                                "display": {
+                                    "template": "Brush",
+                                    "css": "brush"
+                                }
                             }
                         }
                     }
@@ -173,7 +181,11 @@
         },
         "options": {
             "history": true,
-            "bookmarkable": false
+            "bookmark": false,
+            "cache": false,
+            "jail": false,
+            "eval": false,
+            "idle": false
         },
         "errors": {}
     },
@@ -184,9 +196,7 @@
             "use": true,
             "home": "home",
             "placeholder": "#main_public",
-            "scope": [
-                "public"
-            ],
+            "scope": "public",
             "theater": false
         },
         "private:Stages.Private": {
@@ -194,9 +204,7 @@
             "closeable": false,
             "home": "intro",
             "placeholder": "#main_private",
-            "scope": [
-                "public"
-            ],
+            "scope": "public",
             "theater": {
                 "icon": "ogx_logo.svg",
                 "label": "Demo"
@@ -208,9 +216,7 @@
             "closeable": true,
             "home": "chat",
             "placeholder": ".chat",
-            "scope": [
-                "public"
-            ],
+            "scope": "public",
             "theater": {
                 "icon": "messenger.svg",
                 "label": "Messenger"
@@ -221,9 +227,7 @@
             "closeable": true,
             "home": "draw",
             "placeholder": "#basic",
-            "scope": [
-                "public"
-            ],
+            "scope": "public",
             "theater": {
                 "icon": "sketch.svg",
                 "label": "Sketch"
@@ -497,8 +501,6 @@
         "icon_size": 50,
         "timeout": 30
     },
-    "scope": [
-        "public"
-    ],
+    "scope": "public",
     "jwt": false
 }

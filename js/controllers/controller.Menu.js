@@ -5,13 +5,13 @@ OGX.Controllers.Menu = function(){
     let stage, win;
 
     //@Override
-    this.construct = function(){
+    this.construct = () => {
         stage = app.getStage();
         win = app.cfind('Window', 'winmenu');  
     };
         
     //@Override
-    this.ux = function(__bool){
+    this.ux = (__bool) => {
         if(__bool){
             $('#bar').on(this.touch.down, '.bt', function(){
                 stage.addOverlay({anim:'fade', close_on_click:false});  

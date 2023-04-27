@@ -5,7 +5,7 @@ OGX.Views.Register = function(){
 	var that = this;
     
 	//@Override
-    this.construct = function(){        
+    this.construct = () => {       
         OGX.Form.bindForm({
             el:'#register form', 
             forbidden:/<>/,
@@ -26,12 +26,12 @@ OGX.Views.Register = function(){
     };
        
     //@Override
-	this.enable = function(){
+	this.onFocus = () => {
         $('#register form:first').find('input[name="first_name"]').focus();		
 	};
 
 	//@Override
-    this.destroy = function(){
+    this.destroy = () => {
         OGX.Form.bindForm('#register form');
     };
 

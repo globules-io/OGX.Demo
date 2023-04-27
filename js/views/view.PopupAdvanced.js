@@ -11,7 +11,7 @@ OGX.Views.PopupAdvanced = function(__config){
     let popup;
 
     //@Override   
-    this.construct = function(){
+    this.construct = () => {
         let conf = genConf();
         if(!conf){
             popup = app.cfind('Popup', 'container');
